@@ -32,6 +32,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // aplica o middleware apenas em rotas que não sejam arquivos estáticos ou públicos
-    "/((?!_next/static|_next/image|favicon.ico|images|assets|.*\\..*).*)",
+    "/((?!api|_next|favicon.ico|images|svg|public|.*\\..*).*)",
   ],
 };
