@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Início",
+    "foundingTeam": "Equipe Fundadora",
+    "about": "Sobre"
+  },
+  "hero": {
+    "title": "IA precisa, em conformidade e rastreável em todos os mercados",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "button": "Veja como funciona"
+  },
+  "solutions": {
+    "subtitle": "Produtos e Serviços",
+    "title": "Explore nossas soluções principais de IA",
+    "items": [
+      {
+        "title": "Calibração e Ajuste Fino de Modelos",
+        "description": "A ACT-AI constrói modelos de IA especializados para o seu negócio, adaptando estratégias e estruturas híbridas para cada caso.",
+        "icon": "gear"
+      },
+      {
+        "title": "Desenvolvimento de Grafos de Conhecimento",
+        "description": "A ACT-AI cria grafos de conhecimento específicos por setor que classificam e mapeiam conceitos-chave e suas relações, permitindo saídas de IA mais precisas e rastreáveis.",
+        "icon": "graph"
+      },
+      {
+        "title": "Rotulagem e Anotação de Dados",
+        "description": "A ACT-AI produz dados de treinamento de alta qualidade validados por especialistas nativos e com controle rigoroso de qualidade.",
+        "icon": "bulb"
+      }
+    ]
+  },
+  "focusedSectors": {
+    "sectionTitle": "Setores Focados",
+    "sectionSubtitle": "Onde nossa IA gera impacto",
+    "button": "O Que Nos Move",
+    "platformHelp": "A plataforma ACT-AI LS pode ajudar os clientes a:",
+    "items": [
+      {
+        "title": "Saúde",
+        "icon": "plus"
+      },
+      {
+        "title": "Serviços Financeiros",
+        "icon": "dollar"
+      },
+      {
+        "title": "Serviços Jurídicos",
+        "icon": "hashtag",
+        "description": [
+          "Automatizar revisão de documentos;",
+          "Acelerar pesquisa jurídica;",
+          "Avaliar teses jurídicas e probabilidade de sucesso em processos;",
+          "Reduzir custos e melhorar qualidade e velocidade do atendimento"
+        ]
+      }
+    ]
+  },
+  "caseStudy": {
+    "label": "ESTUDO DE CASO DO CLIENTE",
+    "title": "De desafios a resultados."
+  },
+  "contact": {
+  "title": "Fale Conosco",
+  "subtitle": "Vamos construir algo grandioso juntos",
+  "form": {
+    "name": "Seu Nome",
+    "email": "Endereço de Email",
+    "phone": "Telefone (opcional)",
+    "message": "Mensagem",
+    "button": "Enviar Mensagem"
+  }
+  },
+  "footer": {
+  "home": "Início",
+  "foundingTeam": "Equipe Fundadora",
+  "about": "Sobre Nós",
+  "followUs": "Siga-nos",
+  "description": "Em breve"
+  },
+  "founders": {
+    "sectionTitle": "Conheça os fundadores impulsionando inovação e impacto com IA aplicada.",
+    "marco": {
+      "name": "Marco Spinelli",
+      "title": "Co-Fundador e CEO",
+      "bio": "Marco Spinelli é um executivo com mais de 25 anos de experiência global em liderança em empresas como McKinsey, Morgan Stanley, UBS e Bridgewater..."
+    },
+    "mauricio": {
+      "name": "Maurício Lima",
+      "title": "Co-Fundador",
+      "bio": "Maurício Lima é cofundador e CEO da Henkan Investimentos Ltda. Fundou e liderou a Invest Tech Participações, maior empresa de investimentos B2B em tecnologia no Brasil..."
+    }
+  }
+}

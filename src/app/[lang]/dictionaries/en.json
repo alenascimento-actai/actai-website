@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Home",
+    "foundingTeam": "Founding Team",
+    "about": "About"
+  },
+  "hero": {
+    "title": "Accurate, Compliant and Traceable AI in all markets",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "button": "See How It Works"
+  },
+  "solutions": {
+    "subtitle": "Products and Services",
+    "title": "Explore our core AI solutions",
+    "items": [
+      {
+        "title": "Model Calibration and Fine Tuning",
+        "description": "ACT-AI builds specialized AI models for your business, tailoring model strategy and hybrid structures for each business case.",
+        "icon": "gear"
+      },
+      {
+        "title": "Knowledge Graph Development",
+        "description": "ACT-AI creates industry/area specific knowledge graphs that classify and map key concepts and their relationships, enabling traceable, bound and more accurate AI model outputs.",
+        "icon": "graph"
+      },
+      {
+        "title": "Data Labelling and Annotation",
+        "description": "ACT-AI produces high-quality model training data that are sector and language specific through native speaker expert validation and strict labelling quality control.",
+        "icon": "bulb"
+      }
+    ]
+  },
+  "focusedSectors": {
+    "sectionTitle": "Focused Sectors",
+    "sectionSubtitle": "Where our AI creates impact",
+    "button": "What Drives Us",
+    "platformHelp": "ACT-AI LS platform can help clients:",
+    "items": [
+      {
+        "title": "Health Care",
+        "icon": "plus"
+      },
+      {
+        "title": "Financial Services",
+        "icon": "dollar"
+      },
+      {
+        "title": "Legal Services",
+        "icon": "hashtag",
+        "description": [
+          "Automate document review;",
+          "Accelerate legal research;",
+          "Assess legal thesis and probability of case outcomes;",
+          "Reduce costs, improve quality and speed of client service"
+        ]
+      }
+    ]
+  },
+  "caseStudy": {
+    "label": "CLIENT CASE STUDY",
+    "title": "From challenges to outcomes."
+  },
+  "contact": {
+  "title": "Contact Us",
+  "subtitle": "Let's build something great together",
+  "form": {
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number (optional)",
+    "message": "Message",
+    "button": "Leave us a Message"
+  }
+  },
+  "footer": {
+  "home": "Home",
+  "foundingTeam": "Founding Team",
+  "about": "About Us",
+  "followUs": "Follow Us",
+  "description": "shortly"
+  },
+  "founders": {
+    "sectionTitle": "Meet the founders driving innovation and impact with applied AI.",
+    "marco": {
+      "name": "Marco Spinelli",
+      "title": "Co-Founder & CEO",
+      "bio": "Marco Spinelli is a seasoned executive with over 25 years of global leadership experience across top-tier firms including McKinsey, Morgan Stanley, UBS, and Bridgewater. He specializes in product development, AI/LLM applications, data strategy, and digital transformation..."
+    },
+    "mauricio": {
+      "name": "Maurício Lima",
+      "title": "Co-Founder",
+      "bio": "Maurício Lima is the co-founder and CEO of Henkan Investimentos Ltda. He previously founded and led Invest Tech Participações, Brazil’s largest B2B tech investment firm..."
+    }
+  }
+}
