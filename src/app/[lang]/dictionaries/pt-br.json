@@ -34,27 +34,42 @@
     "sectionTitle": "Setores Focados",
     "sectionSubtitle": "Onde nossa IA gera impacto",
     "button": "O Que Nos Move",
-    "platformHelp": "A plataforma ACT-AI LS pode ajudar os clientes a:",
-    "items": [
-      {
-        "title": "Saúde",
-        "icon": "plus"
-      },
-      {
-        "title": "Serviços Financeiros",
-        "icon": "dollar"
-      },
-      {
-        "title": "Serviços Jurídicos",
-        "icon": "hashtag",
-        "description": [
-          "Automatizar revisão de documentos;",
-          "Acelerar pesquisa jurídica;",
-          "Avaliar teses jurídicas e probabilidade de sucesso em processos;",
-          "Reduzir custos e melhorar qualidade e velocidade do atendimento"
-        ]
-      }
-    ]
+   "platformHelpHealthCare": "A plataforma ACT-AI HC pode ajudar os clientes a:",
+   "platformHelpFinancialServices": "A plataforma ACT-AI FS pode ajudar os clientes a:",
+   "platformHelpLegalServices": "A plataforma ACT-AI LS pode ajudar os clientes a:",
+   "items": [
+    {
+      "title": "Saúde",
+      "icon": "plus",
+      "description": [
+        "harmonizar padrões de produtos e serviços;",
+        "otimizar preços e custos, reduzindo a assimetria de informação do setor;",
+        "automatizar processos intensivos em mão de obra;",
+        "melhorar a velocidade e qualidade do atendimento ao paciente"
+      ]
+    },
+    {
+      "title": "Serviços Financeiros",
+      "icon": "dollar",
+      "description": [
+        "melhorar a avaliação e gestão de riscos;",
+        "entregar insights personalizados aos clientes;",
+        "aumentar oportunidades de vendas cruzadas;",
+        "elevar a eficiência, velocidade e qualidade das operações"
+      ]
+    },
+    {
+      "title": "Serviços Jurídicos",
+      "icon": "hashtag",
+      "description": [
+        "automatizar a revisão de documentos;",
+        "acelerar a pesquisa jurídica;",
+        "avaliar teses jurídicas e probabilidade de sucesso em processos;",
+        "reduzir custos, melhorar a qualidade e a velocidade do atendimento"
+      ]
+    }
+  ]
+
   },
   "caseStudy": {
     "label": "ESTUDO DE CASO DO CLIENTE",
@@ -76,19 +91,20 @@
   "foundingTeam": "Equipe Fundadora",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
-  "description": "Em breve"
+  "description": "Em breve",
+  "linkForFounding": "fundadores"
   },
   "founders": {
     "sectionTitle": "Conheça os fundadores impulsionando inovação e impacto com IA aplicada.",
     "marco": {
       "name": "Marco Spinelli",
       "title": "Co-Fundador e CEO",
-      "bio": "Marco Spinelli é um executivo com mais de 25 anos de experiência global em liderança em empresas como McKinsey, Morgan Stanley, UBS e Bridgewater..."
+      "bio": "Mais de 25 anos de liderança global, gestão sênior e desenvolvimento de produtos em serviços financeiros, incluindo aplicações de IA/LLM premiadas no setor, estratégia de dados e transformação digital. Ocupou cargos de liderança na McKinsey & Co, Morgan Stanley, UBS e Bridgewater. Histórico comprovado na construção e expansão de grandes organizações complexas, supervisionando equipes globais com mais de 800 profissionais. Assessorou CEOs da Fortune 500, banqueiros centrais e líderes de gestão de investimentos em inovação e estratégia de IA. MBA pela Wharton e bacharelado/mestrado em Engenharia Elétrica pela Universidade de São Paulo."
     },
     "mauricio": {
       "name": "Maurício Lima",
       "title": "Co-Fundador",
-      "bio": "Maurício Lima é cofundador e CEO da Henkan Investimentos Ltda. Fundou e liderou a Invest Tech Participações, maior empresa de investimentos B2B em tecnologia no Brasil..."
+      "bio": "Mais de 20 anos em VC e PE. Captou mais de US$ 380 milhões, liderou 27 investimentos e 14 saídas, alcançando um retorno médio anual de 30,3% e um múltiplo de mais de 4x o CoC. Cofundador e CEO da Henkan Investimentos Ltda. Fundador da maior empresa de investimentos B2B em tecnologia do Brasil, a Invest Tech. Atual presidente da Quality Digital e membro do conselho da SkyOne. Ocupou cargos de liderança na Latinvest, Lloyds Bank e Banco Itaú. Bacharel pela Fundação Getulio Vargas (FGV)."
     }
   }
 }

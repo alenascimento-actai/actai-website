@@ -16,7 +16,9 @@ interface FocusedSectorsSectionProps {
     sectionTitle: string;
     sectionSubtitle: string;
     button: string;
-    platformHelp: string;
+    platformHelpHealthCare: string;
+    platformHelpFinancialServices: string;
+    platformHelpLegalServices: string;
     items: {
       title: string;
       icon: string;
@@ -91,7 +93,9 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
                   {isOpen && sector.description?.length && (
                     <div className="mt-4">
                       <p className="text-sm font-semibold mb-2">
-                        {dict.platformHelp}
+                        {idx === 0 && dict.platformHelpHealthCare}
+                        {idx === 1 && dict.platformHelpFinancialServices}
+                        {idx === 2 && dict.platformHelpLegalServices}
                       </p>
                       <ul className="list-decimal list-inside text-sm space-y-1">
                         {sector.description.map((text, i) => (

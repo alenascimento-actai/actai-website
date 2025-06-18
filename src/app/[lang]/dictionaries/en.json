@@ -34,15 +34,29 @@
     "sectionTitle": "Focused Sectors",
     "sectionSubtitle": "Where our AI creates impact",
     "button": "What Drives Us",
-    "platformHelp": "ACT-AI LS platform can help clients:",
+    "platformHelpHealthCare": "ACT-AI HC platform can help clients:",
+    "platformHelpFinancialServices": "ACT-AI FS platform can help clients:",
+    "platformHelpLegalServices": "ACT-AI LS platform can help clients:",
     "items": [
       {
         "title": "Health Care",
-        "icon": "plus"
+        "icon": "plus",
+        "description": [
+          "harmonize standards for products and services;",
+          "optimize prices and costs, reducing industry information asymmetry;",
+          "automate labour intensive processes;",
+          "enhance speed and quality of patient service"
+        ]
       },
       {
         "title": "Financial Services",
-        "icon": "dollar"
+        "icon": "dollar",
+        "description":[
+          "improve risk assessment and management;",
+          "deliver personalized customer insights;",
+          "boosting cross-selling opportunities;",
+          "increase operations efficiency, speed and quality"
+        ]
       },
       {
         "title": "Legal Services",
@@ -76,19 +90,20 @@
   "foundingTeam": "Founding Team",
   "about": "About Us",
   "followUs": "Follow Us",
-  "description": "shortly"
+  "description": "shortly",
+  "linkForFounding": "founders"
   },
   "founders": {
     "sectionTitle": "Meet the founders driving innovation and impact with applied AI.",
     "marco": {
       "name": "Marco Spinelli",
       "title": "Co-Founder & CEO",
-      "bio": "Marco Spinelli is a seasoned executive with over 25 years of global leadership experience across top-tier firms including McKinsey, Morgan Stanley, UBS, and Bridgewater. He specializes in product development, AI/LLM applications, data strategy, and digital transformation..."
+      "bio": "25+ years of global leadership, senior management and product development in financial services, including industry award winning AI/LLM applications, data strategy, and digital transformation. Held senior positions at McKinsey & Co, Morgan Stanley, UBS and Bridgewater. Proven track record of building and scaling large complex organizations, overseeing global teams of 800+ professionals. Advised Fortune 500 CEOs, Central Bankers and Investment Management leaders on innovation and AI strategy. MBA from Wharton and a BSc/MSc in Electrical Engineering from University of São Paulo."
     },
     "mauricio": {
       "name": "Maurício Lima",
       "title": "Co-Founder",
-      "bio": "Maurício Lima is the co-founder and CEO of Henkan Investimentos Ltda. He previously founded and led Invest Tech Participações, Brazil’s largest B2B tech investment firm..."
+      "bio": "20+ years in VC and PE. Raised over US$380 million, led 27 investments and 14 exits achieving an average annual return of 30.3% and a multiple of over 4x CoC. Co-founder and CEO of Henkan Investimentos Ltda. Founder of Brazil’s largest B2B tech investment firm, Invest Tech. Current Chairman of Quality Digital and Board Member at SkyOne. Held senior positions at Latinvest, Lloyds Bank, and Banco Itaú. BA from Fundação Getulio Vargas (FGV)."
     }
   }
 }

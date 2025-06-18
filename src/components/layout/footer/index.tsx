@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../../../public/logo-actai.svg";
 
 interface FooterProps {
   dict: {
@@ -11,6 +12,7 @@ interface FooterProps {
       about: string;
       followUs: string;
       description: string;
+      linkForFounding: string;
     };
   };
 }
@@ -22,7 +24,7 @@ export const Footer = ({ dict }: FooterProps) => {
         {/* Logo */}
         <div className="col-span-1 flex items-start">
           <Image
-            src="/logo-actai.svg"
+            src={Logo}
             alt="ACT.AI Logo"
             width={100}
             height={24}
@@ -39,8 +41,8 @@ export const Footer = ({ dict }: FooterProps) => {
         </div>
         <div className="col-span-1">
           <h4 className="font-semibold mb-2">{dict.footer.foundingTeam}</h4>
-          <Link href={"/"} className="text-sm text-white/70">
-            {dict.footer.description}
+          <Link href={"/founders"} className="text-sm text-white/70">
+            {dict.footer.linkForFounding}
           </Link>
         </div>
         <div className="col-span-1">

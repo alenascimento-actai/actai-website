@@ -1,0 +1,9 @@
+.bluerbackground {
+  filter: blur(104.5px);
+  background: conic-gradient(from 94.38deg, #d7f3ff 0deg, #005bbf 360deg);
+  width: 322px;
+  height: 219px;
+  position: absolute;
+  top: 170px;
+  left: calc(50% - 161px);
+}
