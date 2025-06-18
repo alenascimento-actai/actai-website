@@ -18,7 +18,7 @@ export interface FoundersSectionProps {
 
 export default function FoundersSection({ dict }: FoundersSectionProps) {
   return (
-    <section className="w-full bg-black py-24 px-6 md:px-24 text-white bg-[url('/images/founders/founders-background.png')] relative">
+    <section className="w-full bg-black py-24 px-6 md:px-24 text-white bg-[url('/images/founders/founders-background.png')] bg-no-repeat bg-contain relative">
       <div className="bluerbackground"></div>
       <h2 className="text-5xl md:text-3xl font-bold text-center mb-16 max-w-[550px] mx-auto mt-40 relative z-10">
         {dict.sectionTitle}
