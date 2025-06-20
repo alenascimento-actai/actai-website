@@ -15,7 +15,7 @@ interface MissionProps {
 export function MissionSection({ dict }: MissionProps) {
   return (
     <section>
-      <div className="bg-gradient-to-b from-[#1C012B] via-black to-[#5B0B8D] text-white px-6 py-24 md:px-20">
+      <div className="bg-gradient-to-t from-[#1C012B] via-black to-[#5b0b8dad] text-white px-6 py-24 md:px-20 ">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
           {dict.title}
         </h2>
