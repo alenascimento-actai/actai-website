@@ -91,7 +91,8 @@
   "about": "About Us",
   "followUs": "Follow Us",
   "description": "shortly",
-  "linkForFounding": "founders"
+  "linkForFounding": "founders",
+  "linkForMission": "mission"
   },
   "founders": {
     "sectionTitle": "Meet the founders driving innovation and impact with applied AI.",
@@ -105,5 +106,13 @@
       "title": "Co-Founder",
       "bio": "20+ years in VC and PE. Raised over US$380 million, led 27 investments and 14 exits achieving an average annual return of 30.3% and a multiple of over 4x CoC. Co-founder and CEO of Henkan Investimentos Ltda. Founder of Brazil’s largest B2B tech investment firm, Invest Tech. Current Chairman of Quality Digital and Board Member at SkyOne. Held senior positions at Latinvest, Lloyds Bank, and Banco Itaú. BA from Fundação Getulio Vargas (FGV)."
     }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "We accelerate the adoption of AI tools in Emerging Markets and underserved Developed Markets by delivering tailored, real-world solutions.",
+    "problemTitle": "Problem We Are Solving",
+    "problemText": "Emerging Markets often fall 2 to 4 years behind in adopting new technologies. This gap is even more critical in AI, where most models are trained on data from mainstream languages and environments, leaving entire regions underrepresented.",
+    "differenceTitle": "How We Are Different",
+    "differenceText": "ACT.AI focuses on adapting AI to local realities — from language and infrastructure to business needs. We provide high-quality labeled data, train models in underrepresented languages, and develop scalable B2B applications for regions often overlooked."
   }
 }

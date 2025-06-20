@@ -13,6 +13,7 @@ interface FooterProps {
       followUs: string;
       description: string;
       linkForFounding: string;
+      linkForMission: string;
     };
   };
 }
@@ -47,8 +48,8 @@ export const Footer = ({ dict }: FooterProps) => {
         </div>
         <div className="col-span-1">
           <h4 className="font-semibold mb-2">{dict.footer.about}</h4>
-          <Link href={"/"} className="text-sm text-white/70">
-            {dict.footer.description}
+          <Link href={"/mission"} className="text-sm text-white/70">
+            {dict.footer.linkForMission}
           </Link>
         </div>
 

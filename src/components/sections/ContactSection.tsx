@@ -1,9 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-interface ContactSectionProps {
-  dict: {
+export function ContactSection() {
+  const params = useParams();
+  const lang = Array.isArray(params?.lang)
+    ? params.lang[0]
+    : params?.lang || "en";
+
+  const [dict, setDict] = useState<{
     subtitle: string;
     title: string;
     form: {
@@ -13,16 +20,20 @@ interface ContactSectionProps {
       message: string;
       button: string;
     };
-  };
-}
+  } | null>(null);
 
-export function ContactSection({ dict }: ContactSectionProps) {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+
+  useEffect(() => {
+    getDictionary(lang).then((d) => setDict(d.contact));
+  }, [lang]);
+
+  if (!dict) return null;
 
   return (
     <section className="bg-black text-white py-20 bg-[url('/images/contact-background.png')] bg-no-repeat bg-cover px-8 md:px-24">

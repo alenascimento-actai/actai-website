@@ -29,7 +29,7 @@ export default async function Page({
 
       <CaseStudyChart dict={dict.caseStudy} />
 
-      <ContactSection dict={dict.contact} />
+      <ContactSection />
     </main>
   );
 }
