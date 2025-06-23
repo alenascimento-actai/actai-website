@@ -39,7 +39,6 @@
    "items": [
     {
       "title": "Saúde",
-      "icon": "plus",
       "description": [
         "harmonizar padrões de produtos e serviços;",
         "otimizar preços e custos, reduzindo a assimetria de informação do setor;",
@@ -49,7 +48,6 @@
     },
     {
       "title": "Serviços Financeiros",
-      "icon": "dollar",
       "description": [
         "melhorar a avaliação e gestão de riscos;",
         "entregar insights personalizados aos clientes;",
@@ -59,7 +57,6 @@
     },
     {
       "title": "Serviços Jurídicos",
-      "icon": "hashtag",
       "description": [
         "automatizar a revisão de documentos;",
         "acelerar a pesquisa jurídica;",

@@ -14,18 +14,14 @@ export function ContactSection() {
     subtitle: string;
     title: string;
     form: {
-      name: string;
       email: string;
-      phone: string;
       message: string;
       button: string;
     };
   } | null>(null);
 
   const [form, setForm] = useState({
-    name: "",
     email: "",
-    phone: "",
     message: "",
   });
 
@@ -43,34 +39,14 @@ export function ContactSection() {
         </p>
         <h2 className="text-3xl font-bold mb-10">{dict.subtitle}</h2>
 
-        <form className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-          <div className="flex flex-col col-span-1">
-            <label className="mb-1 text-sm">{dict.form.name}</label>
-            <input
-              type="text"
-              className="bg-transparent border-b border-white/40 py-2 outline-none"
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-            />
-          </div>
-
+        <form className="flex flex-col gap-6 text-left">
           <div className="flex flex-col col-span-1">
             <label className="mb-1 text-sm">{dict.form.email}</label>
             <input
               type="email"
-              className="bg-transparent border-b border-white/40 py-2 outline-none"
+              className="bg-transparent border-b border-white/40 py-2 outline-none w-full"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-            />
-          </div>
-
-          <div className="flex flex-col col-span-1">
-            <label className="mb-1 text-sm">{dict.form.phone}</label>
-            <input
-              type="text"
-              className="bg-transparent border-b border-white/40 py-2 outline-none"
-              value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
             />
           </div>
 

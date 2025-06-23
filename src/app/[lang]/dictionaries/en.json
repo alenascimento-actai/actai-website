@@ -32,14 +32,12 @@
   "focusedSectors": {
     "sectionTitle": "Focused Sectors",
     "sectionSubtitle": "Where our AI creates impact",
-    "button": "What Drives Us",
     "platformHelpHealthCare": "ACT-AI HC platform can help clients:",
     "platformHelpFinancialServices": "ACT-AI FS platform can help clients:",
     "platformHelpLegalServices": "ACT-AI LS platform can help clients:",
     "items": [
       {
         "title": "Health Care",
-        "icon": "plus",
         "description": [
           "harmonize standards for products and services;",
           "optimize prices and costs, reducing industry information asymmetry;",
@@ -49,7 +47,6 @@
       },
       {
         "title": "Financial Services",
-        "icon": "dollar",
         "description":[
           "improve risk assessment and management;",
           "deliver personalized customer insights;",
@@ -59,7 +56,6 @@
       },
       {
         "title": "Legal Services",
-        "icon": "hashtag",
         "description": [
           "Automate document review;",
           "Accelerate legal research;",
