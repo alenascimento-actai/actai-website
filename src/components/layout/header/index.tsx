@@ -28,8 +28,6 @@ export function Header({ dict, lang }: NavProps) {
     ? "pt-br"
     : lang;
 
-  const otherLang = currentLang === "pt-br" ? "en" : "pt-br";
-
   return (
     <header className="w-full bg-black py-4 flex items-center justify-between px-8 md:px-24">
       {/* Logo */}
@@ -37,56 +35,64 @@ export function Header({ dict, lang }: NavProps) {
         <Image src={Logo} alt="ACT.AI Logo" width={100} height={24} />
       </Link>
 
-      {/* Navegação */}
-      <nav className="flex gap-6 text-sm text-white items-center">
-        <Link href={`/${lang}`} className="hover:text-gray-300">
-          {dict.nav.home}
-        </Link>
-        <Link href={`/${lang}/founding-team`} className="hover:text-gray-300">
-          {dict.nav.foundingTeam}
-        </Link>
-        <Link href={`/${lang}/about`} className="hover:text-gray-300">
-          {dict.nav.about}
-        </Link>
-      </nav>
-
-      {/* Botão + Idiomas */}
-      <div className="flex items-center gap-4">
-        <Link
-          href={`/${lang}#contact`}
-          className="bg-white text-black px-4 py-2 rounded-xl text-sm font-medium hover:brightness-105 transition"
-        >
-          Let’s Talk
-        </Link>
-
-        {/* Bandeiras */}
-        {otherLang === "en" ? (
+      <div className="flex items-center gap-12">
+        <nav className="flex gap-6 text-sm text-white items-center">
           <Link
-            href={pathname.replace(`/${currentLang}`, "/en")}
-            aria-label="Mudar para inglês"
+            href={`/${lang}`}
+            className={`${pathname === `/${lang}` ? "font-bold" : ""}`}
           >
-            <Image
-              src={FlagEs}
-              alt="Español"
-              width={20}
-              height={20}
-              className="rounded-full"
-            />
+            {dict.nav.home}
           </Link>
-        ) : (
           <Link
-            href={pathname.replace(`/${currentLang}`, "/pt-br")}
-            aria-label="Mudar para português"
+            href={`/${lang}/founders`}
+            className={`${pathname === `/${lang}/founders` ? "font-bold" : ""}`}
           >
-            <Image
-              src={FlagBr}
-              alt="Português"
-              width={20}
-              height={20}
-              className="rounded-full"
-            />
+            {dict.nav.foundingTeam}
           </Link>
-        )}
+          <Link
+            href={`/${lang}/about`}
+            className={`${pathname === `/${lang}/about` ? "font-bold" : ""}`}
+          >
+            {dict.nav.about}
+          </Link>
+        </nav>
+
+        <div className="flex items-center gap-12">
+          <Link
+            href={`/${lang}#contact`}
+            className="bg-white text-black px-11 py-3.5 rounded-xl text-sm font-medium hover:brightness-105 transition"
+          >
+            Let’s Talk
+          </Link>
+
+          <div className="flex items-center gap-5">
+            <Link
+              href={pathname.replace(`/${currentLang}`, "/en")}
+              aria-label="Mudar para inglês"
+            >
+              <Image
+                src={FlagEs}
+                alt="Español"
+                width={20}
+                height={20}
+                className="rounded-full"
+              />
+            </Link>
+
+            <Link
+              href={pathname.replace(`/${currentLang}`, "/pt-br")}
+              aria-label="Mudar para português"
+            >
+              <Image
+                src={FlagBr}
+                alt="Português"
+                width={20}
+                height={20}
+                className="rounded-full"
+              />
+            </Link>
+          </div>
+        </div>
       </div>
     </header>
   );

@@ -15,7 +15,7 @@ export function Hero({ title, buttonLabel }: HeroProps) {
         </h1>
         <a
           href="#"
-          className="inline-block bg-white text-black px-12 py-4 rounded-2xl font-medium text-sm hover:brightness-105 transition"
+          className="inline-block bg-white text-black px-12 py-4 rounded-2xl font-medium text-sm hover:brightness-105 hover:opacity-90 transition"
         >
           {buttonLabel}
         </a>
