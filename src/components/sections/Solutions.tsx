@@ -24,7 +24,7 @@ export function Solutions({ title, subtitle, items }: SolutionsProps) {
   };
   return (
     <section className="bg-black text-white py-24 px-8 md:px-24">
-      <div className="max-w-6xl mx-auto text-center mb-16">
+      <div className="max-w-6xl mx-auto text-center lg:text-start mb-16">
         <p className="uppercase text-sm tracking-widest text-white/60">
           {subtitle}
         </p>
