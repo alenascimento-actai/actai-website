@@ -7,7 +7,6 @@ import Image from "next/image";
 
 interface SectorItem {
   title: string;
-  icon: React.ReactNode;
   description?: string[] | null;
 }
 
@@ -15,13 +14,11 @@ interface FocusedSectorsSectionProps {
   dict: {
     sectionTitle: string;
     sectionSubtitle: string;
-    button: string;
     platformHelpHealthCare: string;
     platformHelpFinancialServices: string;
     platformHelpLegalServices: string;
     items: {
       title: string;
-      icon: string;
       description?: string[] | null;
     }[];
   };
@@ -30,26 +27,14 @@ interface FocusedSectorsSectionProps {
 export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(2); // "Legal Services" aberto por padrão
 
-  const sectors: SectorItem[] = dict.items.map((item, index) => ({
+  const sectors: SectorItem[] = dict.items.map((item) => ({
     title: item.title,
     description: item.description,
-    icon: (
-      <span
-        className={cn(
-          "text-xl",
-          index === 0 && "text-cyan-400",
-          index === 1 && "text-orange-400",
-          index === 2 && "text-purple-400"
-        )}
-      >
-        [+]
-      </span>
-    ),
   }));
 
   return (
     <section className="w-full bg-black py-16 md:py-24 text-white relative bg-[url('/images/sectors.png')] bg-no-repeat bg-cover px-8 md:px-24">
-      <div className="w-full flex items-start flex-col gap-10 lg:gap-0 lg:flex-row md:justify-between md:px-[74px]">
+      <div className="w-full flex items-start flex-col gap-10 lg:gap-0 lg:flex-row md:justify-between">
         <Image
           src="/images/sectors-user.png"
           width={507}
@@ -82,7 +67,32 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
                     className="flex justify-between items-center w-full"
                   >
                     <div className="flex items-center gap-2 text-left">
-                      <div>{sector.icon}</div>
+                      <div>
+                        {idx === 0 && (
+                          <Image
+                            src="/svg/soluctions/medical.svg"
+                            alt="Health Care"
+                            width={59}
+                            height={60}
+                          />
+                        )}
+                        {idx === 1 && (
+                          <Image
+                            src="/svg/soluctions/finance.svg"
+                            alt="Financial Services"
+                            width={59}
+                            height={60}
+                          />
+                        )}
+                        {idx === 2 && (
+                          <Image
+                            src="/svg/soluctions/legalServices.svg"
+                            alt="Legal Services"
+                            width={59}
+                            height={60}
+                          />
+                        )}
+                      </div>
                       <span className="font-semibold text-base">
                         {sector.title}
                       </span>
@@ -109,11 +119,6 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
             })}
           </div>
         </div>
-      </div>
-      <div className="mt-8 text-center lg:mt-20 w-full">
-        <button className="border border-white rounded-xl px-6 py-2 hover:bg-white hover:text-black transition">
-          {dict.button}
-        </button>
       </div>
     </section>
   );

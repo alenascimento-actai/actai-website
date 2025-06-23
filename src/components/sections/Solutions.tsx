@@ -24,14 +24,14 @@ export function Solutions({ title, subtitle, items }: SolutionsProps) {
   };
   return (
     <section className="bg-black text-white py-24 px-8 md:px-24">
-      <div className="max-w-6xl mx-auto text-center lg:text-start mb-16">
+      <div className="text-center lg:text-start mb-16">
         <p className="uppercase text-sm tracking-widest text-white/60">
           {subtitle}
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mt-2">{title}</h2>
       </div>
 
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
         {items.map((item, idx) => (
           <SolutionCard
             key={idx}

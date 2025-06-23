@@ -34,24 +34,16 @@ export const Footer = ({ dict }: FooterProps) => {
         </div>
 
         {/* Links */}
-        <div className="col-span-1">
-          <h4 className="font-semibold mb-2">{dict.footer.home}</h4>
-          <Link href={"/"} className="text-sm text-white/70">
-            {dict.footer.description}
-          </Link>
-        </div>
-        <div className="col-span-1">
-          <h4 className="font-semibold mb-2">{dict.footer.foundingTeam}</h4>
-          <Link href={"/founders"} className="text-sm text-white/70">
-            {dict.footer.linkForFounding}
-          </Link>
-        </div>
-        <div className="col-span-1">
-          <h4 className="font-semibold mb-2">{dict.footer.about}</h4>
-          <Link href={"/mission"} className="text-sm text-white/70">
-            {dict.footer.linkForMission}
-          </Link>
-        </div>
+
+        <Link href={"/"} className="font-semibold text-sm text-white">
+          <h4>{dict.footer.home}</h4>
+        </Link>
+        <Link href={"/founders"} className="font-semibold text-sm text-white">
+          <h4>{dict.footer.foundingTeam}</h4>
+        </Link>
+        <Link href={"/mission"} className="font-semibold text-sm text-white">
+          <h4>{dict.footer.about}</h4>
+        </Link>
 
         {/* Redes Sociais */}
         <div className="col-span-1">
