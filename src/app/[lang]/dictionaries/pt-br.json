@@ -14,17 +14,17 @@
     "items": [
       {
         "title": "Calibração e Ajuste Fino de Modelos",
-        "description": "A ACT-AI constrói modelos de IA especializados para o seu negócio, adaptando estratégias e estruturas híbridas para cada caso.",
+        "description": "Modelos de IA especializados são criados para o seu negócio, adaptando estratégias de modelos e estruturas híbridas para cada caso de negócio",
         "icon": "gear"
       },
       {
         "title": "Desenvolvimento de Grafos de Conhecimento",
-        "description": "A ACT-AI cria grafos de conhecimento específicos por setor que classificam e mapeiam conceitos-chave e suas relações, permitindo saídas de IA mais precisas e rastreáveis.",
+        "description": "Dados de treinamento de modelos de alta qualidade, específicos do setor e do idioma, são criados por meio de validação de especialistas nativos e rigoroso controle de qualidade de rotulagem",
         "icon": "graph"
       },
       {
         "title": "Rotulagem e Anotação de Dados",
-        "description": "A ACT-AI produz dados de treinamento de alta qualidade validados por especialistas nativos e com controle rigoroso de qualidade.",
+        "description": "Dados de treinamento de modelos de alta qualidade, específicos do setor e do idioma, são criados por meio de validação de especialistas nativos e controle rigoroso de qualidade de rotulagem",
         "icon": "bulb"
       }
     ]

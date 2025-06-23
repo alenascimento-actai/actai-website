@@ -14,17 +14,17 @@
     "items": [
       {
         "title": "Model Calibration and Fine Tuning",
-        "description": "ACT-AI builds specialized AI models for your business, tailoring model strategy and hybrid structures for each business case.",
+        "description": "Specialized AI models are built for your business, tailoring model strategy and hybrid structures for each business case",
         "icon": "gear"
       },
       {
         "title": "Knowledge Graph Development",
-        "description": "ACT-AI creates industry/area specific knowledge graphs that classify and map key concepts and their relationships, enabling traceable, bound and more accurate AI model outputs.",
+        "description": "Industry specific knowledge graphs are created to classify and map key concepts and their relationships, enabling traceable, bound and more accurate AI model outputs",
         "icon": "graph"
       },
       {
         "title": "Data Labelling and Annotation",
-        "description": "ACT-AI produces high-quality model training data that are sector and language specific through native speaker expert validation and strict labelling quality control.",
+        "description": "High-quality model training data that is sector and language specific are created though native speaker expert validation and strict labelling quality control",
         "icon": "bulb"
       }
     ]
