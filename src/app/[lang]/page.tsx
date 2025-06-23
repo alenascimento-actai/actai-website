@@ -15,11 +15,7 @@ export default async function Page({
 
   return (
     <main>
-      <Hero
-        title={dict.hero.title}
-        description={dict.hero.description}
-        buttonLabel={dict.hero.button}
-      />
+      <Hero title={dict.hero.title} buttonLabel={dict.hero.button} />
       <Solutions
         subtitle={dict.solutions.subtitle}
         title={dict.solutions.title}
