@@ -50,7 +50,7 @@ export function Header({ dict, lang }: NavProps) {
             {dict.nav.foundingTeam}
           </Link>
           <Link
-            href={`/${lang}/about`}
+            href={`/${lang}/mission`}
             className={`${pathname === `/${lang}/about` ? "font-bold" : ""}`}
           >
             {dict.nav.about}
@@ -59,7 +59,8 @@ export function Header({ dict, lang }: NavProps) {
 
         <div className="flex items-center gap-12">
           <Link
-            href={`/${lang}#contact`}
+            href="#contact"
+            scroll={true}
             className="bg-white text-black px-11 py-3.5 rounded-xl text-sm font-medium hover:brightness-105 transition hover:opacity-90"
           >
             Let’s Talk

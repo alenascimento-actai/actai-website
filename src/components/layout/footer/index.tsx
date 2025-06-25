@@ -49,7 +49,7 @@ export const Footer = ({ dict }: FooterProps) => {
         <div className="col-span-1">
           <h4 className="font-semibold mb-2">{dict.footer.followUs}</h4>
           <Link
-            href="https://www.linkedin.com/company/actai"
+            href="https://www.linkedin.com/company/act-on-ai"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block"

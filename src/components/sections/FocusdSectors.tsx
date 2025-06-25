@@ -25,7 +25,7 @@ interface FocusedSectorsSectionProps {
 }
 
 export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(2); // "Legal Services" aberto por padrão
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // "Legal Services" aberto por padrão
 
   const sectors: SectorItem[] = dict.items.map((item) => ({
     title: item.title,

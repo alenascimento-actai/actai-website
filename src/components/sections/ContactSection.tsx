@@ -1,8 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { useParams } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+
+interface SendMailProps {
+  data: {
+    response: string;
+  };
+}
 
 export function ContactSection() {
   const params = useParams();
@@ -25,21 +31,58 @@ export function ContactSection() {
     message: "",
   });
 
+  const [status, setStatus] = useState({
+    sended: false,
+    error: false,
+  });
+
   useEffect(() => {
     getDictionary(lang).then((d) => setDict(d.contact));
   }, [lang]);
 
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_HOST_LOCAL}/api/sendEmailContact`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+        cache: "no-store",
+      }
+    );
+
+    const resJson: SendMailProps = await res.json();
+
+    if (resJson?.data?.response?.includes("2.0.0 OK")) {
+      setStatus({ sended: true, error: false });
+      setForm({ email: "", message: "" });
+    } else {
+      setStatus({ sended: false, error: true });
+    }
+  }
+
   if (!dict) return null;
 
   return (
-    <section className="bg-black text-white py-20 bg-[url('/images/contact-background.png')] bg-no-repeat bg-cover px-8 md:px-24">
-      <div className=" mx-auto text-center">
+    <section
+      className="bg-black text-white py-20 bg-[url('/images/contact-background.png')] bg-no-repeat bg-cover px-8 md:px-24"
+      id="contact"
+    >
+      <div className="text-center">
         <p className="uppercase text-sm tracking-widest text-white/60 mb-3">
           {dict.title}
         </p>
         <h2 className="text-3xl font-bold mb-10">{dict.subtitle}</h2>
+      </div>
 
-        <form className="flex flex-col gap-6 text-left">
+      {status.sended ? (
+        <p className="text-green-400 font-medium">
+          Mensagem enviada com sucesso. Verifique seu e-mail!
+        </p>
+      ) : (
+        <form className="flex flex-col gap-6 text-left" onSubmit={handleSubmit}>
           <div className="flex flex-col col-span-1">
             <label className="mb-1 text-sm">{dict.form.email}</label>
             <input
@@ -47,6 +90,7 @@ export function ContactSection() {
               className="bg-transparent border-b border-white/40 py-2 outline-none w-full"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
+              required
             />
           </div>
 
@@ -56,6 +100,7 @@ export function ContactSection() {
               className="bg-transparent border-b border-white/40 py-2 outline-none min-h-[100px]"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
+              required
             />
           </div>
 
@@ -67,9 +112,14 @@ export function ContactSection() {
               {dict.form.button}
               <span>→</span>
             </button>
+            {status.error && (
+              <p className="text-red-500 mt-2">
+                Erro ao enviar a mensagem. Tente novamente.
+              </p>
+            )}
           </div>
         </form>
-      </div>
+      )}
     </section>
   );
 }

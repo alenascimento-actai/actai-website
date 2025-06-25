@@ -96,21 +96,21 @@
     "marco": {
       "name": "Marco Spinelli",
       "title": "Co-Fundador e CEO",
-      "bio": "Mais de 25 anos de liderança global, gestão sênior e desenvolvimento de produtos em serviços financeiros, incluindo aplicações de IA/LLM premiadas no setor, estratégia de dados e transformação digital. Ocupou cargos de liderança na McKinsey & Co, Morgan Stanley, UBS e Bridgewater. Histórico comprovado na construção e expansão de grandes organizações complexas, supervisionando equipes globais com mais de 800 profissionais. Assessorou CEOs da Fortune 500, banqueiros centrais e líderes de gestão de investimentos em inovação e estratégia de IA. MBA pela Wharton e bacharelado/mestrado em Engenharia Elétrica pela Universidade de São Paulo."
+      "bio": "Mais de 25 anos de liderança global, gestão sênior e desenvolvimento de produtos em serviços financeiros, lançando aplicações de IA/LLM premiadas no setor, estratégia de dados e transformação digital. Ocupou cargos de liderança na McKinsey & Co, Morgan Stanley, UBS e Bridgewater. Histórico comprovado na construção e expansão de grandes organizações complexas, supervisionando equipes globais com mais de 800 profissionais. Assessorou CEOs da Fortune 500, banqueiros centrais e líderes de gestão de investimentos em inovação e estratégia de IA. MBA pela Wharton e bacharelado/mestrado em Engenharia Elétrica pela Universidade de São Paulo"
     },
     "mauricio": {
       "name": "Maurício Lima",
       "title": "Co-Fundador",
-      "bio": "Mais de 20 anos em VC e PE. Captou mais de US$ 380 milhões, liderou 27 investimentos e 14 saídas, alcançando um retorno médio anual de 30,3% e um múltiplo de mais de 4x o CoC. Cofundador e CEO da Henkan Investimentos Ltda. Fundador da maior empresa de investimentos B2B em tecnologia do Brasil, a Invest Tech. Atual presidente da Quality Digital e membro do conselho da SkyOne. Ocupou cargos de liderança na Latinvest, Lloyds Bank e Banco Itaú. Bacharel pela Fundação Getulio Vargas (FGV)."
+      "bio": "Mais de 20 anos em VC e PE. Captou mais de US$ 380 milhões, liderou 27 investimentos e 14 saídas, alcançando um retorno médio anual de 30,3% e um múltiplo de mais de 4x o CoC. Cofundador e CEO da Henkan Investimentos Ltda. Fundador da maior empresa de investimentos B2B em tecnologia do Brasil, a Invest Tech. Atual presidente da Quality Digital e membro do conselho da SkyOne. Ocupou cargos de liderança na Latinvest, Lloyds Bank e Banco Itaú. Bacharel pela Fundação Getulio Vargas (FGV)"
     }
   },
   "mission": {
     "title": "Nossa Missão",
     "description": "Aceleramos a adoção de ferramentas de IA em Mercados Emergentes e Mercados Desenvolvidos subatendidos, oferecendo soluções reais e sob medida.",
     "problemTitle": "O Problema que Estamos Resolvendo",
-    "problemText": "Mercados emergentes frequentemente ficam de 2 a 4 anos atrás na adoção de novas tecnologias. Essa lacuna é ainda mais crítica na IA, onde a maioria dos modelos é treinada com dados de idiomas e ambientes predominantes, deixando regiões inteiras sub-representadas.",
+    "problemText": "A maioria dos modelos de IA pré-treinados evolui a partir de dados de contexto/idioma inglês, deixando regiões inteiras sub-representadas. Isso é particularmente grave em setores especializados e altamente regulamentados, como Finanças, Saúde e Jurídico",
     "differenceTitle": "Como Somos Diferentes",
-    "differenceText": "A ACT.AI foca em adaptar a IA às realidades locais — desde idioma e infraestrutura até as necessidades do negócio. Fornecemos dados rotulados de alta qualidade, treinamos modelos em idiomas sub-representados e desenvolvemos aplicações B2B escaláveis para regiões muitas vezes negligenciadas."
+    "differenceText": "A ACT.AI se concentra em adaptar a IA às realidades locais — desde o idioma e a infraestrutura até as necessidades comerciais. Fornecemos dados rotulados de alta qualidade, treinamos modelos em idiomas sub-representados e desenvolvemos aplicativos B2B escaláveis ​​para regiões frequentemente negligenciadas."
   }
 
 }

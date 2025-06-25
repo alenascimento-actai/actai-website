@@ -15,7 +15,7 @@ export const FounderCard = ({
 }: FounderCardProps) => {
   return (
     <div className="p-6 rounded-2xl flex flex-col md:flex-row gap-16 items-center w-full backdrop-blur-sm bg-white/20">
-      <div className="w-full min-w-[272px] h-[334px] aspect-square overflow-hidden rounded-xl bg-gray-700">
+      <div className="w-[272px] min-w-[272px] h-[334px] aspect-square overflow-hidden rounded-xl bg-gray-700">
         <Image
           src={imageSrc}
           alt={name}
