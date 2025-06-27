@@ -68,14 +68,14 @@ export function ContactSection() {
 
   return (
     <section
-      className="bg-black text-white py-20 bg-[url('/images/contact-background.png')] bg-no-repeat bg-cover px-8 md:px-24"
+      className="bg-black text-white py-20 bg-[url('/images/contact-background.png')] bg-no-repeat bg-cover px-8 md:px-24 space-y-5"
       id="contact"
     >
-      <div className="text-center">
-        <p className="uppercase text-sm tracking-widest text-white/60 mb-3">
+      <div className="text-center space-y-5">
+        <h4 className="uppercase text-[22px] tracking-[6px] text-[#B6B6B6]">
           {dict.title}
-        </p>
-        <h2 className="text-3xl font-bold mb-10">{dict.subtitle}</h2>
+        </h4>
+        <h2 className="text-4xl md:text-5xl font-bold">{dict.subtitle}</h2>
       </div>
       {/* 
       {status.sended ? (

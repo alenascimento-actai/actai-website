@@ -15,43 +15,43 @@ interface MissionProps {
 export function MissionSection({ dict }: MissionProps) {
   return (
     <section>
-      <div className="bg-gradient-to-t from-[#1C012B] via-black to-[#5b0b8dad] text-white px-6 py-24 md:px-20 ">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-          {dict.title}
-        </h2>
-        <p className="text-center text-white/80 max-w-3xl mx-auto mb-16 text-sm md:text-base">
-          {dict.description}
-        </p>
+      <div className="bg-[url('/images/background-mission.png')] bg-no-repeat bg-center bg-cover text-white px-6 py-26 md:px-20 space-y-20">
+        <div className="space-y-5">
+          <h2 className="text-4xl md:text-5xl font-bold text-center">
+            {dict.title}
+          </h2>
+          <p className="text-center text-white/80 max-w-3xl mx-auto text-base">
+            {dict.description}
+          </p>
+        </div>
 
         <div className="flex flex-col lg:flex-row justify-center gap-16 lg:gap-36 w-full">
-          <div className="flex gap-4 items-start max-w-[459px]">
-            <Image
-              src="/svg/icon-problem.svg"
-              alt="Problem"
-              width={64}
-              height={64}
-            />
-            <div>
-              <h3 className="font-semibold text-lg mb-2">
-                {dict.problemTitle}
-              </h3>
-              <p className="text-sm text-white/80">{dict.problemText}</p>
+          <div className="space-y-5 w-2/5">
+            <div className="flex gap-4 items-center">
+              <Image
+                src="/svg/icon-problem.svg"
+                alt="Problem"
+                width={64}
+                height={64}
+              />
+
+              <h3 className="font-semibold text-2xl">{dict.problemTitle}</h3>
             </div>
+            <p className="text-sm text-white/80">{dict.problemText}</p>
           </div>
 
-          <div className="flex gap-4 items-start max-w-[459px]">
-            <Image
-              src="/svg/icon-difference.svg"
-              alt="Difference"
-              width={64}
-              height={64}
-            />
-            <div>
-              <h3 className="font-semibold text-lg mb-2">
-                {dict.differenceTitle}
-              </h3>
-              <p className="text-sm text-white/80">{dict.differenceText}</p>
+          <div className="space-y-5 w-2/5">
+            <div className="flex gap-4 items-center">
+              <Image
+                src="/svg/icon-difference.svg"
+                alt="Difference"
+                width={64}
+                height={64}
+              />
+
+              <h3 className="font-semibold text-2xl">{dict.differenceTitle}</h3>
             </div>
+            <p className="text-sm text-white/80">{dict.differenceText}</p>
           </div>
         </div>
       </div>

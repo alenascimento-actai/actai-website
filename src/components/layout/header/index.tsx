@@ -29,13 +29,13 @@ export function Header({ dict, lang }: NavProps) {
     : lang;
 
   return (
-    <header className="w-full bg-black py-4 flex items-center justify-between px-8 md:px-24">
+    <header className="w-full bg-black py-4 flex items-center justify-between flex-wrap px-8 md:px-24 font-sans gap-5 md:gap-0">
       {/* Logo */}
       <Link href={`/${lang}`} className="text-white font-bold text-lg">
         <Image src={Logo} alt="ACT.AI Logo" width={100} height={24} />
       </Link>
 
-      <div className="flex items-center gap-12">
+      <div className="flex items-center gap-5 md:gap-12 flex-wrap">
         <nav className="flex gap-6 text-sm text-white items-center">
           <Link
             href={`/${lang}`}

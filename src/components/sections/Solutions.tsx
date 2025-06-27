@@ -25,10 +25,10 @@ export function Solutions({ title, subtitle, items }: SolutionsProps) {
   return (
     <section className="bg-black text-white py-24 px-8 md:px-24">
       <div className="text-center lg:text-start mb-16">
-        <p className="uppercase text-sm tracking-widest text-white/60">
+        <h3 className="uppercase text-[22px] text-white/60 tracking-[6px]">
           {subtitle}
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2">{title}</h2>
+        </h3>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">{title}</h2>
       </div>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-3">

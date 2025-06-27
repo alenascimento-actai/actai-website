@@ -24,13 +24,15 @@ export const Footer = ({ dict }: FooterProps) => {
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
         {/* Logo */}
         <div className="col-span-1 flex items-start">
-          <Image
-            src={Logo}
-            alt="ACT.AI Logo"
-            width={100}
-            height={24}
-            className="w-auto h-6"
-          />
+          <Link href={"/"}>
+            <Image
+              src={Logo}
+              alt="ACT.AI Logo"
+              width={100}
+              height={24}
+              className="w-auto h-6"
+            />
+          </Link>
         </div>
 
         {/* Links */}
