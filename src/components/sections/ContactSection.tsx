@@ -3,6 +3,7 @@
 import { useState, useEffect, FormEvent } from "react";
 import { useParams } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import Link from "next/link";
 
 interface SendMailProps {
   data: {
@@ -76,7 +77,7 @@ export function ContactSection() {
         </p>
         <h2 className="text-3xl font-bold mb-10">{dict.subtitle}</h2>
       </div>
-
+      {/* 
       {status.sended ? (
         <p className="text-green-400 font-medium">
           Mensagem enviada com sucesso. Verifique seu e-mail!
@@ -119,7 +120,13 @@ export function ContactSection() {
             )}
           </div>
         </form>
-      )}
+      )} */}
+      <Link
+        href="mailto:contato@act.ai"
+        className="bg-white text-black font-medium px-6 py-3 rounded-xl hover:brightness-90 transition flex items-center justify-center gap-2 mx-auto w-1/5"
+      >
+        {dict.form.button}
+      </Link>
     </section>
   );
 }
