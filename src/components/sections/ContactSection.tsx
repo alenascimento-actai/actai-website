@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import Link from "next/link";
 
-interface SendMailProps {
-  data: {
-    response: string;
-  };
-}
+// interface SendMailProps {
+//   data: {
+//     response: string;
+//   };
+// }
 
 export function ContactSection() {
   const params = useParams();
@@ -27,42 +27,42 @@ export function ContactSection() {
     };
   } | null>(null);
 
-  const [form, setForm] = useState({
-    email: "",
-    message: "",
-  });
+  // const [form, setForm] = useState({
+  //   email: "",
+  //   message: "",
+  // });
 
-  const [status, setStatus] = useState({
-    sended: false,
-    error: false,
-  });
+  // const [status, setStatus] = useState({
+  //   sended: false,
+  //   error: false,
+  // });
 
   useEffect(() => {
     getDictionary(lang).then((d) => setDict(d.contact));
   }, [lang]);
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  // async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  //   e.preventDefault();
 
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_HOST_LOCAL}/api/sendEmailContact`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-        cache: "no-store",
-      }
-    );
+  //   const res = await fetch(
+  //     `${process.env.NEXT_PUBLIC_HOST_LOCAL}/api/sendEmailContact`,
+  //     {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(form),
+  //       cache: "no-store",
+  //     }
+  //   );
 
-    const resJson: SendMailProps = await res.json();
+  //   const resJson: SendMailProps = await res.json();
 
-    if (resJson?.data?.response?.includes("2.0.0 OK")) {
-      setStatus({ sended: true, error: false });
-      setForm({ email: "", message: "" });
-    } else {
-      setStatus({ sended: false, error: true });
-    }
-  }
+  //   if (resJson?.data?.response?.includes("2.0.0 OK")) {
+  //     setStatus({ sended: true, error: false });
+  //     setForm({ email: "", message: "" });
+  //   } else {
+  //     setStatus({ sended: false, error: true });
+  //   }
+  // }
 
   if (!dict) return null;
 
