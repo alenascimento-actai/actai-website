@@ -15,7 +15,8 @@ export function Hero({ title, buttonLabel }: HeroProps) {
           {title}
         </h1>
         <Link
-          href="#"
+          href="#works"
+          scroll={true}
           className="inline-block bg-white text-black px-12 py-4 rounded-2xl font-medium text-xl hover:brightness-105 hover:opacity-90 transition"
         >
           {buttonLabel}
