@@ -121,7 +121,7 @@ export function ContactSection() {
           </div>
         </form>
       )} */}
-      <p className="text-3xl font-bold mb-10 text-center">contato@act.ai</p>
+      <p className="text-3xl font-bold mb-10 text-center">contato@actai.ai</p>
       {/* <Link
         href="mailto:contato@act.ai"
         className="bg-white text-black font-medium px-6 py-3 rounded-xl hover:brightness-90 transition flex items-center justify-center gap-2 mx-auto w-1/5"
