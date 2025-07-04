@@ -37,7 +37,9 @@ export function Header({ dict, lang }: NavProps) {
 
   return (
     <header
-      className={`w-full bg-black py-4 flex items-center   justify-between flex-wrap px-8 md:px-24 font-sans gap-5 md:gap-0`}
+      className={`w-full bg-black py-4 flex items-center  ${
+        pathname === `/${lang}` ? "justify-end" : "justify-between"
+      } flex-wrap px-8 md:px-24 font-sans gap-5 md:gap-0`}
     >
       <Link
         href={`/${lang}`}

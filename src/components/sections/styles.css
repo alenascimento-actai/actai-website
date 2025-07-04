@@ -1,12 +1,33 @@
 .bluerbackground {
-  filter: blur(104.5px);
-   -webkit-filter: blur(104.5px);
    background: radial-gradient(circle at center, #d7f3ff 0%, #005bbf 100%);
+  backdrop-filter: blur(104.5px);
+  -webkit-backdrop-filter: blur(104.5px);
   width: 322px;
   height: 219px;
   position: absolute;
   top: 170px;
   left: calc(50% - 161px);
+}
+
+.section-card {
+  background: linear-gradient(
+      to bottom right,
+      rgba(59, 21, 84, 0.6),
+      rgba(27, 16, 43, 0.7)
+    ),
+    rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-home {
+  background: linear-gradient(to right, #999999, #cccccc, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 780px) {

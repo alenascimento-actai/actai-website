@@ -17,7 +17,7 @@ export function Hero({ title, buttonLabel }: HeroProps) {
           height={54}
           className="max-[1024px]:mx-auto"
         />
-        <h1 className="text-2xl lg:text-5xl font-extrabold leading-tight mb-14 mt-6 bg-gradient-to-r from-[#999999] via-[#CCCCCC] to-[#FFFFFF] bg-clip-text text-transparent font-title">
+        <h1 className="text-2xl lg:text-5xl font-extrabold leading-tight mb-14 mt-6 text-home text-transparent font-title">
           {title}
         </h1>
         <Link

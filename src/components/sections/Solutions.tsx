@@ -1,8 +1,5 @@
 import { ReactNode } from "react";
 import { SolutionCard } from "../layout/SoluctionCard";
-import { GearIcon } from "../Icons/GearIcon";
-import { GraphIcon } from "../Icons/GraphIcon";
-import { BulbIcon } from "../Icons/BulbIcon";
 
 interface SolutionItem {
   title: string;
@@ -18,9 +15,9 @@ interface SolutionsProps {
 
 export function Solutions({ title, subtitle, items }: SolutionsProps) {
   const iconMap = {
-    gear: <GearIcon />,
-    graph: <GraphIcon />,
-    bulb: <BulbIcon />,
+    gear: "/svg/explore/engrenagem.svg",
+    graph: "/svg/explore/lupa.svg",
+    bulb: "/svg/explore/lampada.svg",
   };
   return (
     <section className="bg-black text-white py-24 px-8 md:px-24">
