@@ -19,7 +19,7 @@ export interface FoundersSectionProps {
 
 export function FoundersSection({ dict }: FoundersSectionProps) {
   return (
-    <section className="w-full text-white bg-[url('/images/founders/founders-background.png')] lg:bg-no-repeat bg-contain">
+    <section className="w-full text-white bg-[url('/images/founders/founders-background.png')] lg:bg-no-repeat bg-contain bg-black">
       <div className="flex flex-col gap-16 mx-auto py-24 px-6 md:px-24">
         <FounderCard
           name={dict.marco.name}

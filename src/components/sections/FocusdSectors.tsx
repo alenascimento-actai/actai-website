@@ -42,11 +42,11 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
           alt="user"
         />
         <div className="w-full lg:w-[50%]">
-          <h3 className="text-[22px] text-white/60 mb-2 uppercase tracking-[6px]">
+          <h3 className="text-lg lg:text-[22px] text-white/60 mb-2 uppercase tracking-[6px]">
             {dict.sectionTitle}
           </h3>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-2xl md:text-5xl font-bold mb-6 leading-tight">
             {dict.sectionSubtitle}
           </h2>
 
@@ -107,7 +107,7 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
                       </p>
                       <ul className="list-decimal list-inside text-sm space-y-4">
                         {sector.description.map((text, i) => (
-                          <li key={i} className="text-base">
+                          <li key={i} className="text-sm lg:text-base">
                             {text}
                           </li>
                         ))}

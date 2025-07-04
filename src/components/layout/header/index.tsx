@@ -36,10 +36,27 @@ export function Header({ dict, lang }: NavProps) {
     : lang;
 
   return (
-    <header className="w-full bg-black py-4 flex items-center justify-between flex-wrap px-8 md:px-24 font-sans gap-5 md:gap-0">
-      <Link href={`/${lang}`} className="text-white font-bold text-lg">
+    <header
+      className={`w-full bg-black py-4 flex items-center   justify-between flex-wrap px-8 md:px-24 font-sans gap-5 md:gap-0`}
+    >
+      <Link
+        href={`/${lang}`}
+        className={`text-white font-bold text-lg ${
+          pathname === `/${lang}` ? "hidden" : "block"
+        }`}
+      >
         <Image src={Logo} alt="ACT.AI Logo" width={100} height={24} />
       </Link>
+
+      <div className="lg:hidden">
+        <Link
+          href="#contact"
+          scroll={true}
+          className="bg-white text-black px-9 py-1 rounded-xl text-lg font-medium text-center"
+        >
+          Let’s Talk
+        </Link>
+      </div>
 
       <div className="lg:hidden">
         <Sheet>
@@ -74,42 +91,32 @@ export function Header({ dict, lang }: NavProps) {
                   </Link>
                 </nav>
 
-                <div className="flex flex-col-reverse gap-6">
+                <div className="flex items-center gap-6">
                   <Link
-                    href="#contact"
-                    scroll={true}
-                    className="bg-white text-black px-11 py-3.5 rounded-xl text-lg font-medium text-center"
+                    href={pathname.replace(`/${currentLang}`, "/en")}
+                    aria-label="Mudar para inglês"
                   >
-                    Let’s Talk
+                    <Image
+                      src={FlagEs}
+                      alt="Español"
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                    />
                   </Link>
 
-                  <div className="flex items-center gap-6">
-                    <Link
-                      href={pathname.replace(`/${currentLang}`, "/en")}
-                      aria-label="Mudar para inglês"
-                    >
-                      <Image
-                        src={FlagEs}
-                        alt="Español"
-                        width={40}
-                        height={40}
-                        className="rounded-full"
-                      />
-                    </Link>
-
-                    <Link
-                      href={pathname.replace(`/${currentLang}`, "/pt-br")}
-                      aria-label="Mudar para português"
-                    >
-                      <Image
-                        src={FlagBr}
-                        alt="Português"
-                        width={40}
-                        height={40}
-                        className="rounded-full"
-                      />
-                    </Link>
-                  </div>
+                  <Link
+                    href={pathname.replace(`/${currentLang}`, "/pt-br")}
+                    aria-label="Mudar para português"
+                  >
+                    <Image
+                      src={FlagBr}
+                      alt="Português"
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                    />
+                  </Link>
                 </div>
               </div>
             </SheetDescription>

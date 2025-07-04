@@ -1,6 +1,7 @@
 .bluerbackground {
   filter: blur(104.5px);
-  background: conic-gradient(from 94.38deg, #d7f3ff 0deg, #005bbf 360deg);
+   -webkit-filter: blur(104.5px);
+   background: radial-gradient(circle at center, #d7f3ff 0%, #005bbf 100%);
   width: 322px;
   height: 219px;
   position: absolute;
@@ -8,10 +9,15 @@
   left: calc(50% - 161px);
 }
 
-.mobile {
-  @media (max-width: 780px) {
-    background-position-x: -29px;
+@media (max-width: 780px) {
+  .bluerbackground {
     background-size: 325px;
     height: 129px;
+  }
+}
+
+@media (max-width: 400px) {
+  .bluerbackground {
+    background-position-x: -29px;
   }
 }

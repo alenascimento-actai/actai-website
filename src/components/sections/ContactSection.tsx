@@ -72,10 +72,10 @@ export function ContactSection() {
       id="contact"
     >
       <div className="text-center space-y-5">
-        <h4 className="uppercase text-[22px] tracking-[6px] text-[#B6B6B6]">
+        <h4 className="uppercase text-lg lg:text-[22px] tracking-[6px] text-[#B6B6B6]">
           {dict.title}
         </h4>
-        <h2 className="text-4xl md:text-5xl font-bold">{dict.subtitle}</h2>
+        <h2 className="text-2xl lg:text-5xl font-bold">{dict.subtitle}</h2>
       </div>
       {/* 
       {status.sended ? (
@@ -121,7 +121,9 @@ export function ContactSection() {
           </div>
         </form>
       )} */}
-      <p className="text-3xl font-bold mb-10 text-center">contato@actai.ai</p>
+      <p className="text-2xl lg:text-3xl font-bold mb-10 text-center">
+        contato@actai.ai
+      </p>
       {/* <Link
         href="mailto:contato@act.ai"
         className="bg-white text-black font-medium px-6 py-3 rounded-xl hover:brightness-90 transition flex items-center justify-center gap-2 mx-auto w-1/5"
