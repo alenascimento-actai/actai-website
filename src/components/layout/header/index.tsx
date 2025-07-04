@@ -50,17 +50,30 @@ export function Header({ dict, lang }: NavProps) {
         <Image src={Logo} alt="ACT.AI Logo" width={100} height={24} />
       </Link>
 
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         <Link
           href="#contact"
           scroll={true}
-          className="bg-white text-black px-9 py-1 rounded-xl text-lg font-medium text-center"
+          className="text-white px-4 py-1 border rounded-xl text-sm lg:text-lg font-medium text-center"
         >
           Let’s Talk
         </Link>
-      </div>
+      </div> */}
 
-      <div className="lg:hidden">
+      <div
+        className={`lg:hidden ${
+          pathname === `/${lang}` ? "w-full justify-end" : "w-auto"
+        } flex gap-2.5`}
+      >
+        <div className="lg:hidden">
+          <Link
+            href="#contact"
+            scroll={true}
+            className="text-white px-4 py-1 border rounded-[10px] text-sm lg:text-lg font-medium text-center"
+          >
+            Let’s Talk
+          </Link>
+        </div>
         <Sheet>
           <SheetTrigger className="text-white">
             <Menu />
