@@ -9,6 +9,7 @@ import FlagBr from "../../../../public/flag-br.svg";
 import FlagEs from "../../../../public/flag-es.svg";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetTrigger,
@@ -86,7 +87,7 @@ export function Header({ dict, lang }: NavProps) {
                     href={`/${lang}`}
                     className={`${pathname === `/${lang}` ? "font-bold" : ""}`}
                   >
-                    {dict.nav.home}
+                    <SheetClose>{dict.nav.home}</SheetClose>
                   </Link>
                   <Link
                     href={`/${lang}/founders`}
@@ -94,7 +95,7 @@ export function Header({ dict, lang }: NavProps) {
                       pathname === `/${lang}/founders` ? "font-bold" : ""
                     }`}
                   >
-                    {dict.nav.foundingTeam}
+                    <SheetClose>{dict.nav.foundingTeam}</SheetClose>
                   </Link>
                   <Link
                     href={`/${lang}/mission`}
@@ -102,7 +103,7 @@ export function Header({ dict, lang }: NavProps) {
                       pathname === `/${lang}/about` ? "font-bold" : ""
                     }`}
                   >
-                    {dict.nav.about}
+                    <SheetClose>{dict.nav.about}</SheetClose>
                   </Link>
                 </nav>
 
@@ -111,26 +112,30 @@ export function Header({ dict, lang }: NavProps) {
                     href={pathname.replace(`/${currentLang}`, "/en")}
                     aria-label="Mudar para inglês"
                   >
-                    <Image
-                      src={FlagEs}
-                      alt="Español"
-                      width={40}
-                      height={40}
-                      className="rounded-full"
-                    />
+                    <SheetClose>
+                      <Image
+                        src={FlagEs}
+                        alt="Español"
+                        width={40}
+                        height={40}
+                        className="rounded-full"
+                      />
+                    </SheetClose>
                   </Link>
 
                   <Link
                     href={pathname.replace(`/${currentLang}`, "/pt-br")}
                     aria-label="Mudar para português"
                   >
-                    <Image
-                      src={FlagBr}
-                      alt="Português"
-                      width={40}
-                      height={40}
-                      className="rounded-full"
-                    />
+                    <SheetClose>
+                      <Image
+                        src={FlagBr}
+                        alt="Português"
+                        width={40}
+                        height={40}
+                        className="rounded-full"
+                      />
+                    </SheetClose>
                   </Link>
                 </div>
               </div>
