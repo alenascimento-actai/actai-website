@@ -63,7 +63,7 @@ export function Header({ dict, lang }: NavProps) {
 
       <div
         className={`lg:hidden ${
-          pathname === `/${lang}` ? "w-full justify-end" : "w-auto"
+          pathname === `/${lang}` ? "w-full justify-between" : "w-auto"
         } flex gap-2.5`}
       >
         <div className="lg:hidden">

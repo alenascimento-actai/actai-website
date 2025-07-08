@@ -33,7 +33,10 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
   }));
 
   return (
-    <section className="w-full bg-black py-16 md:py-24 text-white relative bg-[url('/images/sectors.png')] bg-no-repeat bg-cover px-8 md:px-24">
+    <section
+      className="w-full bg-black py-16 md:py-24 text-white relative bg-[url('/images/sectors.png')] bg-no-repeat bg-cover px-8 md:px-24"
+      id="works"
+    >
       <div className="w-full flex items-start flex-col gap-10 lg:gap-0 lg:flex-row md:justify-between">
         <Image
           src="/images/sectors-user.png"
