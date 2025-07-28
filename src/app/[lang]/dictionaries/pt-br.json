@@ -1,8 +1,9 @@
 {
   "nav": {
     "home": "Início",
-    "foundingTeam": "Equipe Fundadora",
-    "about": "Sobre"
+    "foundingTeam": "Fundadores",
+    "about": "Sobre",
+    "button": "Fale Conosco"
   },
   "hero": {
     "title": "IA precisa, em conformidade e rastreável em todos os mercados",
@@ -18,7 +19,7 @@
         "icon": "gear"
       },
       {
-        "title": "Desenvolvimento de Grafos de Conhecimento",
+        "title": "Desenvolvimento de Knowledge Graph",
         "description": "Dados de treinamento de modelos de alta qualidade, específicos do setor e do idioma, são criados por meio de validação de especialistas nativos e rigoroso controle de qualidade de rotulagem",
         "icon": "graph"
       },
@@ -30,7 +31,7 @@
     ]
   },
   "focusedSectors": {
-    "sectionTitle": "Setores Focados",
+    "sectionTitle": "Setores de foco",
     "sectionSubtitle": "Onde nossa IA gera impacto",
     "button": "O Que Nos Move",
    "platformHelpHealthCare": "A plataforma ACT-AI HC pode ajudar os clientes a:",
@@ -84,7 +85,7 @@
   },
   "footer": {
   "home": "Início",
-  "foundingTeam": "Equipe Fundadora",
+  "foundingTeam": "Fundadores",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
   "description": "Em breve",

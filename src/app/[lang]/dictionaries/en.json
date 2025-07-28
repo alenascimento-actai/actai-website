@@ -1,8 +1,9 @@
 {
   "nav": {
     "home": "Home",
-    "foundingTeam": "Founding Team",
-    "about": "About"
+    "foundingTeam": "Founders",
+    "about": "About",
+    "button": "Let's Talk"
   },
   "hero": {
     "title": "Accurate, Compliant and Traceable AI in all markets",
@@ -50,7 +51,7 @@
         "description":[
           "improve risk assessment and management;",
           "deliver personalized customer insights;",
-          "boosting cross-selling opportunities;",
+          "boost cross-selling opportunities;",
           "increase operations efficiency, speed and quality"
         ]
       },
@@ -82,7 +83,7 @@
   },
   "footer": {
   "home": "Home",
-  "foundingTeam": "Founding Team",
+  "foundingTeam": "Founders",
   "about": "About Us",
   "followUs": "Follow Us",
   "description": "shortly",
