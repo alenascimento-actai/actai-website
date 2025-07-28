@@ -22,7 +22,7 @@ export const CaseStudyChart = ({ dict, lang }: CaseStudyChartProps) => {
           } bg-contain bg-no-repeat h-48 lg:h-[229px] max-w-[578px] w-full mobile`}
         />
 
-        <div className="md:max-w-96 text-center lg:text-end">
+        <div className="md:max-w-96 lg:max-w-[479px] text-center lg:text-end">
           <p className="text-lg lg:text-2xl text-gray-400 uppercase mb-2 tracking-[6px]">
             {dict.label}
           </p>

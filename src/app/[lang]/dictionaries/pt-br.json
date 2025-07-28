@@ -20,7 +20,7 @@
       },
       {
         "title": "Desenvolvimento de Knowledge Graph",
-        "description": "Knowledge graphs específicos por setor são criados para classificar e mapear os principais conceitos e suas relações, possibilitando resultados de modelos de IA mais rastreáveis, delimitados e precisos.",
+        "description": "Knowledge graphs específicos por setor são criados para classificar e mapear os principais conceitos e suas relações, possibilitando resultados de modelos de IA mais rastreáveis, delimitados e precisos",
         "icon": "graph"
       },
       {
@@ -41,28 +41,28 @@
     {
       "title": "Saúde",
       "description": [
-        "harmonizar padrões de produtos e serviços;",
-        "otimizar preços e custos, reduzindo a assimetria de informação do setor;",
-        "automatizar processos intensivos em mão de obra;",
-        "melhorar a velocidade e qualidade do atendimento ao paciente"
+        "Harmonizar padrões de produtos e serviços;",
+        "Otimizar preços e custos, reduzindo a assimetria de informação do setor;",
+        "Automatizar processos intensivos em mão de obra;",
+        "Melhorar a velocidade e qualidade do atendimento ao paciente"
       ]
     },
     {
       "title": "Serviços Financeiros",
       "description": [
-        "melhorar a avaliação e gestão de riscos;",
-        "entregar insights personalizados aos clientes;",
-        "aumentar oportunidades de vendas cruzadas;",
-        "elevar a eficiência, velocidade e qualidade das operações"
+        "Melhorar a avaliação e gestão de riscos;",
+        "Entregar insights personalizados aos clientes;",
+        "Aumentar oportunidades de vendas cruzadas;",
+        "Elevar a eficiência, velocidade e qualidade das operações"
       ]
     },
     {
       "title": "Serviços Jurídicos",
       "description": [
-        "automatizar a revisão de documentos;",
-        "acelerar a pesquisa jurídica;",
-        "avaliar teses jurídicas e probabilidade de sucesso em processos;",
-        "reduzir custos, melhorar a qualidade e a velocidade do atendimento"
+        "Automatizar a revisão de documentos;",
+        "Acelerar a pesquisa jurídica;",
+        "Avaliar teses jurídicas e probabilidade de sucesso em processos;",
+        "Reduzir custos, melhorar a qualidade e a velocidade do atendimento"
       ]
     }
   ]
