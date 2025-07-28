@@ -173,7 +173,7 @@ export function Header({ dict, lang }: NavProps) {
             scroll={true}
             className="bg-white text-black px-11 py-3.5 rounded-xl text-sm font-medium hover:brightness-105 transition hover:opacity-90"
           >
-            Let’s Talk
+            {dict.nav.button}
           </Link>
 
           <div className="flex items-center gap-5">
