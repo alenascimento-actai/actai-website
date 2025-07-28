@@ -23,7 +23,7 @@ export default async function Page({
       />
       <FocusedSectorsSection dict={dict.focusedSectors} />
 
-      <CaseStudyChart dict={dict.caseStudy} />
+      <CaseStudyChart dict={dict.caseStudy} lang={lang} />
 
       <ContactSection />
     </main>

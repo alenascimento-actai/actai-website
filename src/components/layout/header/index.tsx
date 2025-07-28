@@ -22,6 +22,7 @@ interface NavProps {
       home: string;
       foundingTeam: string;
       about: string;
+      button: string;
     };
   };
   lang: "pt-br" | "en";
@@ -72,7 +73,7 @@ export function Header({ dict, lang }: NavProps) {
             scroll={true}
             className="text-white px-4 py-1 border rounded-[10px] text-sm lg:text-lg font-medium text-center"
           >
-            Let’s Talk
+            {dict.nav.button}
           </Link>
         </div>
         <Sheet>
@@ -172,7 +173,7 @@ export function Header({ dict, lang }: NavProps) {
             scroll={true}
             className="bg-white text-black px-11 py-3.5 rounded-xl text-sm font-medium hover:brightness-105 transition hover:opacity-90"
           >
-            Let’s Talk
+            {dict.nav.button}
           </Link>
 
           <div className="flex items-center gap-5">
