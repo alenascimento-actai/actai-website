@@ -28,7 +28,7 @@ export function Solutions({ title, subtitle, items }: SolutionsProps) {
         <h2 className="text-2xl md:text-5xl font-bold mt-2">{title}</h2>
       </div>
 
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-3 parent">
         {items.map((item, idx) => (
           <SolutionCard
             key={idx}

@@ -3,6 +3,7 @@
     "home": "Início",
     "foundingTeam": "Fundadores",
     "about": "Sobre",
+    "data-labenling": "Data Labeling",
     "button": "Fale Conosco"
   },
   "hero": {
@@ -86,6 +87,7 @@
   "footer": {
   "home": "Início",
   "foundingTeam": "Fundadores",
+  "data-labenling": "Data Labeling",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
   "description": "Em breve",

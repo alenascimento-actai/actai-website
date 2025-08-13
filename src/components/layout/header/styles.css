@@ -1,0 +1,42 @@
+.header-styles {
+  -webkit-backdrop-filter: blur(52px);
+  backdrop-filter: blur(52px);
+}
+
+@media (min-width: 1024px) {
+
+  .header-styles nav a {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .header-styles nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* distância abaixo do texto */
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.25s ease-out;
+  }
+  
+  .header-styles nav a:hover::after {
+    width: 100%; 
+  }
+  
+  /* Para o item ativo (pagina atual) já deixar a linha preenchida */
+  .header-styles nav a.font-bold::after {
+    width: 100%;
+  }
+  
+  .header-styles nav a::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+  }
+  
+  .header-styles nav a:hover::after {
+    width: 100%;
+  }
+}

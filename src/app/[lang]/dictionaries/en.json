@@ -3,6 +3,7 @@
     "home": "Home",
     "foundingTeam": "Founders",
     "about": "About",
+    "data-labenling": "Data Labeling",
     "button": "Let's Talk"
   },
   "hero": {
@@ -84,6 +85,7 @@
   "footer": {
   "home": "Home",
   "foundingTeam": "Founders",
+  "data-labenling": "Data Labeling",
   "about": "About Us",
   "followUs": "Follow Us",
   "description": "shortly",

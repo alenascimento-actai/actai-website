@@ -166,3 +166,7 @@ h1, h2, h3, h4 {
     @apply bg-background text-foreground;
   }
 }
+
+.bg-gif {
+  background-image: url("../../public/giffs/bg-home.gif");
+}
