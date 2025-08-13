@@ -14,8 +14,8 @@ interface MissionProps {
 
 export function MissionSection({ dict }: MissionProps) {
   return (
-    <section>
-      <div className="bg-[url('/images/background-mission.png')] bg-no-repeat bg-center bg-cover text-white px-6 py-26 md:px-20 space-y-20">
+    <section className="mt-[-74px]">
+      <div className="bg-[url('/images/background-mission.png')] bg-no-repeat bg-center bg-cover text-white px-6 pt-52 pb-24 md:px-20 space-y-20">
         <div className="space-y-5">
           <h2 className="text-2xl lg:text-5xl font-bold text-center">
             {dict.title}

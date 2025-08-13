@@ -19,7 +19,11 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+}
+
+.parent:hover .section-card:not(:hover) {
+  opacity: 0.5;
 }
 
 .text-home {
@@ -28,6 +32,11 @@
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+}
+
+.bg-blur-ios {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
 }
 
 @media (max-width: 780px) {
