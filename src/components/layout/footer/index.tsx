@@ -14,6 +14,7 @@ interface FooterProps {
       description: string;
       linkForFounding: string;
       linkForMission: string;
+      "data-labenling": string;
     };
   };
 }
@@ -21,31 +22,39 @@ interface FooterProps {
 export const Footer = ({ dict }: FooterProps) => {
   return (
     <footer className="bg-black text-white py-12 px-8 md:px-24">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-5">
         {/* Logo */}
         <div className="col-span-1 flex items-start">
           <Link href={"/"}>
             <Image
               src={Logo}
               alt="ACT.AI Logo"
-              width={100}
-              height={24}
-              className="w-auto h-6"
+              width={174}
+              height={37}
+              className="w-auto h-9"
             />
           </Link>
         </div>
 
         {/* Links */}
 
-        <Link href={"/"} className="font-semibold text-sm text-white">
-          <h4>{dict.footer.home}</h4>
-        </Link>
-        <Link href={"/founders"} className="font-semibold text-sm text-white">
-          <h4>{dict.footer.foundingTeam}</h4>
-        </Link>
-        <Link href={"/mission"} className="font-semibold text-sm text-white">
-          <h4>{dict.footer.about}</h4>
-        </Link>
+        <div className="hidden md:flex justify-center gap-20 col-span-3">
+          <Link href="/" className="font-semibold text-sm text-white">
+            {dict.footer.home}
+          </Link>
+          <Link href="/founders" className="font-semibold text-sm text-white">
+            {dict.footer.foundingTeam}
+          </Link>
+          <Link
+            href="/data-labenling"
+            className="font-semibold text-sm text-white"
+          >
+            {dict.footer["data-labenling"]}
+          </Link>
+          <Link href="/mission" className="font-semibold text-sm text-white">
+            {dict.footer.about}
+          </Link>
+        </div>
 
         {/* Redes Sociais */}
         <div className="col-span-1">
