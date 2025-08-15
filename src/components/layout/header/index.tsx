@@ -23,7 +23,7 @@ interface NavProps {
       home: string;
       foundingTeam: string;
       about: string;
-      "data-labenling": string;
+      "data-labeling": string;
       button: string;
     };
   };
@@ -40,7 +40,7 @@ export function Header({ dict, lang }: NavProps) {
     : lang;
 
   return (
-    <header className="bg-transparent relative top-9">
+    <header className="bg-transparent relative top-9 z-10">
       <div
         className={`max-w-[90%] w-full m-auto bg-[#FFFFFF0D] rounded-[133px] py-3 flex items-center  ${
           pathname === `/${lang}` ? "justify-end" : "justify-between"
@@ -64,7 +64,9 @@ export function Header({ dict, lang }: NavProps) {
             <Link
               href="#contact"
               scroll={true}
-              className="text-white px-4 py-1 border rounded-[10px] text-sm lg:text-lg font-medium text-center shadow-[0px_1px_2px_0px_#0000000D]"
+              className={`text-white px-4 py-1 border rounded-[10px] text-sm lg:text-lg font-medium text-center shadow-[0px_1px_2px_0px_#0000000D] ${
+                pathname === `/${lang}` ? "block" : "hidden md:block"
+              }`}
             >
               {dict.nav.button}
             </Link>
@@ -73,17 +75,24 @@ export function Header({ dict, lang }: NavProps) {
             <SheetTrigger className="text-white">
               <Menu />
             </SheetTrigger>
-            <SheetContent>
-              <SheetDescription className="mt-10 px-4">
-                <div className="flex flex-col gap-6">
-                  <nav className="flex flex-col gap-6 text-lg text-white">
+
+            <SheetContent className="w-full bg-[#FFFFFF0D] bg-blur-ios">
+              <SheetDescription className="mt-20 px-4 text-center">
+                <div className="flex flex-col gap-20">
+                  <nav className="flex flex-col gap-10 text-lg text-white">
                     <Link
                       href={`/${lang}`}
                       className={`${
                         pathname === `/${lang}` ? "font-bold" : ""
                       }`}
                     >
-                      <SheetClose>{dict.nav.home}</SheetClose>
+                      <SheetClose
+                        className={`${
+                          pathname === `/${lang}` ? "underline" : ""
+                        }`}
+                      >
+                        {dict.nav.home}
+                      </SheetClose>
                     </Link>
                     <Link
                       href={`/${lang}/founders`}
@@ -91,19 +100,49 @@ export function Header({ dict, lang }: NavProps) {
                         pathname === `/${lang}/founders` ? "font-bold" : ""
                       }`}
                     >
-                      <SheetClose>{dict.nav.foundingTeam}</SheetClose>
+                      <SheetClose
+                        className={`${
+                          pathname === `/${lang}/founders` ? "underline" : ""
+                        }`}
+                      >
+                        {dict.nav.foundingTeam}
+                      </SheetClose>
+                    </Link>
+                    <Link
+                      href={`/${lang}/data-labeling`}
+                      className={`${
+                        pathname === `/${lang}/data-labeling`
+                          ? "font-bold underline"
+                          : ""
+                      }`}
+                    >
+                      <SheetClose
+                        className={`${
+                          pathname === `/${lang}/data-labeling`
+                            ? "underline"
+                            : ""
+                        }`}
+                      >
+                        {dict.nav["data-labeling"]}
+                      </SheetClose>
                     </Link>
                     <Link
                       href={`/${lang}/mission`}
                       className={`${
-                        pathname === `/${lang}/about` ? "font-bold" : ""
+                        pathname === `/${lang}/mission` ? "font-bold" : ""
                       }`}
                     >
-                      <SheetClose>{dict.nav.about}</SheetClose>
+                      <SheetClose
+                        className={`${
+                          pathname === `/${lang}/mission` ? "underline" : ""
+                        }`}
+                      >
+                        {dict.nav.about}
+                      </SheetClose>
                     </Link>
                   </nav>
 
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center justify-center gap-6">
                     <Link
                       href={pathname.replace(`/${currentLang}`, "/en")}
                       aria-label="Mudar para inglês"
@@ -159,12 +198,12 @@ export function Header({ dict, lang }: NavProps) {
               {dict.nav.foundingTeam}
             </Link>
             <Link
-              href={`/${lang}/founders`}
+              href={`/${lang}/data-labeling`}
               className={`${
-                pathname === `/${lang}/data-labenling` ? "font-bold" : ""
+                pathname === `/${lang}/data-labeling` ? "font-bold" : ""
               } hover:font-bold`}
             >
-              {dict.nav["data-labenling"]}
+              {dict.nav["data-labeling"]}
             </Link>
             <Link
               href={`/${lang}/mission`}
