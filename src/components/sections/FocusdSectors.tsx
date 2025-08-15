@@ -103,7 +103,7 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
 
                   {isOpen && sector.description?.length && (
                     <div className="mt-4">
-                      <p className="text-sm font-semibold mb-4">
+                      <p className="text-base font-semibold mb-4">
                         {idx === 0 && dict.platformHelpHealthCare}
                         {idx === 1 && dict.platformHelpFinancialServices}
                         {idx === 2 && dict.platformHelpLegalServices}

@@ -3,7 +3,7 @@
     "home": "Início",
     "foundingTeam": "Fundadores",
     "about": "Sobre",
-    "data-labenling": "Data Labeling",
+    "data-labeling": "Data Labeling",
     "button": "Fale Conosco"
   },
   "hero": {
@@ -87,7 +87,7 @@
   "footer": {
   "home": "Início",
   "foundingTeam": "Fundadores",
-  "data-labenling": "Data Labeling",
+  "data-labeling": "Data Labeling",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
   "description": "Em breve",
@@ -114,6 +114,41 @@
     "problemText": "A maioria dos modelos de IA pré-treinados evolui a partir de dados de contexto/idioma inglês, deixando regiões inteiras sub-representadas. Isso é particularmente grave em setores especializados e altamente regulamentados, como Finanças, Saúde e Jurídico",
     "differenceTitle": "Como Somos Diferentes",
     "differenceText": "A ACT.AI se concentra em adaptar a IA às realidades locais — desde o idioma e a infraestrutura até as necessidades comerciais. Fornecemos dados rotulados de alta qualidade, treinamos modelos em idiomas sub-representados e desenvolvemos aplicativos B2B escaláveis ​​para regiões frequentemente negligenciadas."
+  },
+  "dataLabeling": {
+    "hero":{
+      "titlePart01": "Faster and smarter",
+      "titleHighlight": "data labeling.",
+      "titlePart02": "Powered by AI.",
+      "subtitle": "Accelerate your model training pipeline with intelligent, secure and collaborative data labeling, all in one platform.",
+      "textButton": "Book a Demo"
+    },
+    "myWorks": {
+      "title": "From raw data to trained model in just a few steps.",
+      "subtitle": "how it works",
+      "textSliders": [
+        {
+          "title": "Images",
+          "subtitle": "Upload. Annotate. Export.",
+          "text": "Bounding boxes, segmentation and more, all AI-assisted."
+        },
+        {
+          "title": "Text",
+          "subtitle": "Highlight. Tag. Automate.",
+          "text": "Extract entities and patterns with smart NLP tools."
+        },
+        {
+          "title": "Video",
+          "subtitle": "Frame. Track. Label.",
+          "text": "Use frame-by-frame labeling or apply object tracking."
+        },
+        {
+        "title": "Audio",
+        "subtitle": "Listen. Mark. Transcribe.",
+        "text": "Label speech, music or noise with timestamped accuracy."
+        }
+      ]
+    }
   }
 
 }

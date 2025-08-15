@@ -14,7 +14,7 @@ interface FooterProps {
       description: string;
       linkForFounding: string;
       linkForMission: string;
-      "data-labenling": string;
+      "data-labeling": string;
     };
   };
 }
@@ -38,7 +38,7 @@ export const Footer = ({ dict }: FooterProps) => {
 
         {/* Links */}
 
-        <div className="hidden md:flex justify-center gap-20 col-span-3">
+        <div className="flex flex-col lg:flex-row justify-center gap-5 lg:gap-20 col-span-3 py-5 lg:py-0">
           <Link href="/" className="font-semibold text-sm text-white">
             {dict.footer.home}
           </Link>
@@ -46,10 +46,10 @@ export const Footer = ({ dict }: FooterProps) => {
             {dict.footer.foundingTeam}
           </Link>
           <Link
-            href="/data-labenling"
+            href="/data-labeling"
             className="font-semibold text-sm text-white"
           >
-            {dict.footer["data-labenling"]}
+            {dict.footer["data-labeling"]}
           </Link>
           <Link href="/mission" className="font-semibold text-sm text-white">
             {dict.footer.about}

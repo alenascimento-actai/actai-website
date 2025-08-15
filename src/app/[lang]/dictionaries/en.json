@@ -3,7 +3,7 @@
     "home": "Home",
     "foundingTeam": "Founders",
     "about": "About",
-    "data-labenling": "Data Labeling",
+    "data-labeling": "Data Labeling",
     "button": "Let's Talk"
   },
   "hero": {
@@ -85,7 +85,7 @@
   "footer": {
   "home": "Home",
   "foundingTeam": "Founders",
-  "data-labenling": "Data Labeling",
+  "data-labeling": "Data Labeling",
   "about": "About Us",
   "followUs": "Follow Us",
   "description": "shortly",
@@ -112,5 +112,40 @@
     "problemText": "Most pre-trained AI models evolve from English language/context data, leaving entire regions under-represented. This is particularly acute in specialty and highly regulated sectors, such as Finance, Health Care and Legal",
     "differenceTitle": "How We Are Different",
     "differenceText": "ACT.AI focuses on adapting AI to local realities — from language and infrastructure to business needs. We provide high-quality labeled data, train models in underrepresented languages, and develop scalable B2B applications for regions often overlooked"
+  },
+  "dataLabeling": {
+    "hero":{
+      "titlePart01": "Faster and smarter",
+      "titleHighlight": "data labeling.",
+      "titlePart02": "Powered by AI.",
+      "subtitle": "Accelerate your model training pipeline with intelligent, secure and collaborative data labeling, all in one platform.",
+      "textButton": "Book a Demo"
+    },
+    "myWorks": {
+      "title": "From raw data to trained model in just a few steps.",
+      "subtitle": "how it works",
+      "textSliders": [
+        {
+          "title": "Images",
+          "subtitle": "Upload. Annotate. Export.",
+          "text": "Bounding boxes, segmentation and more, all AI-assisted."
+        },
+        {
+          "title": "Text",
+          "subtitle": "Highlight. Tag. Automate.",
+          "text": "Extract entities and patterns with smart NLP tools."
+        },
+        {
+          "title": "Video",
+          "subtitle": "Frame. Track. Label.",
+          "text": "Use frame-by-frame labeling or apply object tracking."
+        },
+        {
+        "title": "Audio",
+        "subtitle": "Listen. Mark. Transcribe.",
+        "text": "Label speech, music or noise with timestamped accuracy."
+        }
+      ]
+    }
   }
 }
