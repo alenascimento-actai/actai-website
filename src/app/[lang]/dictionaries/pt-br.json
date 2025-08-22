@@ -75,7 +75,7 @@
   },
   "contact": {
   "title": "Fale Conosco",
-  "subtitle": "Vamos construir algo grandioso juntos",
+  "subtitle": "Vamos construir uma jornada de sucesso juntos",
   "form": {
     "name": "Seu Nome",
     "email": "Endereço de Email",
@@ -117,35 +117,35 @@
   },
   "dataLabeling": {
     "hero":{
-      "titlePart01": "Faster and smarter",
+      "titlePart01": "Mais rápido e inteligente",
       "titleHighlight": "data labeling.",
-      "titlePart02": "Powered by AI.",
-      "subtitle": "Accelerate your model training pipeline with intelligent, secure and collaborative data labeling, all in one platform.",
-      "textButton": "Book a Demo"
+      "titlePart02": "Impulsionado por IA.",
+      "subtitle": "Acelere seu pipeline de treinamento de modelos com data labeling inteligente, segura e colaborativa — tudo em uma única plataforma.",
+      "textButton": "Agende uma demonstração"
     },
     "myWorks": {
-      "title": "From raw data to trained model in just a few steps.",
-      "subtitle": "how it works",
+      "title": "Dos dados brutos ao modelo treinado em poucos passos.",
+      "subtitle": "como funciona",
       "textSliders": [
         {
-          "title": "Images",
-          "subtitle": "Upload. Annotate. Export.",
-          "text": "Bounding boxes, segmentation and more, all AI-assisted."
+          "title": "Texto",
+          "subtitle": "Destacar. Rotular. Automatizar.",
+          "text": "Extraia entidades e padrões com ferramentas inteligentes de PLN."
         },
         {
-          "title": "Text",
-          "subtitle": "Highlight. Tag. Automate.",
-          "text": "Extract entities and patterns with smart NLP tools."
+          "title": "Imagens",
+          "subtitle": "Fazer upload. Anotar. Exportar.",
+          "text": "Caixas delimitadoras, segmentação e mais — tudo com auxílio de IA."
         },
         {
-          "title": "Video",
-          "subtitle": "Frame. Track. Label.",
-          "text": "Use frame-by-frame labeling or apply object tracking."
+          "title": "Vídeo",
+          "subtitle": "Quadro a quadro. Rastrear. Rotular.",
+          "text": "Use rotulagem quadro a quadro ou aplique rastreamento de objetos."
         },
         {
-        "title": "Audio",
-        "subtitle": "Listen. Mark. Transcribe.",
-        "text": "Label speech, music or noise with timestamped accuracy."
+          "title": "Áudio",
+          "subtitle": "Ouvir. Marcar. Transcrever.",
+          "text": "Rotule fala, música ou ruído com marcação temporal precisa."
         }
       ]
     }

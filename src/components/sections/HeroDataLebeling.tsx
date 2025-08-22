@@ -7,6 +7,7 @@ interface HeroDataLebingProps {
   titlePart02: string;
   subtitle: string;
   textButton: string;
+  lang: string;
 }
 
 export function HeroDataLebing({
@@ -15,6 +16,7 @@ export function HeroDataLebing({
   titleHighlight,
   titlePart01,
   titlePart02,
+  lang,
 }: HeroDataLebingProps) {
   return (
     <section className="relative">
@@ -28,14 +30,22 @@ export function HeroDataLebing({
             <span> {titlePart02}</span>
           </h1>
 
-          <p className="text-xl text-center max-w-[637px] mx-auto mt-6 mb-14 font-sans">
+          <p
+            className={`text-xl text-center ${
+              lang.includes("en") ? "max-w-[637px]" : "max-w-[703px]"
+            } mx-auto mt-6 mb-14 font-sans`}
+          >
             {subtitle}
           </p>
 
           <Link
-            href="#"
+            href="#contact"
             scroll={true}
-            className="flex bg-white text-black px-10 py-2.5 rounded-full font-medium text-base lg:pl-10 lg:pr-0 lg:text-xl hover:brightness-105 hover:bg-[#E7C2FF] transition justify-start items-center gap-2 h-12 max-w-[217px] lg:max-w-[257px] w-full lg:hover:gap-9 lg:hover:pr-0 duration-600 ease-out mx-auto"
+            className={`flex bg-white text-black py-2.5 rounded-full font-medium text-base lg:pl-10 lg:pr-0 lg:text-xl hover:brightness-105 hover:bg-[#E7C2FF] transition justify-start items-center gap-2 h-12 ${
+              lang.includes("en")
+                ? "max-w-[217px] lg:max-w-[257px] px-10"
+                : "md:max-w-[310px] lg:max-w-[365px] px-8"
+            } w-full lg:hover:gap-9 lg:hover:pr-0 duration-600 ease-out mx-auto`}
           >
             <span>{textButton}</span>
             <ArrowRight />
