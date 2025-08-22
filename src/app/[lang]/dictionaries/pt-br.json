@@ -3,6 +3,7 @@
     "home": "Início",
     "foundingTeam": "Fundadores",
     "about": "Sobre",
+    "data-labeling": "Data Labeling",
     "button": "Fale Conosco"
   },
   "hero": {
@@ -74,7 +75,7 @@
   },
   "contact": {
   "title": "Fale Conosco",
-  "subtitle": "Vamos construir algo grandioso juntos",
+  "subtitle": "Vamos construir uma jornada de sucesso juntos!",
   "form": {
     "name": "Seu Nome",
     "email": "Endereço de Email",
@@ -86,6 +87,7 @@
   "footer": {
   "home": "Início",
   "foundingTeam": "Fundadores",
+  "data-labeling": "Data Labeling",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
   "description": "Em breve",
@@ -112,6 +114,41 @@
     "problemText": "A maioria dos modelos de IA pré-treinados evolui a partir de dados de contexto/idioma inglês, deixando regiões inteiras sub-representadas. Isso é particularmente grave em setores especializados e altamente regulamentados, como Finanças, Saúde e Jurídico",
     "differenceTitle": "Como Somos Diferentes",
     "differenceText": "A ACT.AI se concentra em adaptar a IA às realidades locais — desde o idioma e a infraestrutura até as necessidades comerciais. Fornecemos dados rotulados de alta qualidade, treinamos modelos em idiomas sub-representados e desenvolvemos aplicativos B2B escaláveis ​​para regiões frequentemente negligenciadas."
+  },
+  "dataLabeling": {
+    "hero":{
+      "titlePart01": "Mais rápido e inteligente",
+      "titleHighlight": "data labeling.",
+      "titlePart02": "Impulsionado por IA.",
+      "subtitle": "Acelere seu pipeline de treinamento de modelos com data labeling inteligente, segura e colaborativa — tudo em uma única plataforma.",
+      "textButton": "Agende uma demonstração"
+    },
+    "myWorks": {
+      "title": "Dos dados brutos ao modelo treinado em poucos passos.",
+      "subtitle": "como funciona",
+      "textSliders": [
+        {
+          "title": "Texto",
+          "subtitle": "Destacar. Rotular. Automatizar.",
+          "text": "Extraia entidades e padrões com ferramentas inteligentes de PLN."
+        },
+        {
+          "title": "Imagens",
+          "subtitle": "Fazer upload. Anotar. Exportar.",
+          "text": "Caixas delimitadoras, segmentação e mais — tudo com auxílio de IA."
+        },
+        {
+          "title": "Vídeo",
+          "subtitle": "Quadro a quadro. Rastrear. Rotular.",
+          "text": "Use rotulagem quadro a quadro ou aplique rastreamento de objetos."
+        },
+        {
+          "title": "Áudio",
+          "subtitle": "Ouvir. Marcar. Transcrever.",
+          "text": "Rotule fala, música ou ruído com marcação temporal precisa."
+        }
+      ]
+    }
   }
 
 }

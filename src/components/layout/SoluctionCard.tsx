@@ -8,7 +8,7 @@ interface SolutionCardProps {
 
 export function SolutionCard({ title, description, icon }: SolutionCardProps) {
   return (
-    <div className="relative flex flex-col justify-between h-[435px] px-6 py-8 rounded-2xl shadow-xl overflow-hidden section-card border lg:hover:scale-[1.01] lg:transition border-gradient">
+    <div className="relative flex flex-col justify-between h-[435px] px-6 py-8 rounded-2xl shadow-xl overflow-hidden section-card border lg:transition border-gradient lg:hover:bg-blur-ios lg:hover:shadow-[0px_1px_9.8px_0px_#E7C2FFC7] duration-600 ease-out">
       {/* Ícone decorativo ao fundo */}
       <div className="absolute top-4 right-4 w-[180px] h-[180px]">
         <Image src={icon} width={195} height={195} alt="icone" />
