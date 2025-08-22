@@ -108,7 +108,7 @@ export function Header({ dict, lang }: NavProps) {
                         {dict.nav.foundingTeam}
                       </SheetClose>
                     </Link>
-                    <Link
+                    {/* <Link
                       href={`/${lang}/data-labeling`}
                       className={`${
                         pathname === `/${lang}/data-labeling`
@@ -125,7 +125,7 @@ export function Header({ dict, lang }: NavProps) {
                       >
                         {dict.nav["data-labeling"]}
                       </SheetClose>
-                    </Link>
+                    </Link> */}
                     <Link
                       href={`/${lang}/mission`}
                       className={`${
@@ -197,14 +197,14 @@ export function Header({ dict, lang }: NavProps) {
             >
               {dict.nav.foundingTeam}
             </Link>
-            <Link
+            {/* <Link
               href={`/${lang}/data-labeling`}
               className={`${
                 pathname === `/${lang}/data-labeling` ? "font-bold" : ""
               } hover:font-bold`}
             >
               {dict.nav["data-labeling"]}
-            </Link>
+            </Link> */}
             <Link
               href={`/${lang}/mission`}
               className={`${

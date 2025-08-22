@@ -45,12 +45,12 @@ export const Footer = ({ dict }: FooterProps) => {
           <Link href="/founders" className="font-semibold text-sm text-white">
             {dict.footer.foundingTeam}
           </Link>
-          <Link
+          {/* <Link
             href="/data-labeling"
             className="font-semibold text-sm text-white"
           >
             {dict.footer["data-labeling"]}
-          </Link>
+          </Link> */}
           <Link href="/mission" className="font-semibold text-sm text-white">
             {dict.footer.about}
           </Link>
