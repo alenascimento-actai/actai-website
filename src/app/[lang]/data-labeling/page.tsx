@@ -20,6 +20,7 @@ export default async function DataLebeling({
         titleHighlight={hero.titleHighlight}
         subtitle={hero.subtitle}
         textButton={hero.textButton}
+        lang={lang}
       />
       <WorksSection dict={myWorks} />
       <ContactSection />

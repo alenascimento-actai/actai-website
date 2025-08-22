@@ -17,7 +17,7 @@ export function CardWorksCarousel({
   const [isActive, setIsActive] = useState(false);
   return (
     <div
-      className={`py-[30px] pl-[34px] pr-7 text-start bg-[linear-gradient(117.92deg,rgba(215,243,255,0.31)_-1.78%,rgba(0,0,0,0.31)_82.68%)] border-[0.75px] border-white rounded-[16px] hover:shadow-[0px_0px_31.1px_#9700FFC7] container-item-card ${
+      className={`py-[30px] pl-[34px] pr-7 text-start bg-[linear-gradient(117.92deg,rgba(215,243,255,0.31)_-1.78%,rgba(0,0,0,0.31)_82.68%)] border-[0.75px] border-white rounded-[16px] hover:shadow-[0px_0px_31.1px_#9700FFC7] container-item-card h-full ${
         isActive ? "shadow-[0px_0px_31.1px_#9700FFC7]" : ""
       }`}
       onClick={() => setIsActive((old) => !old)}

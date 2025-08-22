@@ -126,14 +126,14 @@
       "subtitle": "how it works",
       "textSliders": [
         {
-          "title": "Images",
-          "subtitle": "Upload. Annotate. Export.",
-          "text": "Bounding boxes, segmentation and more, all AI-assisted."
-        },
-        {
           "title": "Text",
           "subtitle": "Highlight. Tag. Automate.",
           "text": "Extract entities and patterns with smart NLP tools."
+        },
+        {
+          "title": "Images",
+          "subtitle": "Upload. Annotate. Export.",
+          "text": "Bounding boxes, segmentation and more, all AI-assisted."
         },
         {
           "title": "Video",
