@@ -4,7 +4,9 @@
     "foundingTeam": "Founders",
     "about": "About",
     "data-labeling": "Data Labeling",
-    "button": "Let's Talk"
+    "plataform": "Input Manager",
+    "button": "Let's Talk",
+    "button-plataform": "Access Manager"
   },
   "hero": {
     "title": "Accurate, Compliant and Traceable AI in all markets",
@@ -146,6 +148,16 @@
         "text": "Label speech, music or noise with timestamped accuracy."
         }
       ]
+    }
+  },
+  "input-manager": {
+    "hero":{
+      "titlePart01": "The solution that ",
+      "titleHighlight": "simplifies the management ",
+      "titlePart02": "of hospital supplies",
+      "subtitle": "An intuitive platform to simplify your routine and ensure safer choices",
+      "linkButton01": "find out more",
+      "linkButton02": "access Manager"
     }
   }
 }

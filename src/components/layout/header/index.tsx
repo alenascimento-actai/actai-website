@@ -24,7 +24,9 @@ interface NavProps {
       foundingTeam: string;
       about: string;
       "data-labeling": string;
+      plataform: string;
       button: string;
+      "button-plataform": string;
     };
   };
   lang: "pt-br" | "en";
@@ -54,13 +56,13 @@ export function Header({ dict, lang }: NavProps) {
         >
           <Image src={Logo} alt="ACT.AI Logo" width={100} height={24} />
         </Link>
-
+        {/* Mobile */}
         <div
           className={`lg:hidden ${
             pathname === `/${lang}` ? "w-full justify-between" : "w-auto"
           } flex gap-2.5`}
         >
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center gap-3">
             <Link
               href="#contact"
               scroll={true}
@@ -70,7 +72,17 @@ export function Header({ dict, lang }: NavProps) {
             >
               {dict.nav.button}
             </Link>
+
+            <Link
+              href="https://dev-search-app-front.vercel.app/"
+              className={`text-black px-4 py-1 rounded-[10px] border-white border text-base font-medium bg-white shadow-[0px_1px_2px_0px_#0000000D] ${
+                pathname === `/${lang}` ? "block" : "hidden md:block"
+              }`}
+            >
+              {dict.nav["button-plataform"]}
+            </Link>
           </div>
+
           <Sheet>
             <SheetTrigger className="text-white">
               <Menu />
@@ -94,6 +106,7 @@ export function Header({ dict, lang }: NavProps) {
                         {dict.nav.home}
                       </SheetClose>
                     </Link>
+
                     <Link
                       href={`/${lang}/founders`}
                       className={`${
@@ -108,7 +121,8 @@ export function Header({ dict, lang }: NavProps) {
                         {dict.nav.foundingTeam}
                       </SheetClose>
                     </Link>
-                    {/* <Link
+
+                    <Link
                       href={`/${lang}/data-labeling`}
                       className={`${
                         pathname === `/${lang}/data-labeling`
@@ -125,7 +139,27 @@ export function Header({ dict, lang }: NavProps) {
                       >
                         {dict.nav["data-labeling"]}
                       </SheetClose>
-                    </Link> */}
+                    </Link>
+
+                    <Link
+                      href={`/${lang}/input-plataform`}
+                      className={`${
+                        pathname === `/${lang}/input-plataform`
+                          ? "font-bold underline"
+                          : ""
+                      }`}
+                    >
+                      <SheetClose
+                        className={`${
+                          pathname === `/${lang}/input-plataform`
+                            ? "underline"
+                            : ""
+                        }`}
+                      >
+                        {dict.nav["button-plataform"]}
+                      </SheetClose>
+                    </Link>
+
                     <Link
                       href={`/${lang}/mission`}
                       className={`${
@@ -178,7 +212,7 @@ export function Header({ dict, lang }: NavProps) {
             </SheetContent>
           </Sheet>
         </div>
-
+        {/* Desktop */}
         <div className="items-center gap-5 md:gap-12 flex-wrap hidden lg:flex">
           <nav className="flex gap-6 text-base font-medium text-white items-center">
             <Link
@@ -197,31 +231,46 @@ export function Header({ dict, lang }: NavProps) {
             >
               {dict.nav.foundingTeam}
             </Link>
-            {/* <Link
+            <Link
               href={`/${lang}/data-labeling`}
               className={`${
                 pathname === `/${lang}/data-labeling` ? "font-bold" : ""
               } hover:font-bold`}
             >
               {dict.nav["data-labeling"]}
-            </Link> */}
+            </Link>
+            <Link
+              href={`/${lang}/input-manager`}
+              className={`${
+                pathname === `/${lang}/input-manager` ? "font-bold" : ""
+              } hover:font-bold`}
+            >
+              {dict.nav.plataform}
+            </Link>
             <Link
               href={`/${lang}/mission`}
               className={`${
                 pathname === `/${lang}/mission` ? "font-bold" : ""
-              } hover:font-bold`}
+              } hover:font-bold hover:underline`}
             >
               {dict.nav.about}
             </Link>
           </nav>
 
-          <div className="flex items-center gap-12">
+          <div className="flex items-center gap-3">
             <Link
               href="#contact"
               scroll={true}
-              className="bg-transparent text-white px-11 py-3 rounded-[36px] border-white border text-base font-medium hover:brightness-105 transition hover:bg-white hover:text-black shadow-[0px_1px_2px_0px_#0000000D]"
+              className="bg-transparent text-white px-7 py-3 rounded-[36px] border-white border text-base font-medium hover:brightness-105 transition hover:bg-white hover:text-black shadow-[0px_1px_2px_0px_#0000000D]"
             >
               {dict.nav.button}
+            </Link>
+
+            <Link
+              href="https://dev-search-app-front.vercel.app/"
+              className="text-black px-7 py-3 rounded-[36px] border-white border text-base font-medium hover:brightness-105 transition bg-white shadow-[0px_1px_2px_0px_#0000000D] hover:bg-[#e7c2ff] ease-in hover:border-transparent"
+            >
+              {dict.nav["button-plataform"]}
             </Link>
 
             <div className="flex items-center gap-5">

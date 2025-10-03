@@ -4,7 +4,9 @@
     "foundingTeam": "Fundadores",
     "about": "Sobre",
     "data-labeling": "Data Labeling",
-    "button": "Fale Conosco"
+    "plataform": "Gestor de Insumos",
+    "button": "Fale Conosco",
+    "button-plataform": "Acessar Gestor"
   },
   "hero": {
     "title": "IA precisa, em conformidade e rastreável em todos os mercados",
@@ -87,6 +89,7 @@
   "footer": {
   "home": "Início",
   "foundingTeam": "Fundadores",
+  "plataform": "Gestor de Insumos",
   "data-labeling": "Data Labeling",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
@@ -148,6 +151,16 @@
           "text": "Rotule fala, música ou ruído com marcação temporal precisa."
         }
       ]
+    }
+  },
+   "input-manager": {
+    "hero":{
+      "titlePart01": "A solução que ",
+      "titleHighlight": "simplifica a gestão ",
+      "titlePart02": "de insumos hospitalares",
+      "subtitle": "Uma plataforma intuitiva para simplificar sua rotina e garantir escolhas mais seguras",
+      "linkButton01": "Saiba Mais",
+      "linkButton02": "Acessar Gestor"
     }
   }
 
