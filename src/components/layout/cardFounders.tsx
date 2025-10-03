@@ -26,12 +26,16 @@ export const FounderCard = ({
       </div>
       <div className="flex flex-col justify-between items-baseline space-y-5 text-white text-sm lg:h-[334px]">
         <div className="flex items-center justify-between flex-wrap gap-5 md:gap-0 w-full">
-          <h3 className="text-[32px] font-bold mb-2 text-white">{name}</h3>
-          <span className="text-xl max-w-60 w-full py-3 rounded-2xl border border-white text-white text-center font-semibold">
+          <h3 className="text-2xl lg:text-[32px] font-bold mb-2 text-white">
+            {name}
+          </h3>
+          <span className="text-lg max-w-60 w-full py-3 rounded-2xl border border-white text-white text-center font-semibold">
             {title}
           </span>
         </div>
-        <p className="text-white/80 leading-relaxed text-xl">{bio}</p>
+        <p className="text-white/80 leading-relaxed text-sm lg:text-xl">
+          {bio}
+        </p>
       </div>
     </div>
   );

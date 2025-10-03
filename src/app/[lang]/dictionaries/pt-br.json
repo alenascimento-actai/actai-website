@@ -1,8 +1,10 @@
 {
   "nav": {
     "home": "Início",
-    "foundingTeam": "Equipe Fundadora",
-    "about": "Sobre"
+    "foundingTeam": "Fundadores",
+    "about": "Sobre",
+    "data-labeling": "Data Labeling",
+    "button": "Fale Conosco"
   },
   "hero": {
     "title": "IA precisa, em conformidade e rastreável em todos os mercados",
@@ -18,8 +20,8 @@
         "icon": "gear"
       },
       {
-        "title": "Desenvolvimento de Grafos de Conhecimento",
-        "description": "Dados de treinamento de modelos de alta qualidade, específicos do setor e do idioma, são criados por meio de validação de especialistas nativos e rigoroso controle de qualidade de rotulagem",
+        "title": "Desenvolvimento de Knowledge Graph",
+        "description": "Knowledge graphs específicos por setor são criados para classificar e mapear os principais conceitos e suas relações, possibilitando resultados de modelos de IA mais rastreáveis, delimitados e precisos",
         "icon": "graph"
       },
       {
@@ -30,7 +32,7 @@
     ]
   },
   "focusedSectors": {
-    "sectionTitle": "Setores Focados",
+    "sectionTitle": "Setores de foco",
     "sectionSubtitle": "Onde nossa IA gera impacto",
     "button": "O Que Nos Move",
    "platformHelpHealthCare": "A plataforma ACT-AI HC pode ajudar os clientes a:",
@@ -40,28 +42,28 @@
     {
       "title": "Saúde",
       "description": [
-        "harmonizar padrões de produtos e serviços;",
-        "otimizar preços e custos, reduzindo a assimetria de informação do setor;",
-        "automatizar processos intensivos em mão de obra;",
-        "melhorar a velocidade e qualidade do atendimento ao paciente"
+        "Harmonizar padrões de produtos e serviços;",
+        "Otimizar preços e custos, reduzindo a assimetria de informação do setor;",
+        "Automatizar processos intensivos em mão de obra;",
+        "Melhorar a velocidade e qualidade do atendimento ao paciente"
       ]
     },
     {
       "title": "Serviços Financeiros",
       "description": [
-        "melhorar a avaliação e gestão de riscos;",
-        "entregar insights personalizados aos clientes;",
-        "aumentar oportunidades de vendas cruzadas;",
-        "elevar a eficiência, velocidade e qualidade das operações"
+        "Melhorar a avaliação e gestão de riscos;",
+        "Entregar insights personalizados aos clientes;",
+        "Aumentar oportunidades de vendas cruzadas;",
+        "Elevar a eficiência, velocidade e qualidade das operações"
       ]
     },
     {
       "title": "Serviços Jurídicos",
       "description": [
-        "automatizar a revisão de documentos;",
-        "acelerar a pesquisa jurídica;",
-        "avaliar teses jurídicas e probabilidade de sucesso em processos;",
-        "reduzir custos, melhorar a qualidade e a velocidade do atendimento"
+        "Automatizar a revisão de documentos;",
+        "Acelerar a pesquisa jurídica;",
+        "Avaliar teses jurídicas e probabilidade de sucesso em processos;",
+        "Reduzir custos, melhorar a qualidade e a velocidade do atendimento"
       ]
     }
   ]
@@ -73,7 +75,7 @@
   },
   "contact": {
   "title": "Fale Conosco",
-  "subtitle": "Vamos construir algo grandioso juntos",
+  "subtitle": "Vamos construir uma jornada de sucesso juntos!",
   "form": {
     "name": "Seu Nome",
     "email": "Endereço de Email",
@@ -84,7 +86,8 @@
   },
   "footer": {
   "home": "Início",
-  "foundingTeam": "Equipe Fundadora",
+  "foundingTeam": "Fundadores",
+  "data-labeling": "Data Labeling",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
   "description": "Em breve",
@@ -101,7 +104,7 @@
     "mauricio": {
       "name": "Maurício Lima",
       "title": "Co-Fundador",
-      "bio": "Mais de 20 anos em VC e PE. Captou mais de US$ 380 milhões, liderou 27 investimentos e 14 saídas, alcançando um retorno médio anual de 30,3% e um múltiplo de mais de 4x o CoC. Cofundador e CEO da Henkan Investimentos Ltda. Fundador da maior empresa de investimentos B2B em tecnologia do Brasil, a Invest Tech. Atual presidente da Quality Digital e membro do conselho da SkyOne. Ocupou cargos de liderança na Latinvest, Lloyds Bank e Banco Itaú. Bacharel pela Fundação Getulio Vargas (FGV)"
+      "bio": "Mais de 20 anos em VC e PE. Captou mais de US$ 380 milhões, liderou 27 investimentos e 14 saídas, alcançando um retorno médio anual de 30,3% e um múltiplo de mais de 4x o CoC. Cofundador e CEO da Henkan Investimentos Ltda. Fundador da maior empresa de investimentos B2B em tecnologia do Brasil, a Invest Tech. Atual presidente do conselho da Quality Digital e membro do conselho da SkyOne. Ocupou cargos de liderança na Latinvest, Lloyds Bank e Banco Itaú. Bacharel pela Fundação Getulio Vargas (FGV)"
     }
   },
   "mission": {
@@ -111,6 +114,41 @@
     "problemText": "A maioria dos modelos de IA pré-treinados evolui a partir de dados de contexto/idioma inglês, deixando regiões inteiras sub-representadas. Isso é particularmente grave em setores especializados e altamente regulamentados, como Finanças, Saúde e Jurídico",
     "differenceTitle": "Como Somos Diferentes",
     "differenceText": "A ACT.AI se concentra em adaptar a IA às realidades locais — desde o idioma e a infraestrutura até as necessidades comerciais. Fornecemos dados rotulados de alta qualidade, treinamos modelos em idiomas sub-representados e desenvolvemos aplicativos B2B escaláveis ​​para regiões frequentemente negligenciadas."
+  },
+  "dataLabeling": {
+    "hero":{
+      "titlePart01": "Mais rápido e inteligente",
+      "titleHighlight": "data labeling.",
+      "titlePart02": "Impulsionado por IA.",
+      "subtitle": "Acelere seu pipeline de treinamento de modelos com data labeling inteligente, segura e colaborativa — tudo em uma única plataforma.",
+      "textButton": "Agende uma demonstração"
+    },
+    "myWorks": {
+      "title": "Dos dados brutos ao modelo treinado em poucos passos.",
+      "subtitle": "como funciona",
+      "textSliders": [
+        {
+          "title": "Texto",
+          "subtitle": "Destacar. Rotular. Automatizar.",
+          "text": "Extraia entidades e padrões com ferramentas inteligentes de PLN."
+        },
+        {
+          "title": "Imagens",
+          "subtitle": "Fazer upload. Anotar. Exportar.",
+          "text": "Caixas delimitadoras, segmentação e mais — tudo com auxílio de IA."
+        },
+        {
+          "title": "Vídeo",
+          "subtitle": "Quadro a quadro. Rastrear. Rotular.",
+          "text": "Use rotulagem quadro a quadro ou aplique rastreamento de objetos."
+        },
+        {
+          "title": "Áudio",
+          "subtitle": "Ouvir. Marcar. Transcrever.",
+          "text": "Rotule fala, música ou ruído com marcação temporal precisa."
+        }
+      ]
+    }
   }
 
 }

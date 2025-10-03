@@ -1,6 +1,7 @@
 .bluerbackground {
-  filter: blur(104.5px);
-  background: conic-gradient(from 94.38deg, #d7f3ff 0deg, #005bbf 360deg);
+   background: radial-gradient(circle at center, #d7f3ff 0%, #005bbf 100%);
+  backdrop-filter: blur(104.5px);
+  -webkit-backdrop-filter: blur(104.5px);
   width: 322px;
   height: 219px;
   position: absolute;
@@ -8,10 +9,64 @@
   left: calc(50% - 161px);
 }
 
-.mobile {
-  @media (max-width: 780px) {
-    background-position-x: -29px;
+.section-card {
+  background: linear-gradient(135deg, #0a0010 0%, #35004d 30%, #4b0074 70%, #250033 100%),
+    rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px;
+  border: 1px solid transparent;
+}
+.section-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.parent:hover .section-card:not(:hover) {
+  opacity: 0.5;
+}
+
+.text-home {
+  background: linear-gradient(to right, #999999, #cccccc, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-blur-ios {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+@media (min-width: 1024px) {
+  .container-item-card:hover :nth-child(2){
+    color: #E7C2FF;
+  }
+
+  .container-item-card:hover :nth-child(3),
+  .container-item-card:hover :nth-child(4){
+    color: #CCCCCC;
+  }
+}
+
+@media (max-width: 780px) {
+  .bluerbackground {
     background-size: 325px;
     height: 129px;
+  }
+}
+
+@media (max-width: 400px) {
+  .bluerbackground {
+    background-position-x: -29px;
   }
 }

@@ -33,7 +33,10 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
   }));
 
   return (
-    <section className="w-full bg-black py-16 md:py-24 text-white relative bg-[url('/images/sectors.png')] bg-no-repeat bg-cover px-8 md:px-24">
+    <section
+      className="w-full bg-black py-16 md:py-24 text-white relative bg-[url('/images/sectors.png')] bg-no-repeat bg-cover px-8 md:px-24"
+      id="works"
+    >
       <div className="w-full flex items-start flex-col gap-10 lg:gap-0 lg:flex-row md:justify-between">
         <Image
           src="/images/sectors-user.png"
@@ -42,11 +45,11 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
           alt="user"
         />
         <div className="w-full lg:w-[50%]">
-          <h3 className="text-[22px] text-white/60 mb-2 uppercase tracking-[6px]">
+          <h3 className="text-lg lg:text-[22px] text-white/60 mb-2 uppercase tracking-[6px]">
             {dict.sectionTitle}
           </h3>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-2xl md:text-5xl font-bold mb-6 leading-tight">
             {dict.sectionSubtitle}
           </h2>
 
@@ -100,14 +103,14 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
 
                   {isOpen && sector.description?.length && (
                     <div className="mt-4">
-                      <p className="text-sm font-semibold mb-2">
+                      <p className="text-base font-semibold mb-4">
                         {idx === 0 && dict.platformHelpHealthCare}
                         {idx === 1 && dict.platformHelpFinancialServices}
                         {idx === 2 && dict.platformHelpLegalServices}
                       </p>
                       <ul className="list-decimal list-inside text-sm space-y-4">
                         {sector.description.map((text, i) => (
-                          <li key={i} className="text-base">
+                          <li key={i} className="text-sm lg:text-base">
                             {text}
                           </li>
                         ))}

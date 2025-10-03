@@ -1,8 +1,10 @@
 {
   "nav": {
     "home": "Home",
-    "foundingTeam": "Founding Team",
-    "about": "About"
+    "foundingTeam": "Founders",
+    "about": "About",
+    "data-labeling": "Data Labeling",
+    "button": "Let's Talk"
   },
   "hero": {
     "title": "Accurate, Compliant and Traceable AI in all markets",
@@ -39,19 +41,19 @@
       {
         "title": "Health Care",
         "description": [
-          "harmonize standards for products and services;",
-          "optimize prices and costs, reducing industry information asymmetry;",
-          "automate labour intensive processes;",
-          "enhance speed and quality of patient service"
+          "Harmonize standards for products and services;",
+          "Optimize prices and costs, reducing industry information asymmetry;",
+          "Automate labour intensive processes;",
+          "Enhance speed and quality of patient service"
         ]
       },
       {
         "title": "Financial Services",
         "description":[
-          "improve risk assessment and management;",
-          "deliver personalized customer insights;",
-          "boosting cross-selling opportunities;",
-          "increase operations efficiency, speed and quality"
+          "Improve risk assessment and management;",
+          "Deliver personalized customer insights;",
+          "Boost cross-selling opportunities;",
+          "Increase operations efficiency, speed and quality"
         ]
       },
       {
@@ -71,7 +73,7 @@
   },
   "contact": {
   "title": "Contact Us",
-  "subtitle": "Let's build something great together",
+  "subtitle": "Let's build something great together!",
   "form": {
     "name": "Your Name",
     "email": "Email Address",
@@ -82,7 +84,8 @@
   },
   "footer": {
   "home": "Home",
-  "foundingTeam": "Founding Team",
+  "foundingTeam": "Founders",
+  "data-labeling": "Data Labeling",
   "about": "About Us",
   "followUs": "Follow Us",
   "description": "shortly",
@@ -109,5 +112,40 @@
     "problemText": "Most pre-trained AI models evolve from English language/context data, leaving entire regions under-represented. This is particularly acute in specialty and highly regulated sectors, such as Finance, Health Care and Legal",
     "differenceTitle": "How We Are Different",
     "differenceText": "ACT.AI focuses on adapting AI to local realities — from language and infrastructure to business needs. We provide high-quality labeled data, train models in underrepresented languages, and develop scalable B2B applications for regions often overlooked"
+  },
+  "dataLabeling": {
+    "hero":{
+      "titlePart01": "Faster and smarter",
+      "titleHighlight": "data labeling.",
+      "titlePart02": "Powered by AI.",
+      "subtitle": "Accelerate your model training pipeline with intelligent, secure and collaborative data labeling, all in one platform.",
+      "textButton": "Book a Demo"
+    },
+    "myWorks": {
+      "title": "From raw data to trained model in just a few steps.",
+      "subtitle": "how it works",
+      "textSliders": [
+        {
+          "title": "Text",
+          "subtitle": "Highlight. Tag. Automate.",
+          "text": "Extract entities and patterns with smart NLP tools."
+        },
+        {
+          "title": "Images",
+          "subtitle": "Upload. Annotate. Export.",
+          "text": "Bounding boxes, segmentation and more, all AI-assisted."
+        },
+        {
+          "title": "Video",
+          "subtitle": "Frame. Track. Label.",
+          "text": "Use frame-by-frame labeling or apply object tracking."
+        },
+        {
+        "title": "Audio",
+        "subtitle": "Listen. Mark. Transcribe.",
+        "text": "Label speech, music or noise with timestamped accuracy."
+        }
+      ]
+    }
   }
 }

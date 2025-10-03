@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${ubuntu.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased duration-2000 ease-out">{children}</body>
     </html>
   );
 }
