@@ -161,6 +161,54 @@
       "subtitle": "Uma plataforma intuitiva para simplificar sua rotina e garantir escolhas mais seguras",
       "linkButton01": "Saiba Mais",
       "linkButton02": "Acessar Gestor"
+    },
+    "transformWork": {
+      "title": "Transformando dados em decisões inteligentes",
+      "text01": "Nossa plataforma reúne dados técnicos e regulatórios de materiais hospitalares em uma base global, sempre atualizada automaticamente quando há mudanças em tabelas oficiais, fornecedores ou fabricantes.",
+      "text02": "Cada código é tratado, garantindo informações limpas e confiáveis para apoiar decisões seguras."
+    },
+    "advantages": {
+      "title": "Conheça nossas principais vantagens",
+      "cards": [
+        {
+          "title":"Dados Confiáveis",
+          "text":"Dados regulatórios e técnicos sempre atualizados automaticamente, com códigos limpos e validados.",
+          "image":"/images/plataform/vandagem-dados.png"
+        },
+        {
+          "title":"Base Global",
+          "text":"Informações centralizadas de fornecedores, fabricantes e órgãos regulatórios do Brasil e do mundo.",
+          "image":"/images/plataform/vandagem-base.png"
+        },
+        {
+          "title":"Interoperabilidade",
+          "text":"Integre o Gestor de Insumos ao seu fluxo de trabalho, garantindo continuidade e eficiência na sua rotina.",
+          "image":"/images/plataform/vandagem-inter.png"
+        }
+      ],
+      "button": "Acessar Gestor"
+    },
+    "agility": {
+      "title": "A tecnologia que simplifica sua jornada",
+      "text": "Entenda como o sistema guia você da pesquisa à escolha segura.",
+      "content": [
+        {
+          "textHighlight": "Busca",
+          "text": " por código do modelo, descrição ou fabricante."
+        },
+        {
+          "textHighlight": "Confira",
+          "text": " os resultados com dados técnicos e regulatórios."
+        },
+        {
+          "textHighlight": "Compare",
+          "text": " opções e escolha com segurança."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Chega de perder tempo em buscas complexas",
+      "button": "Começar Agora"
     }
   }
 

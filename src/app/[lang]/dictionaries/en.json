@@ -92,7 +92,8 @@
   "followUs": "Follow Us",
   "description": "shortly",
   "linkForFounding": "founders",
-  "linkForMission": "mission"
+  "linkForMission": "mission",
+  "plataform":""
   },
   "founders": {
     "sectionTitle": "Meet the founders driving innovation and impact with applied AI.",
@@ -158,6 +159,54 @@
       "subtitle": "An intuitive platform to simplify your routine and ensure safer choices",
       "linkButton01": "find out more",
       "linkButton02": "access Manager"
+    },
+     "transformWork": {
+      "title": "Turning data into smart decisions",
+      "text01": "Our platform gathers technical and regulatory data on hospital materials on a global basis, always automatically updated when there are changes in official tables, suppliers, or manufacturers.",
+      "text02": "Each code is processed, ensuring clean and reliable information to support safe decisions."
+    },
+    "advantages": {
+      "title": "Discover our main advantages",
+      "cards": [
+        {
+          "title":"Trusted Data",
+          "text":"Regulatory and technical data always automatically updated, with clean and validated codes.",
+          "image":"/images/plataform/vandagem-dados.png"
+        },
+        {
+          "title":"Global Base",
+          "text":"Centralized information from suppliers, manufacturers and regulatory bodies in Brazil and around the world.",
+          "image":"/images/plataform/vandagem-base.png"
+        },
+        {
+          "title":"Interoperability",
+          "text":"Integrate the Input Manager into your workflow, ensuring continuity and efficiency in your routine.",
+          "image":"/images/plataform/vandagem-inter.png"
+        }
+      ],
+      "button": "Access Manager"
+    },
+    "agility": {
+      "title": "The technology that simplifies your journey",
+      "text": "Understand how the system guides you from research to safe choice.",
+      "content": [
+        {
+          "textHighlight": "Search",
+          "text": " by model code, description or manufacturer"
+        },
+        {
+          "textHighlight": "Check",
+          "text": " the results with technical and regulatory data."
+        },
+        {
+          "textHighlight": "Compare",
+          "text": " options and choose safely."
+        }
+      ]
+    },
+    "cta": {
+      "title": "No more wasting time on complex searches",
+      "button": "Start Now"
     }
   }
 }

@@ -21,6 +21,10 @@
     transition: width 0.25s ease-out;
   }
   
+.header-styles.header--input-manager nav a::after {
+  background-color: #000;
+}
+
   .header-styles nav a:hover::after {
     width: 100%; 
   }
