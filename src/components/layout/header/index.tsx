@@ -24,7 +24,9 @@ interface NavProps {
       foundingTeam: string;
       about: string;
       "data-labeling": string;
+      plataform: string;
       button: string;
+      "button-plataform": string;
     };
   };
   lang: "pt-br" | "en";
@@ -39,47 +41,87 @@ export function Header({ dict, lang }: NavProps) {
     ? "pt-br"
     : lang;
 
+  // 1) Validação de rota /input-manager (exata ou com subrotas)
+  const baseInputManager = `/${currentLang}/input-manager`;
+  const isInputManager =
+    pathname === baseInputManager ||
+    pathname.startsWith(`${baseInputManager}/`);
+
   return (
     <header className="bg-transparent relative top-9 z-10">
       <div
-        className={`max-w-[90%] w-full m-auto bg-[#FFFFFF0D] rounded-[133px] py-3 flex items-center  ${
+        className={`max-w-[90%] w-full m-auto ${
+          isInputManager ? "bg-white" : "bg-[#FFFFFF0D]"
+        } rounded-[133px] py-3 flex items-center ${
           pathname === `/${lang}` ? "justify-end" : "justify-between"
-        } flex-wrap px-8 md:px-7 font-sans gap-5 md:gap-0 header-styles`}
+        } flex-wrap px-8 md:px-7 font-sans gap-5 md:gap-0 header-styles ${
+          isInputManager ? "header--input-manager" : ""
+        }`}
       >
         <Link
           href={`/${lang}`}
-          className={`text-white font-bold text-lg ${
+          className={`${
             pathname === `/${lang}` ? "hidden" : "block"
-          }`}
+          } font-bold text-lg`}
         >
-          <Image src={Logo} alt="ACT.AI Logo" width={100} height={24} />
+          <Image
+            src={Logo}
+            alt="ACT.AI Logo"
+            width={100}
+            height={24}
+            className={isInputManager ? "brightness-0" : ""}
+          />
         </Link>
-
+        {/* Mobile */}
         <div
           className={`lg:hidden ${
             pathname === `/${lang}` ? "w-full justify-between" : "w-auto"
           } flex gap-2.5`}
         >
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center gap-3">
             <Link
               href="#contact"
               scroll={true}
-              className={`text-white px-4 py-1 border rounded-[10px] text-sm lg:text-lg font-medium text-center shadow-[0px_1px_2px_0px_#0000000D] ${
+              className={`px-4 py-1 border rounded-[10px] text-sm lg:text-lg font-medium text-center shadow-[0px_1px_2px_0px_#0000000D] ${
                 pathname === `/${lang}` ? "block" : "hidden md:block"
+              } ${
+                isInputManager
+                  ? "text-black border-black"
+                  : "text-white border-white"
               }`}
             >
               {dict.nav.button}
             </Link>
+
+            <Link
+              href="https://dev-search-app-front.vercel.app/"
+              className={`px-4 py-1 rounded-[10px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
+                pathname === `/${lang}` ? "block" : "hidden md:block"
+              } ${
+                isInputManager
+                  ? "text-black bg-[#D7F3FF] border-transparent"
+                  : "text-black bg-white border-white"
+              }`}
+            >
+              {dict.nav["button-plataform"]}
+            </Link>
           </div>
+
           <Sheet>
-            <SheetTrigger className="text-white">
+            <SheetTrigger
+              className={`${isInputManager ? "text-black" : "text-white"}`}
+            >
               <Menu />
             </SheetTrigger>
 
-            <SheetContent className="w-full bg-[#FFFFFF0D] bg-blur-ios">
+            <SheetContent className={`w-full bg-[#FFFFFF0D] bg-blur-ios`}>
               <SheetDescription className="mt-20 px-4 text-center">
                 <div className="flex flex-col gap-20">
-                  <nav className="flex flex-col gap-10 text-lg text-white">
+                  <nav
+                    className={`flex flex-col gap-10 text-lg ${
+                      isInputManager ? "text-black" : "text-white"
+                    }`}
+                  >
                     <Link
                       href={`/${lang}`}
                       className={`${
@@ -94,6 +136,7 @@ export function Header({ dict, lang }: NavProps) {
                         {dict.nav.home}
                       </SheetClose>
                     </Link>
+
                     <Link
                       href={`/${lang}/founders`}
                       className={`${
@@ -108,6 +151,7 @@ export function Header({ dict, lang }: NavProps) {
                         {dict.nav.foundingTeam}
                       </SheetClose>
                     </Link>
+
                     <Link
                       href={`/${lang}/data-labeling`}
                       className={`${
@@ -126,6 +170,26 @@ export function Header({ dict, lang }: NavProps) {
                         {dict.nav["data-labeling"]}
                       </SheetClose>
                     </Link>
+
+                    <Link
+                      href={`/${lang}/input-plataform`}
+                      className={`${
+                        pathname === `/${lang}/input-plataform`
+                          ? "font-bold underline"
+                          : ""
+                      }`}
+                    >
+                      <SheetClose
+                        className={`${
+                          pathname === `/${lang}/input-plataform`
+                            ? "underline"
+                            : ""
+                        }`}
+                      >
+                        {dict.nav["button-plataform"]}
+                      </SheetClose>
+                    </Link>
+
                     <Link
                       href={`/${lang}/mission`}
                       className={`${
@@ -178,9 +242,13 @@ export function Header({ dict, lang }: NavProps) {
             </SheetContent>
           </Sheet>
         </div>
-
+        {/* Desktop */}
         <div className="items-center gap-5 md:gap-12 flex-wrap hidden lg:flex">
-          <nav className="flex gap-6 text-base font-medium text-white items-center">
+          <nav
+            className={`flex gap-6 text-base font-medium items-center ${
+              isInputManager ? "text-black" : "text-white"
+            }`}
+          >
             <Link
               href={`/${lang}`}
               className={`${
@@ -206,22 +274,45 @@ export function Header({ dict, lang }: NavProps) {
               {dict.nav["data-labeling"]}
             </Link>
             <Link
+              href={`/${lang}/input-manager`}
+              className={`${
+                pathname === `/${lang}/input-manager` ? "font-bold" : ""
+              } hover:font-bold`}
+            >
+              {dict.nav.plataform}
+            </Link>
+            <Link
               href={`/${lang}/mission`}
               className={`${
                 pathname === `/${lang}/mission` ? "font-bold" : ""
-              } hover:font-bold`}
+              } hover:font-bold hover:underline`}
             >
               {dict.nav.about}
             </Link>
           </nav>
 
-          <div className="flex items-center gap-12">
+          <div className="flex items-center gap-3">
             <Link
               href="#contact"
               scroll={true}
-              className="bg-transparent text-white px-11 py-3 rounded-[36px] border-white border text-base font-medium hover:brightness-105 transition hover:bg-white hover:text-black shadow-[0px_1px_2px_0px_#0000000D]"
+              className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
+                isInputManager
+                  ? "bg-transparent text-black border-black"
+                  : "bg-transparent text-white border-white hover:bg-white hover:text-black transition"
+              }`}
             >
               {dict.nav.button}
+            </Link>
+
+            <Link
+              href="https://dev-search-app-front.vercel.app/"
+              className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
+                isInputManager
+                  ? "text-black bg-[#D7F3FF] border-transparent hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out"
+                  : "text-black bg-white border-white hover:brightness-105 transition hover:bg-[#e7c2ff] ease-in hover:border-transparent"
+              }`}
+            >
+              {dict.nav["button-plataform"]}
             </Link>
 
             <div className="flex items-center gap-5">
