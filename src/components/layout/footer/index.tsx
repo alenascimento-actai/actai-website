@@ -15,6 +15,7 @@ interface FooterProps {
       linkForFounding: string;
       linkForMission: string;
       "data-labeling": string;
+      plataform: string;
     };
   };
 }
@@ -38,20 +39,35 @@ export const Footer = ({ dict }: FooterProps) => {
 
         {/* Links */}
 
-        <div className="flex flex-col lg:flex-row justify-center gap-5 lg:gap-20 col-span-3 py-5 lg:py-0">
-          <Link href="/" className="font-semibold text-sm text-white">
+        <div className="flex flex-col lg:flex-row justify-center gap-5 lg:gap-16 col-span-3 py-5 lg:py-0">
+          <Link
+            href="/"
+            className="font-semibold text-sm text-white hover:underline"
+          >
             {dict.footer.home}
           </Link>
-          <Link href="/founders" className="font-semibold text-sm text-white">
+          <Link
+            href="/founders"
+            className="font-semibold text-sm text-white hover:underline"
+          >
             {dict.footer.foundingTeam}
           </Link>
           {/* <Link
             href="/data-labeling"
-            className="font-semibold text-sm text-white"
+            className="font-semibold text-sm text-white hover:underline"
           >
             {dict.footer["data-labeling"]}
           </Link> */}
-          <Link href="/mission" className="font-semibold text-sm text-white">
+          <Link
+            href="/input-manager"
+            className="font-semibold text-sm text-white hover:underline"
+          >
+            {dict.footer.plataform}
+          </Link>
+          <Link
+            href="/mission"
+            className="font-semibold text-sm text-white hover:underline"
+          >
             {dict.footer.about}
           </Link>
         </div>
