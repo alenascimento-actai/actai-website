@@ -151,7 +151,7 @@
       ]
     }
   },
-  "input-manager": {
+  "gestor-insumos": {
     "hero":{
       "titlePart01": "The solution that ",
       "titleHighlight": "simplifies the management ",

@@ -59,7 +59,7 @@ export const Footer = ({ dict }: FooterProps) => {
             {dict.footer["data-labeling"]}
           </Link> */}
           <Link
-            href="/input-manager"
+            href="/gestor-insumos"
             className="font-semibold text-sm text-white hover:underline"
           >
             {dict.footer.plataform}
