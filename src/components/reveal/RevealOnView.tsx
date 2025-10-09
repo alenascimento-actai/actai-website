@@ -1,66 +1,90 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, ElementType } from "react";
 
 type Props = {
   children: React.ReactNode;
-  /**
-   * Classes que serão aplicadas quando o elemento entrar em viewport.
-   * Ex.: "animate-fade-right animate-duration-[2000ms] animate-delay-200"
-   * ou   "animate-fade-in-fwd"
-   */
   revealClasses?: string;
-  /** Atraso do gatilho (ms) – apenas para o ScrollReveal controlar quando disparar */
   delay?: number;
-  /** Reanimar ao sair/voltar para a viewport */
-  reset?: boolean;
-  /** Classes adicionais no wrapper */
+  /** Se true, anima cada vez que entrar na viewport (equivale a reset do SR=false). */
+  once?: boolean;
+  /** 0..1: porcentagem visível para disparar (SR usa viewFactor ~ 0.2). */
+  threshold?: number;
   className?: string;
+  /** Trocar a tag do wrapper sem perder estilos/ref */
+  as?: ElementType;
 };
 
 export default function RevealOnView({
   children,
-  // padrão: seu efeito de texto
   revealClasses = "animate-fade-right animate-duration-[2000ms] animate-delay-200",
   delay = 200,
-  reset = false,
+  once = true,
+  threshold = 0.2,
   className = "",
+  as: Tag = "div",
 }: Props) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const el = ref.current;
+    const el = ref.current as HTMLElement | null;
     if (!el) return;
 
-    // Acessibilidade: sem animação se o usuário pedir reduzir movimento
-    if (
+    // Acessibilidade: respeitar preferência do usuário
+    const prefersReduced =
       typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches
-    ) {
-      el.classList.remove("opacity-0");
-      el.style.transform = "none";
-      return;
-    }
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
-    // Estado inicial defensivo
+    // Estado inicial seguro
     el.style.willChange = "opacity, transform";
     el.classList.add("opacity-0");
 
+    // Não anima se usuário preferir reduzir movimento
+    if (prefersReduced) {
+      el.classList.remove("opacity-0");
+      el.style.transform = "none";
+      el.style.willChange = "auto";
+      return;
+    }
+
+    const classes = revealClasses
+      .split(/\s+/)
+      .map((c) => c.trim())
+      .filter(Boolean);
+
+    let isMounted = true;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let sr: any;
-    let fallback: number | undefined;
+    let sr: any | null = null;
+    let io: IntersectionObserver | null = null;
+    let fallbackTimer: number | null = null;
+
+    const revealNow = (node: HTMLElement) => {
+      if (!isMounted) return;
+      node.classList.remove("opacity-0");
+      node.classList.add(...classes);
+      // remove will-change depois que a animação passou do delay + duração aproximada
+      const approxMsFromClasses =
+        classes
+          .find((c) => c.startsWith("animate-duration-["))
+          ?.match(/\[(\d+)ms\]/)?.[1] ?? "1000";
+      const total = Number(approxMsFromClasses) + delay + 50;
+      window.setTimeout(() => {
+        if (!isMounted) return;
+        node.style.willChange = "auto";
+      }, total);
+    };
+
+    const resetNow = (node: HTMLElement) => {
+      node.classList.remove(...classes);
+      node.classList.add("opacity-0");
+      node.style.willChange = "opacity, transform";
+    };
 
     (async () => {
       try {
-        const ScrollReveal = (await import("scrollreveal")).default;
+        // Import dinâmico do ScrollReveal (se instalado)
+        const { default: ScrollReveal } = await import("scrollreveal");
         sr = ScrollReveal();
-
-        const classes = revealClasses
-          .split(/\s+/)
-          .map((c) => c.trim())
-          .filter(Boolean);
-
-        // Usamos ScrollReveal só como OBSERVER (sem animar por ele)
         sr.reveal(el, {
           duration: 0,
           distance: "0px",
@@ -69,43 +93,64 @@ export default function RevealOnView({
           delay,
           cleanup: true,
           mobile: true,
-          reset, // se true, remove as classes ao sair (ver beforeReset)
-          viewFactor: 0.2, // 20% visível já dispara
-          beforeReveal: (node: HTMLElement) => {
-            node.classList.remove("opacity-0");
-            node.classList.add(...classes);
-          },
+          reset: !once, // se once=true, não reseta (anima só 1x)
+          viewFactor: Math.min(Math.max(threshold, 0), 1),
+          beforeReveal: (node: HTMLElement) => revealNow(node),
           beforeReset: (node: HTMLElement) => {
-            if (!reset) return;
-            node.classList.remove(...classes);
-            node.classList.add("opacity-0");
+            if (once) return;
+            resetNow(node);
           },
         });
-
-        // Fallback: se algo impedir o reveal, mostra o conteúdo
-        fallback = window.setTimeout(() => {
-          if (!el) return;
-          if (el.classList.contains("opacity-0")) {
-            el.classList.remove("opacity-0");
-            el.style.transform = "none";
-          }
-        }, 1500);
       } catch {
-        // Se falhar o import do SR, garante conteúdo visível
-        el.classList.remove("opacity-0");
-        el.style.transform = "none";
+        // Fallback leve com IntersectionObserver (sem dependências)
+        if ("IntersectionObserver" in window) {
+          io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  revealNow(entry.target as HTMLElement);
+                  if (once && io) {
+                    io.unobserve(entry.target);
+                  }
+                } else if (!once) {
+                  resetNow(entry.target as HTMLElement);
+                }
+              });
+            },
+            { threshold }
+          );
+          io.observe(el);
+        } else {
+          // Fallback final: apenas mostra
+          el.classList.remove("opacity-0");
+          el.style.transform = "none";
+          el.style.willChange = "auto";
+        }
       }
+
+      // safety: se nada disparar por algum motivo, mostra após 1.5s
+      fallbackTimer = window.setTimeout(() => {
+        if (!isMounted) return;
+        if (el.classList.contains("opacity-0")) {
+          el.classList.remove("opacity-0");
+          el.style.transform = "none";
+          el.style.willChange = "auto";
+        }
+      }, 1500) as unknown as number;
     })();
 
     return () => {
+      isMounted = false;
       if (sr?.destroy) sr.destroy();
-      if (fallback) window.clearTimeout(fallback);
+      if (io) io.disconnect();
+      if (fallbackTimer) window.clearTimeout(fallbackTimer);
     };
-  }, [delay, reset, revealClasses]);
+  }, [delay, once, threshold, revealClasses]);
 
   return (
-    <div ref={ref} className={`will-change-transform ${className}`}>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    <Tag ref={ref as any} className={`will-change-transform ${className}`}>
       {children}
-    </div>
+    </Tag>
   );
 }
