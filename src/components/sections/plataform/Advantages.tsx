@@ -16,7 +16,7 @@ const icons = [BetweenHorizonalEnd, Globe, Puzzle];
 export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
   return (
     <section className="w-full py-16 md:py-24">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-200">
           <h2 className="text-center text-3xl md:text-5xl font-bold text-[#3B3B3B]">
             {dict.title}
@@ -24,7 +24,7 @@ export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
         </RevealOnView>
 
         {/* Cards */}
-        <div className="px-20 flex flex-col basis-full gap-8 py-16 lg:flex-row lg:basis-1/3">
+        <div className="px-4 md:px-20 flex flex-col basis-full gap-8 py-16 lg:flex-row lg:basis-1/3">
           {dict.cards.map((card, i) => {
             const Icon = icons[i] ?? BetweenHorizonalEnd;
             return (

@@ -23,7 +23,7 @@ export function Hero({ dict }: HeroProps) {
         text-[#3B3B3B] -top-[62.2px]
         bg-[url(/images/plataform/background.png)]
         pb-28 sm:pb-36 lg:pb-44 rounded-[21px]
-        px-20
+        px-4 lg:px-20
       "
       style={{
         background:
@@ -45,7 +45,7 @@ export function Hero({ dict }: HeroProps) {
               {dict.subtitle}
             </p>
             {/* Botões principais (no fluxo, intocados) */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 z-20 lg:items-center lg:justify-center">
+            <div className="mt-8 flex flex-col items-center sm:flex-row gap-4 z-20 sm:justify-center">
               <Link
                 href="#tranformWorkSection"
                 scroll
@@ -69,8 +69,8 @@ export function Hero({ dict }: HeroProps) {
       <div
         className="
           pointer-events-none
-          absolute left-1/2 bottom-0 lg:bottom-[-490px] -translate-x-1/2
-          w-full max-w-4xl
+          absolute left-1/2 -bottom-[226px] md:-bottom-[419px] lg:bottom-[-490px] -translate-x-1/2
+          w-full lg:max-w-4xl
         "
       >
         {/* Monitor */}
@@ -85,21 +85,21 @@ export function Hero({ dict }: HeroProps) {
           />
 
           {/* Divs (chips) flutuantes — posicionadas relativas ao wrapper */}
-          <div className="absolute top-[38%] right-1/4 translate-x-1/3 bg-[#EEEEEE42] backdrop-blur-xl rounded-full px-4 py-2 flex items-center gap-2 text-[#0C2941] font-bold border border-[#BCE9FC]">
+          <div className="absolute top-[38%] right-1/4 translate-x-1/3 bg-[#EEEEEE42] backdrop-blur-xl rounded-full px-4 py-2 hidden md:flex items-center gap-2 text-[#0C2941] font-bold border border-[#BCE9FC]">
             <span className="w-9 h-9 rounded-full bg-[#D7F3FF] flex items-center justify-center text-2xl shadow-[0px_0px_10.3px_0px_#00000021]">
               <TrendingUp size={18} color="#114C87" />
             </span>
             <span>+Praticidade</span>
           </div>
 
-          <div className="absolute bottom-[40%] left-1/4 -translate-x-1/3 bg-[#EEEEEE42] backdrop-blur-xl rounded-full px-4 py-2 flex items-center gap-2 text-[#0C2941] font-bold border border-[#BCE9FC]">
+          <div className="absolute bottom-[40%] left-1/4 -translate-x-1/3 bg-[#EEEEEE42] backdrop-blur-xl rounded-full px-4 py-2 hidden md:flex items-center gap-2 text-[#0C2941] font-bold border border-[#BCE9FC]">
             <span className="w-9 h-9 rounded-full bg-[#D7F3FF] flex items-center justify-center text-2xl shadow-[0px_0px_10.3px_0px_#00000021]">
               <Zap size={18} color="#114C87" />
             </span>
             <span>+Agilidade</span>
           </div>
 
-          <div className="absolute bottom-[30%] right-1/4 translate-y-1/3 bg-[#EEEEEE42] backdrop-blur-xl rounded-full px-4 py-2 flex items-center gap-2 text-[#0C2941] font-bold border border-[#BCE9FC]">
+          <div className="absolute bottom-[30%] right-1/4 translate-y-1/3 bg-[#EEEEEE42] backdrop-blur-xl rounded-full px-4 py-2 hidden md:flex items-center gap-2 text-[#0C2941] font-bold border border-[#BCE9FC]">
             <span className="w-9 h-9 rounded-full bg-[#D7F3FF] flex items-center justify-center text-2xl shadow-[0px_0px_10.3px_0px_#00000021]">
               <Check size={18} color="#114C87" />
             </span>

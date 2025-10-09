@@ -14,7 +14,7 @@ const icons = [Search, ClipboardList, ArrowUpDown];
 export function AgilitySection({ dict }: AgilitySectionProps) {
   return (
     <section className="w-full bg-[url('/images/plataform/bg-section-agility.png')] bg-no-repeat bg-cover lg:bg-contain bg-left py-16 md:py-24">
-      <div className="container mx-auto px-20">
+      <div className="container mx-auto px-4 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
           <div className="max-w-[550px]">
             <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-200">
