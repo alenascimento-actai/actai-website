@@ -4,6 +4,7 @@ import { TransformWorkSection } from "@/components/sections/plataform/TransformW
 import { AdvantagesSection } from "@/components/sections/plataform/Advantages";
 import { AgilitySection } from "@/components/sections/plataform/Agility";
 import { CtaSection } from "../../../components/sections/plataform/CtaSection";
+import { ConnectionSection } from "@/components/sections/plataform/Connection";
 
 export default async function PageInputManager({
   params,
@@ -17,6 +18,7 @@ export default async function PageInputManager({
     <section>
       <Hero dict={dict["input-manager"].hero} />
       <TransformWorkSection dict={dict["input-manager"].transformWork} />
+      <ConnectionSection dict={dict["input-manager"].connection} />
       <AdvantagesSection dict={dict["input-manager"].advantages} />
       <AgilitySection dict={dict["input-manager"].agility} />
       <CtaSection dict={dict["input-manager"].cta} />

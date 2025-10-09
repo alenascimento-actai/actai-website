@@ -156,9 +156,13 @@
       "titlePart01": "The solution that ",
       "titleHighlight": "simplifies the management ",
       "titlePart02": "of hospital supplies",
-      "subtitle": "An intuitive platform to simplify your routine and ensure safer choices",
+      "subtitle": "Search and compare supplies directly on our platform or easily integrate the information into your workflow.",
       "linkButton01": "find out more",
       "linkButton02": "access Manager"
+    },
+        "connection": {
+      "title":"Connected to what you already use",
+      "text": "The Input Manager easily integrates with the main systems on the market, whether via API, cookies, or simple copy and paste."
     },
      "transformWork": {
       "title": "Turning data into smart decisions",
