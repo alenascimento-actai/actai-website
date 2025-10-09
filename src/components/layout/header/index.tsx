@@ -48,7 +48,7 @@ export function Header({ dict, lang }: NavProps) {
     pathname.startsWith(`${baseInputManager}/`);
 
   return (
-    <header className="bg-transparent relative top-9 z-10">
+    <header className="bg-transparent relative top-9 z-50">
       <div
         className={`max-w-[90%] w-full m-auto ${
           isInputManager ? "bg-white" : "bg-[#FFFFFF0D]"
@@ -152,7 +152,7 @@ export function Header({ dict, lang }: NavProps) {
                       </SheetClose>
                     </Link>
 
-                    <Link
+                    {/* <Link
                       href={`/${lang}/data-labeling`}
                       className={`${
                         pathname === `/${lang}/data-labeling`
@@ -169,19 +169,19 @@ export function Header({ dict, lang }: NavProps) {
                       >
                         {dict.nav["data-labeling"]}
                       </SheetClose>
-                    </Link>
+                    </Link> */}
 
                     <Link
-                      href={`/${lang}/input-plataform`}
+                      href={`/${lang}/input-manager`}
                       className={`${
-                        pathname === `/${lang}/input-plataform`
+                        pathname === `/${lang}/input-manager`
                           ? "font-bold underline"
                           : ""
                       }`}
                     >
                       <SheetClose
                         className={`${
-                          pathname === `/${lang}/input-plataform`
+                          pathname === `/${lang}/input-manager`
                             ? "underline"
                             : ""
                         }`}
@@ -265,14 +265,14 @@ export function Header({ dict, lang }: NavProps) {
             >
               {dict.nav.foundingTeam}
             </Link>
-            <Link
+            {/* <Link
               href={`/${lang}/data-labeling`}
               className={`${
                 pathname === `/${lang}/data-labeling` ? "font-bold" : ""
               } hover:font-bold`}
             >
               {dict.nav["data-labeling"]}
-            </Link>
+            </Link> */}
             <Link
               href={`/${lang}/input-manager`}
               className={`${

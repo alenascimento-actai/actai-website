@@ -158,9 +158,13 @@
       "titlePart01": "A solução que ",
       "titleHighlight": "simplifica a gestão ",
       "titlePart02": "de insumos hospitalares",
-      "subtitle": "Uma plataforma intuitiva para simplificar sua rotina e garantir escolhas mais seguras",
+      "subtitle": "Pesquise e compare insumos diretamente na nossa plataforma ou integre as informações ao seu fluxo de trabalho com facilidade.",
       "linkButton01": "Saiba Mais",
       "linkButton02": "Acessar Gestor"
+    },
+    "connection": {
+      "title":"Conectado ao que você já usa",
+      "text": "O Gestor de Insumos se integra facilmente aos principais sistemas do mercado, seja via API, cookie ou simples copy & paste."
     },
     "transformWork": {
       "title": "Transformando dados em decisões inteligentes",
@@ -193,7 +197,7 @@
       "text": "Entenda como o sistema guia você da pesquisa à escolha segura.",
       "content": [
         {
-          "textHighlight": "Busca",
+          "textHighlight": "Busque",
           "text": " por código do modelo, descrição ou fabricante."
         },
         {

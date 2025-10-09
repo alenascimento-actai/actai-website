@@ -52,12 +52,12 @@ export const Footer = ({ dict }: FooterProps) => {
           >
             {dict.footer.foundingTeam}
           </Link>
-          <Link
+          {/* <Link
             href="/data-labeling"
             className="font-semibold text-sm text-white hover:underline"
           >
             {dict.footer["data-labeling"]}
-          </Link>
+          </Link> */}
           <Link
             href="/input-manager"
             className="font-semibold text-sm text-white hover:underline"
