@@ -21,7 +21,9 @@
     "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.3.1"
+    "scrollreveal": "^4.0.9",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animated": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

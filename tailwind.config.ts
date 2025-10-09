@@ -1,7 +1,13 @@
 import type { Config } from "tailwindcss";
+import animated from "tailwindcss-animated";
 
-const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+export default {
+  content: [
+    "./src/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -10,10 +16,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require("tailwindcss-animated"),
-  ],
-};
-
-export default config;
+  plugins: [animated],
+} satisfies Config;
