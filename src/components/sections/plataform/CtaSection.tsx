@@ -43,7 +43,7 @@ export function CtaSection({ dict }: CtaSectionProps) {
 
                 <div className="mt-8">
                   <Link
-                    href={"#"}
+                    href="https://healthcare.actai.ai"
                     className="flex bg-[#0C2941] text-white rounded-full font-medium text-base lg:text-xl hover:brightness-105 hover:bg-[#E7C2FF] transition justify-center items-center gap-2 h-12 w-[270px] lg:w-[257px] lg:hover:gap-9 duration-600 ease-out hover:text-black max-w-[270px] lg:max-w-[300px]"
                   >
                     {dict.button}

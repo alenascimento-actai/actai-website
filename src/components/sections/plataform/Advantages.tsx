@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { BetweenHorizonalEnd, Globe, Puzzle } from "lucide-react";
 import RevealOnView from "@/components/reveal/RevealOnView";
+import Link from "next/link";
 
 export interface AdvantagesSectionProps {
   dict: {
@@ -67,12 +67,12 @@ export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
         </div>
 
         <div className="flex justify-center">
-          <Button
-            variant="outline"
-            className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out "
+          <Link
+            href="https://healthcare.actai.ai"
+            className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#0C2941] font-medium text-base flex items-center"
           >
             {dict.button}
-          </Button>
+          </Link>
         </div>
       </div>
     </section>

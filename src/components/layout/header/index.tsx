@@ -94,7 +94,7 @@ export function Header({ dict, lang }: NavProps) {
             </Link>
 
             <Link
-              href="https://dev-search-app-front.vercel.app/"
+              href="https://healthcare.actai.ai/"
               className={`px-4 py-1 rounded-[10px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
                 pathname === `/${lang}` ? "block" : "hidden md:block"
               } ${
@@ -305,7 +305,7 @@ export function Header({ dict, lang }: NavProps) {
             </Link>
 
             <Link
-              href="https://dev-search-app-front.vercel.app/"
+              href="https://healthcare.actai.ai/"
               className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
                 isInputManager
                   ? "text-black bg-[#D7F3FF] border-transparent hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out"

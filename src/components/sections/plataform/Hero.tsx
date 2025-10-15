@@ -55,7 +55,7 @@ export function Hero({ dict }: HeroProps) {
                 <ArrowRight />
               </Link>
               <Link
-                href="https://search-app-front-two.vercel.app/"
+                href="https://healthcare.actai.ai/"
                 className="flex text-[#0C2941] border-[#0C2941] border rounded-full font-medium text-base lg:text-xl hover:brightness-105 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] transition justify-center items-center gap-2 h-12 w-[270px] lg:w-[257px] lg:hover:gap-9 duration-600 ease-out"
               >
                 {dict.linkButton02}
