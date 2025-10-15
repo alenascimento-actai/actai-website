@@ -41,8 +41,8 @@ export function Header({ dict, lang }: NavProps) {
     ? "pt-br"
     : lang;
 
-  // 1) Validação de rota /input-manager (exata ou com subrotas)
-  const baseInputManager = `/${currentLang}/input-manager`;
+  // 1) Validação de rota /gestor-insumos (exata ou com subrotas)
+  const baseInputManager = `/${currentLang}/gestor-insumos`;
   const isInputManager =
     pathname === baseInputManager ||
     pathname.startsWith(`${baseInputManager}/`);
@@ -55,7 +55,7 @@ export function Header({ dict, lang }: NavProps) {
         } rounded-[133px] py-3 flex items-center ${
           pathname === `/${lang}` ? "justify-end" : "justify-between"
         } flex-wrap px-8 md:px-7 font-sans gap-5 md:gap-0 header-styles ${
-          isInputManager ? "header--input-manager" : ""
+          isInputManager ? "header--gestor-insumos" : ""
         }`}
       >
         <Link
@@ -94,7 +94,7 @@ export function Header({ dict, lang }: NavProps) {
             </Link>
 
             <Link
-              href="https://dev-search-app-front.vercel.app/"
+              href="https://healthcare.actai.ai/"
               className={`px-4 py-1 rounded-[10px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
                 pathname === `/${lang}` ? "block" : "hidden md:block"
               } ${
@@ -172,16 +172,16 @@ export function Header({ dict, lang }: NavProps) {
                     </Link> */}
 
                     <Link
-                      href={`/${lang}/input-manager`}
+                      href={`/${lang}/gestor-insumos`}
                       className={`${
-                        pathname === `/${lang}/input-manager`
+                        pathname === `/${lang}/gestor-insumos`
                           ? "font-bold underline"
                           : ""
                       }`}
                     >
                       <SheetClose
                         className={`${
-                          pathname === `/${lang}/input-manager`
+                          pathname === `/${lang}/gestor-insumos`
                             ? "underline"
                             : ""
                         }`}
@@ -274,9 +274,9 @@ export function Header({ dict, lang }: NavProps) {
               {dict.nav["data-labeling"]}
             </Link> */}
             <Link
-              href={`/${lang}/input-manager`}
+              href={`/${lang}/gestor-insumos`}
               className={`${
-                pathname === `/${lang}/input-manager` ? "font-bold" : ""
+                pathname === `/${lang}/gestor-insumos` ? "font-bold" : ""
               } hover:font-bold`}
             >
               {dict.nav.plataform}
@@ -305,7 +305,7 @@ export function Header({ dict, lang }: NavProps) {
             </Link>
 
             <Link
-              href="https://dev-search-app-front.vercel.app/"
+              href="https://healthcare.actai.ai/"
               className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
                 isInputManager
                   ? "text-black bg-[#D7F3FF] border-transparent hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out"

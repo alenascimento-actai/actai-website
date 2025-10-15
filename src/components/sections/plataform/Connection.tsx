@@ -12,26 +12,26 @@ export function ConnectionSection({ dict }: ConnectionSectionProps) {
   return (
     <section
       id="connectionSection"
-      className="relative overflow-hidden py-50 bg-[url('/images/plataform/bg-section-connection.png')]
+      className="overflow-hidden py-50 bg-[url('/images/plataform/bg-section-connection.png')]
           bg-no-repeat bg-cover bg-center"
       aria-labelledby="connection-title"
     >
-      <div className="container relative z-[2] px-6 lg:px-20 ">
+      <div className="container mx-auto px-4 lg:px-20 ">
         <div
           className="
             mx-auto w-full max-w-5xl
-            rounded-full
+            rounded-[100px] lg:rounded-full
             border
             bg-[#eeeeee07]
             backdrop-blur-xl
             border-white
-            px-6 sm:px-10 md:px-14
+            px-7 sm:px-10 md:px-14
             py-10 md:py-14
           "
         >
           {/* Ícone */}
-          <div className="mx-auto mb-5 sm:mb-6 grid place-items-center">
-            <span className="size-14 sm:size-16 rounded-[24px] bg-gradient-to-b from-[#D7F3FF] via-[#B9E9FD] to-[#A9E5FF] grid place-items-center border border-[#D7F3FF]">
+          <div className="mx-auto mb-5 sm:mb-6 grid place-items-center relative">
+            <span className="size-16  rounded-[24px] bg-gradient-to-b from-[#D7F3FF] via-[#B9E9FD] to-[#A9E5FF] grid place-items-center border border-[#D7F3FF] absolute right-[37%] left-[37%] -top-[70px] md:static">
               <Link color="#012169" size={26} />
             </span>
           </div>
