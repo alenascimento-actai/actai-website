@@ -56,7 +56,6 @@ export const Footer = ({ dict }: FooterProps) => {
           >
             {dict.footer["data-labeling"]}
           </Link> */}
-
           <Link
             href="/mission"
             className="font-semibold text-sm text-white hover:underline"
