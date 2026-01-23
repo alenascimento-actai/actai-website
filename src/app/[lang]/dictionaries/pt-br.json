@@ -1,16 +1,16 @@
 {
   "nav": {
     "home": "Início",
-    "foundingTeam": "Fundadores",
     "about": "Sobre",
+    "concepts": "Conceitos Por Trás da Solução",
     "data-labeling": "Data Labeling",
-    "plataform": "Gestor de Insumos",
     "button": "Fale Conosco",
     "button-plataform": "Acessar Gestor"
   },
   "hero": {
     "title": "IA precisa, em conformidade e rastreável em todos os mercados",
-    "button": "Veja como funciona"
+    "button": "Veja como funciona",
+    "demo": "Agende uma demonstração"
   },
   "solutions": {
     "subtitle": "Produtos e Serviços",
@@ -88,17 +88,15 @@
   },
   "footer": {
   "home": "Início",
-  "foundingTeam": "Fundadores",
-  "plataform": "Gestor de Insumos",
+  "plataform": "",
+  "concepts": "Conceitos Por Trás da Solução",
   "data-labeling": "Data Labeling",
   "about": "Sobre Nós",
   "followUs": "Siga-nos",
-  "description": "Em breve",
-  "linkForFounding": "fundadores",
-  "linkForMission": "missão"
+  "description": "Em breve"
   },
   "founders": {
-    "sectionTitle": "Conheça os fundadores impulsionando inovação e impacto com IA aplicada.",
+    "sectionTitle": "Time Fundador",
     "marco": {
       "name": "Marco Spinelli",
       "title": "Co-Fundador e CEO",
@@ -163,8 +161,8 @@
       "linkButton02": "Acessar Gestor"
     },
     "connection": {
-      "title":"Conectado ao que você já usa",
-      "text": "O Gestor de Insumos se integra facilmente aos principais sistemas do mercado, seja via API, cookie ou simples copy & paste."
+      "title":"Possibilidade de integração ao que você já usa",
+      "text": "O Gestor de Insumos se integra aos principais sistemas do mercado, seja via API ou troca de arquivos."
     },
     "transformWork": {
       "title": "Transformando dados em decisões inteligentes",
@@ -177,20 +175,21 @@
         {
           "title":"Dados Confiáveis",
           "text":"Dados regulatórios e técnicos sempre atualizados automaticamente, com códigos limpos e validados.",
-          "image":"/images/plataform/vandagem-dados.png"
+          "image":"https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/vandagem-dados.png"
         },
         {
-          "title":"Base Global",
-          "text":"Informações centralizadas de fornecedores, fabricantes e órgãos regulatórios do Brasil e do mundo.",
-          "image":"/images/plataform/vandagem-base.png"
+          "title":"Base Atualizada",
+          "text":"Informações atualizadas dos fornecedores, fabricantes e órgãos regulatórios do Brasil e do mundo.",
+          "image":"https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/vandagem-base.png"
         },
         {
-          "title":"Interoperabilidade",
-          "text":"Integre o Gestor de Insumos ao seu fluxo de trabalho, garantindo continuidade e eficiência na sua rotina.",
-          "image":"/images/plataform/vandagem-inter.png"
+          "title":"Smart Search",
+          "text":"Uma busca que interpreta variações, erros de digitação e termos incompletos para encontrar o item desejado.",
+          "image":"https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/vandagem-inter.png"
         }
       ],
-      "button": "Acessar Gestor"
+      "button": "Acessar Gestor",
+      "buttonContact": "Fale Conosco"
     },
     "agility": {
       "title": "A tecnologia que simplifica sua jornada",
@@ -212,7 +211,8 @@
     },
     "cta": {
       "title": "Chega de perder tempo em buscas complexas",
-      "button": "Começar Agora"
+      "button": "Começar Agora",
+      "buttonContact": "Fale Conosco"
     }
   }
 

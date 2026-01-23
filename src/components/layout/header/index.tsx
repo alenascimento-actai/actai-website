@@ -21,10 +21,9 @@ interface NavProps {
   dict: {
     nav: {
       home: string;
-      foundingTeam: string;
+      concepts: string;
       about: string;
       "data-labeling": string;
-      plataform: string;
       button: string;
       "button-plataform": string;
     };
@@ -38,38 +37,29 @@ export function Header({ dict, lang }: NavProps) {
   const currentLang = pathname.startsWith("/en")
     ? "en"
     : pathname.startsWith("/pt-br")
-    ? "pt-br"
-    : lang;
+      ? "pt-br"
+      : lang;
 
-  // 1) Validação de rota /gestor-insumos (exata ou com subrotas)
-  const baseInputManager = `/${currentLang}/gestor-insumos`;
-  const isInputManager =
-    pathname === baseInputManager ||
-    pathname.startsWith(`${baseInputManager}/`);
+  const normalizedPath = pathname.replace(/\/$/, "");
+
+  const isHome = normalizedPath === "" || normalizedPath === `/${currentLang}`;
 
   return (
     <header className="bg-transparent relative top-9 z-50">
       <div
         className={`max-w-[90%] w-full m-auto ${
-          isInputManager ? "bg-white" : "bg-[#FFFFFF0D]"
-        } rounded-[133px] py-3 flex items-center ${
-          pathname === `/${lang}` ? "justify-end" : "justify-between"
-        } flex-wrap px-8 md:px-7 font-sans gap-5 md:gap-0 header-styles ${
-          isInputManager ? "header--gestor-insumos" : ""
+          isHome ? "bg-white" : "bg-[rgba(255,255,255,0.05)]"
+        } rounded-[133px] py-3 flex items-center justify-between flex-wrap px-8 md:px-7 font-sans gap-5 md:gap-0 header-styles ${
+          isHome ? "header--gestor-insumos" : ""
         }`}
       >
-        <Link
-          href={`/${lang}`}
-          className={`${
-            pathname === `/${lang}` ? "hidden" : "block"
-          } font-bold text-lg`}
-        >
+        <Link href={`/${lang}`} className="font-bold text-lg">
           <Image
             src={Logo}
             alt="ACT.AI Logo"
             width={100}
             height={24}
-            className={isInputManager ? "brightness-0" : ""}
+            className={isHome ? "brightness-0" : ""}
           />
         </Link>
         {/* Mobile */}
@@ -82,12 +72,10 @@ export function Header({ dict, lang }: NavProps) {
             <Link
               href="#contact"
               scroll={true}
-              className={`px-4 py-1 border rounded-[10px] text-sm lg:text-lg font-medium text-center shadow-[0px_1px_2px_0px_#0000000D] ${
+              className={`px-4 py-1 border rounded-[10px] text-xs md:text-sm lg:text-lg font-medium text-center shadow-[0px_1px_2px_0px_#0000000D] ${
                 pathname === `/${lang}` ? "block" : "hidden md:block"
               } ${
-                isInputManager
-                  ? "text-black border-black"
-                  : "text-white border-white"
+                isHome ? "text-black border-black" : "text-white border-white"
               }`}
             >
               {dict.nav.button}
@@ -95,10 +83,10 @@ export function Header({ dict, lang }: NavProps) {
 
             <Link
               href="https://healthcare.actai.ai/"
-              className={`px-4 py-1 rounded-[10px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
+              className={`px-4 py-1 rounded-[10px] border text-xs md:text-sm lg:text-lg font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
                 pathname === `/${lang}` ? "block" : "hidden md:block"
               } ${
-                isInputManager
+                isHome
                   ? "text-black bg-[#D7F3FF] border-transparent"
                   : "text-black bg-white border-white"
               }`}
@@ -108,9 +96,7 @@ export function Header({ dict, lang }: NavProps) {
           </div>
 
           <Sheet>
-            <SheetTrigger
-              className={`${isInputManager ? "text-black" : "text-white"}`}
-            >
+            <SheetTrigger className={`${isHome ? "text-black" : "text-white"}`}>
               <Menu />
             </SheetTrigger>
 
@@ -119,7 +105,7 @@ export function Header({ dict, lang }: NavProps) {
                 <div className="flex flex-col gap-20">
                   <nav
                     className={`flex flex-col gap-10 text-lg ${
-                      isInputManager ? "text-black" : "text-white"
+                      isHome ? "text-black" : "text-white"
                     }`}
                   >
                     <Link
@@ -138,17 +124,17 @@ export function Header({ dict, lang }: NavProps) {
                     </Link>
 
                     <Link
-                      href={`/${lang}/founders`}
+                      href={`/${lang}/concepts`}
                       className={`${
-                        pathname === `/${lang}/founders` ? "font-bold" : ""
+                        pathname === `/${lang}/concepts` ? "font-bold" : ""
                       }`}
                     >
                       <SheetClose
                         className={`${
-                          pathname === `/${lang}/founders` ? "underline" : ""
+                          pathname === `/${lang}/concepts` ? "underline" : ""
                         }`}
                       >
-                        {dict.nav.foundingTeam}
+                        {dict.nav.concepts}
                       </SheetClose>
                     </Link>
 
@@ -187,21 +173,6 @@ export function Header({ dict, lang }: NavProps) {
                         }`}
                       >
                         {dict.nav["button-plataform"]}
-                      </SheetClose>
-                    </Link>
-
-                    <Link
-                      href={`/${lang}/mission`}
-                      className={`${
-                        pathname === `/${lang}/mission` ? "font-bold" : ""
-                      }`}
-                    >
-                      <SheetClose
-                        className={`${
-                          pathname === `/${lang}/mission` ? "underline" : ""
-                        }`}
-                      >
-                        {dict.nav.about}
                       </SheetClose>
                     </Link>
                   </nav>
@@ -246,7 +217,7 @@ export function Header({ dict, lang }: NavProps) {
         <div className="items-center gap-5 md:gap-12 flex-wrap hidden lg:flex">
           <nav
             className={`flex gap-6 text-base font-medium items-center ${
-              isInputManager ? "text-black" : "text-white"
+              isHome ? "text-black" : "text-white"
             }`}
           >
             <Link
@@ -257,14 +228,16 @@ export function Header({ dict, lang }: NavProps) {
             >
               {dict.nav.home}
             </Link>
+
             <Link
-              href={`/${lang}/founders`}
+              href={`/${lang}/concepts`}
               className={`${
-                pathname === `/${lang}/founders` ? "font-bold" : ""
+                pathname === `/${lang}/concepts` ? "font-bold" : ""
               } hover:font-bold`}
             >
-              {dict.nav.foundingTeam}
+              {dict.nav.concepts}
             </Link>
+
             {/* <Link
               href={`/${lang}/data-labeling`}
               className={`${
@@ -273,14 +246,6 @@ export function Header({ dict, lang }: NavProps) {
             >
               {dict.nav["data-labeling"]}
             </Link> */}
-            <Link
-              href={`/${lang}/gestor-insumos`}
-              className={`${
-                pathname === `/${lang}/gestor-insumos` ? "font-bold" : ""
-              } hover:font-bold`}
-            >
-              {dict.nav.plataform}
-            </Link>
             <Link
               href={`/${lang}/mission`}
               className={`${
@@ -295,8 +260,8 @@ export function Header({ dict, lang }: NavProps) {
             <Link
               href="#contact"
               scroll={true}
-              className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
-                isInputManager
+              className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out ${
+                isHome
                   ? "bg-transparent text-black border-black"
                   : "bg-transparent text-white border-white hover:bg-white hover:text-black transition"
               }`}
@@ -306,9 +271,9 @@ export function Header({ dict, lang }: NavProps) {
 
             <Link
               href="https://healthcare.actai.ai/"
-              className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] ${
-                isInputManager
-                  ? "text-black bg-[#D7F3FF] border-transparent hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out"
+              className={`px-7 py-3 rounded-[36px] border text-base font-medium shadow-[0px_1px_2px_0px_#0000000D] hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out ${
+                isHome
+                  ? "text-black bg-[#D7F3FF] border-transparent "
                   : "text-black bg-white border-white hover:brightness-105 transition hover:bg-[#e7c2ff] ease-in hover:border-transparent"
               }`}
             >

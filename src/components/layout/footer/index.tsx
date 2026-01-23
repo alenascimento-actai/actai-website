@@ -8,14 +8,11 @@ interface FooterProps {
   dict: {
     footer: {
       home: string;
-      foundingTeam: string;
+      concepts: string;
       about: string;
       followUs: string;
       description: string;
-      linkForFounding: string;
-      linkForMission: string;
       "data-labeling": string;
-      plataform: string;
     };
   };
 }
@@ -23,7 +20,7 @@ interface FooterProps {
 export const Footer = ({ dict }: FooterProps) => {
   return (
     <footer className="bg-black text-white py-12 px-8 md:px-24">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-5">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-5">
         {/* Logo */}
         <div className="col-span-1 flex items-start">
           <Link href={"/"}>
@@ -33,6 +30,7 @@ export const Footer = ({ dict }: FooterProps) => {
               width={174}
               height={37}
               className="w-auto h-9"
+              priority
             />
           </Link>
         </div>
@@ -47,10 +45,10 @@ export const Footer = ({ dict }: FooterProps) => {
             {dict.footer.home}
           </Link>
           <Link
-            href="/founders"
+            href="/concepts"
             className="font-semibold text-sm text-white hover:underline"
           >
-            {dict.footer.foundingTeam}
+            {dict.footer.concepts}
           </Link>
           {/* <Link
             href="/data-labeling"
@@ -58,12 +56,6 @@ export const Footer = ({ dict }: FooterProps) => {
           >
             {dict.footer["data-labeling"]}
           </Link> */}
-          <Link
-            href="/gestor-insumos"
-            className="font-semibold text-sm text-white hover:underline"
-          >
-            {dict.footer.plataform}
-          </Link>
           <Link
             href="/mission"
             className="font-semibold text-sm text-white hover:underline"

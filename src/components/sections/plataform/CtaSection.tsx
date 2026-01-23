@@ -9,6 +9,7 @@ export interface CtaSectionProps {
   dict: {
     title: string;
     button: string;
+    buttonContact: string;
   };
 }
 
@@ -22,12 +23,11 @@ export function CtaSection({ dict }: CtaSectionProps) {
           <div className="pointer-events-none select-none">
             <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-[400ms]">
               <Image
-                src="/images/plataform/bg-last-section.png"
+                src="https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/bg-last-section.png"
                 alt="Prévia do Gestor ACT.AI em tablets"
                 width={760}
                 height={560}
-                priority={false}
-                draggable={false}
+                priority
                 className="w-[560px] md:w-[680px] lg:w-[740px] h-auto drop-shadow-2xl transform-gpu"
                 sizes="(max-width: 1024px) 60vw, 740px"
               />
@@ -41,7 +41,7 @@ export function CtaSection({ dict }: CtaSectionProps) {
                   {dict.title}
                 </h2>
 
-                <div className="mt-8">
+                <div className="mt-8 flex justify-start gap-6">
                   <Link
                     href="https://healthcare.actai.ai"
                     className="flex bg-[#0C2941] text-white rounded-full font-medium text-base lg:text-xl hover:brightness-105 hover:bg-[#E7C2FF] transition justify-center items-center gap-2 h-12 w-[270px] lg:w-[257px] lg:hover:gap-9 duration-600 ease-out hover:text-black max-w-[270px] lg:max-w-[300px]"
@@ -49,6 +49,14 @@ export function CtaSection({ dict }: CtaSectionProps) {
                     {dict.button}
 
                     <ArrowRight size={16} aria-hidden="true" />
+                  </Link>
+
+                  <Link
+                    href="#contact"
+                    scroll={true}
+                    className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#0C2941] font-medium text-base flex items-center"
+                  >
+                    {dict.buttonContact}
                   </Link>
                 </div>
               </div>

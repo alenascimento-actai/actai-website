@@ -168,11 +168,11 @@ h1, h2, h3, h4 {
 }
 
 .bg-gif {
-  background-image: url("../../public/giffs/bg-home.gif");
+  background-image: url("https://website-actai.s3.sa-east-1.amazonaws.com/imagens/bg-home.gif");
 }
 
 .bg-data-lebeling {
-  background-image: url("../../public/giffs/bg-data-labeling.gif");
+  background-image: url("https://website-actai.s3.sa-east-1.amazonaws.com/imagens/bg-data-labeling.gif");
 }
 
 .bg-data-lebeling::after,

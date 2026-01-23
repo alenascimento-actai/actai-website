@@ -21,7 +21,7 @@ export function Hero({ dict }: HeroProps) {
         relative w-full max-w-[98.5%] mx-auto
         overflow-visible
         text-[#3B3B3B] -top-[62.2px]
-        bg-[url(/images/plataform/background.png)]
+        bg-[url(https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/background.png)]
         pb-28 sm:pb-36 lg:pb-44 rounded-[21px]
         px-4 lg:px-20
       "
@@ -76,7 +76,7 @@ export function Hero({ dict }: HeroProps) {
         {/* Monitor */}
         <RevealOnView revealClasses="animate-fade-left animate-duration-[1500ms] animate-delay-200">
           <Image
-            src="/images/plataform/monitor.png"
+            src="https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/monitor.png"
             alt="Monitor mostrando a plataforma"
             width={900}
             height={700}

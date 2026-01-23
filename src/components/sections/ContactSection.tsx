@@ -3,15 +3,16 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
-// import Link from "next/link";
+import { CheckCircle2, Copy } from "lucide-react";
+import { Button } from "../ui/button";
 
-// interface SendMailProps {
-//   data: {
-//     response: string;
-//   };
-// }
+const SUPPORT_EMAIL = "contato@actai.ai";
 
-export function ContactSection() {
+interface ContactSectionProps {
+  isPlataform?: boolean;
+}
+
+export function ContactSection({ isPlataform = false }: ContactSectionProps) {
   const params = useParams();
   const lang = Array.isArray(params?.lang)
     ? params.lang[0]
@@ -27,107 +28,75 @@ export function ContactSection() {
     };
   } | null>(null);
 
-  // const [form, setForm] = useState({
-  //   email: "",
-  //   message: "",
-  // });
+  const [emailCopied, setEmailCopied] = useState(false);
 
-  // const [status, setStatus] = useState({
-  //   sended: false,
-  //   error: false,
-  // });
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText(SUPPORT_EMAIL);
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2500);
+  };
 
   useEffect(() => {
     getDictionary(lang).then((d) => setDict(d.contact));
   }, [lang]);
 
-  // async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-  //   e.preventDefault();
-
-  //   const res = await fetch(
-  //     `${process.env.NEXT_PUBLIC_HOST_LOCAL}/api/sendEmailContact`,
-  //     {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(form),
-  //       cache: "no-store",
-  //     }
-  //   );
-
-  //   const resJson: SendMailProps = await res.json();
-
-  //   if (resJson?.data?.response?.includes("2.0.0 OK")) {
-  //     setStatus({ sended: true, error: false });
-  //     setForm({ email: "", message: "" });
-  //   } else {
-  //     setStatus({ sended: false, error: true });
-  //   }
-  // }
-
   if (!dict) return null;
 
   return (
     <section
-      className="bg-black text-white py-20 bg-[url('/images/contact-background.png')] bg-no-repeat bg-cover px-8 md:px-24 space-y-5"
       id="contact"
+      className={[
+        "py-20 px-8 md:px-24 space-y-11 bg-no-repeat bg-cover",
+        isPlataform
+          ? "bg-white bg-[url('https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/bg-section-agility.png')]"
+          : "bg-black text-white bg-[url('https://website-actai.s3.sa-east-1.amazonaws.com/imagens/contact-background.png')]",
+      ].join(" ")}
     >
       <div className="text-center space-y-5">
         <h4 className="uppercase text-lg lg:text-[22px] tracking-[6px] text-[#B6B6B6]">
           {dict.title}
         </h4>
-        <h2 className="text-2xl lg:text-5xl font-bold">{dict.subtitle}</h2>
+
+        <h2
+          className="text-2xl lg:text-5xl font-bold"
+          style={{ color: isPlataform ? "#3B3B3B" : undefined }}
+        >
+          {dict.subtitle}
+        </h2>
       </div>
-      {/* 
-      {status.sended ? (
-        <p className="text-green-400 font-medium">
-          Mensagem enviada com sucesso. Verifique seu e-mail!
+
+      <div className="flex flex-col gap-2 items-center justify-center">
+        <p
+          className={[
+            "text-xl lg:text-2xl font-bold cursor-default rounded-[20px]",
+            "max-w-[358px] w-full mx-auto px-6 py-5",
+            "flex justify-between items-center  border",
+            isPlataform ? "border-[#E3E3E3] text-[#0C2941]" : "border-white",
+          ].join(" ")}
+        >
+          <span>{SUPPORT_EMAIL}</span>
+
+          <Button
+            variant={"link"}
+            onClick={handleCopyEmail}
+            className="bg-[#F4F5F8] lg:bg-transparent hover:bg-[#f4f5f8e1] cursor-pointer"
+          >
+            <Copy size={16} color={` ${isPlataform ? "#0C2941" : "#fff"}`} />
+          </Button>
         </p>
-      ) : (
-        <form className="flex flex-col gap-6 text-left" onSubmit={handleSubmit}>
-          <div className="flex flex-col col-span-1">
-            <label className="mb-1 text-sm">{dict.form.email}</label>
-            <input
-              type="email"
-              className="bg-transparent border-b border-white/40 py-2 outline-none w-full"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              required
-            />
-          </div>
 
-          <div className="flex flex-col col-span-1 md:col-span-3">
-            <label className="mb-1 text-sm">{dict.form.message}</label>
-            <textarea
-              className="bg-transparent border-b border-white/40 py-2 outline-none min-h-[100px]"
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              required
-            />
-          </div>
-
-          <div className="col-span-1 md:col-span-3 text-center mt-6">
-            <button
-              type="submit"
-              className="bg-white text-black font-medium px-6 py-3 rounded-xl hover:brightness-90 transition flex items-center justify-center gap-2 mx-auto"
-            >
-              {dict.form.button}
-              <span>→</span>
-            </button>
-            {status.error && (
-              <p className="text-red-500 mt-2">
-                Erro ao enviar a mensagem. Tente novamente.
-              </p>
-            )}
-          </div>
-        </form>
-      )} */}
-      <p className="text-2xl lg:text-3xl font-bold mb-10 text-center">
-        contato@actai.ai
-      </p>
-      {/* <Link
-        href="mailto:contato@act.ai"
-        className="bg-white text-black font-medium px-6 py-3 rounded-xl hover:brightness-90 transition flex items-center justify-center gap-2 mx-auto w-1/5"
-      ></Link> */}
+        <div className="h-5">
+          {emailCopied && (
+            <span className="text-xs text-[#00A63E] font-medium w-full gap-1 flex justify-center">
+              <div className="flex gap-2">
+                <CheckCircle2 size={16} />
+                <strong>E-mail copiado!</strong>
+              </div>
+              Agora é só enviar sua mensagem para nosso time.
+            </span>
+          )}
+        </div>
+      </div>
     </section>
   );
 }

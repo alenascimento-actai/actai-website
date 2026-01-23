@@ -34,12 +34,12 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
 
   return (
     <section
-      className="w-full bg-black py-16 md:py-24 text-white relative bg-[url('/images/sectors.png')] bg-no-repeat bg-cover px-8 md:px-24"
+      className="w-full bg-black py-16 md:py-24 text-white relative bg-[url('https://website-actai.s3.sa-east-1.amazonaws.com/imagens/sectors.png')] bg-no-repeat bg-cover px-8 md:px-24"
       id="works"
     >
       <div className="w-full flex items-start flex-col gap-10 lg:gap-0 lg:flex-row md:justify-between">
         <Image
-          src="/images/sectors-user.png"
+          src="https://website-actai.s3.sa-east-1.amazonaws.com/imagens/sectors-user.png"
           width={507}
           height={407}
           alt="user"
@@ -62,7 +62,7 @@ export function FocusedSectorsSection({ dict }: FocusedSectorsSectionProps) {
                   className={cn(
                     "border border-white/20 rounded-xl p-4 transition-all backdrop-blur-sm bg-white/15",
                     isOpen &&
-                      "bg-gradient-to-r from-purple-900/20 to-black backdrop-blur-sm bg-white/15"
+                      "bg-gradient-to-r from-purple-900/20 to-black backdrop-blur-sm bg-white/15",
                   )}
                 >
                   <button

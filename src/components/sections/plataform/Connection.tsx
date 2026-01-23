@@ -12,7 +12,7 @@ export function ConnectionSection({ dict }: ConnectionSectionProps) {
   return (
     <section
       id="connectionSection"
-      className="overflow-hidden py-50 bg-[url('/images/plataform/bg-section-connection.png')]
+      className="overflow-hidden py-50 bg-[url('https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/bg-section-connection.png')]
           bg-no-repeat bg-cover bg-center"
       aria-labelledby="connection-title"
     >
@@ -40,12 +40,12 @@ export function ConnectionSection({ dict }: ConnectionSectionProps) {
           <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-200">
             <h2
               id="connection-title"
-              className="text-center text-3xl md:text-5xl font-bold text-[#3B3B3B] leading-tight"
+              className="text-center text-3xl md:text-5xl font-bold text-[#3B3B3B] leading-tight lg:max-w-2xl mx-auto"
             >
               {dict.title}
             </h2>
 
-            <p className="mt-4 md:mt-6 text-center text-[#565656] text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="mt-4 md:mt-6 text-center text-[#565656] text-lg md:text-xl max-w-xl mx-auto">
               {dict.text}
             </p>
           </RevealOnView>

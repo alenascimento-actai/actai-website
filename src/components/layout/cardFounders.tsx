@@ -21,6 +21,7 @@ export const FounderCard = ({
           alt={name}
           width={272}
           height={334}
+          priority
           className="object-cover w-full h-full"
         />
       </div>
