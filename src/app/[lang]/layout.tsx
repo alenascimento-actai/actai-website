@@ -25,15 +25,17 @@ export default async function LangLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: "pt-br" | "en" }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const safeLang = lang === "pt-br" ? "pt-br" : "en";
+
+  const dict = await getDictionary(safeLang);
 
   return (
-    <html lang={lang}>
+    <html lang={safeLang}>
       <body className="antialiased">
-        <Header dict={dict} lang={lang} />
+        <Header dict={dict} lang={safeLang} />
         <main className={`${inter.variable} ${ubuntu.variable}`}>
           {children}
         </main>
