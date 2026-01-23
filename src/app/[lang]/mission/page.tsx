@@ -1,5 +1,6 @@
 import { MissionSection } from "@/components/sections/MissionSection";
 import { getDictionary } from "../dictionaries";
+import { FoundersSection } from "@/components/sections/FoundersSection";
 
 export default async function FoundersPage({
   params,
@@ -9,5 +10,10 @@ export default async function FoundersPage({
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
-  return <MissionSection dict={dict.mission} />;
+  return (
+    <div>
+      <MissionSection dict={dict.mission} />
+      <FoundersSection dict={dict.founders} />
+    </div>
+  );
 }

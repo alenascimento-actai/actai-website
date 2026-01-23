@@ -17,15 +17,15 @@ export function TransformWorkSection({ dict }: TransformWorkSectionProps) {
         <div
           aria-hidden="true"
           className="
-            hidden lg:block
+           hidden lg:block
             pointer-events-none absolute right-0 top-1/2 z-[1]
-            lg:h-[72vh] xl:h-[82vh] 2xl:h-[85vh]
+            lg:h-[72vh] xl:h-[82vh] 2xl:h-[100vh]
             lg:w-[clamp(1200px,88vw,2400px)]
-            bg-[url('/images/plataform/section-transform.png')]
+            bg-[url('https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/section-transform.png')]
             bg-no-repeat bg-contain bg-right-bottom
             transform-gpu will-change-transform
-            lg:translate-x-[12vw] xl:translate-x-[10vw] 2xl:translate-x-[8vw]
-            lg:-translate-y-[10%]
+            lg:translate-x-[12vw] xl:translate-x-[10vw] 2xl:translate-x-[4vw]
+            lg:-translate-y-[14%]
           "
         />
       </RevealOnView>
@@ -52,7 +52,7 @@ export function TransformWorkSection({ dict }: TransformWorkSectionProps) {
               </div>
 
               {/* ILUSTRAÇÃO (MOBILE) — background entre título e textos */}
-              <div className="block h-[148px] mb-20 lg:hidden">
+              <div className="block h-[220px] mb-20 lg:hidden">
                 <RevealOnView revealClasses="animate-fade-up duration-[1200ms] delay-150">
                   {/* 
                     Objetivo: ocupar o “retângulo vermelho”.
@@ -71,9 +71,8 @@ export function TransformWorkSection({ dict }: TransformWorkSectionProps) {
                         md:!bg-position[-44px,0]
                         drop-shadow-[0_12px_32px_rgba(1,33,105,0.12)]
                         rounded-[14px]
-                        bg-[url('/images/plataform/section-transform.png')]
+                        bg-[url('https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/section-transform.png')]
                       "
-                      style={{ backgroundPositionX: "100%" }}
                     />
                   </div>
                 </RevealOnView>
