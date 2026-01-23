@@ -1,8 +1,10 @@
-import { Hero } from "@/components/sections/Hero";
+import { Hero } from "@/components/sections/plataform/Hero";
 import { getDictionary } from "./dictionaries";
-import { Solutions } from "@/components/sections/Solutions";
-import { FocusedSectorsSection } from "@/components/sections/FocusdSectors";
-import { CaseStudyChart } from "@/components/sections/CaseStudySection";
+import { TransformWorkSection } from "@/components/sections/plataform/TransformWork";
+import { AdvantagesSection } from "@/components/sections/plataform/Advantages";
+import { AgilitySection } from "@/components/sections/plataform/Agility";
+import { CtaSection } from "../../components/sections/plataform/CtaSection";
+import { ConnectionSection } from "@/components/sections/plataform/Connection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default async function Page({
@@ -14,18 +16,14 @@ export default async function Page({
   const dict = await getDictionary(lang);
 
   return (
-    <main>
-      <Hero title={dict.hero.title} buttonLabel={dict.hero.button} />
-      <Solutions
-        subtitle={dict.solutions.subtitle}
-        title={dict.solutions.title}
-        items={dict.solutions.items}
-      />
-      <FocusedSectorsSection dict={dict.focusedSectors} />
-
-      <CaseStudyChart dict={dict.caseStudy} lang={lang} />
-
-      <ContactSection />
-    </main>
+    <section>
+      <Hero dict={dict["gestor-insumos"].hero} />
+      <TransformWorkSection dict={dict["gestor-insumos"].transformWork} />
+      <ConnectionSection dict={dict["gestor-insumos"].connection} />
+      <AdvantagesSection dict={dict["gestor-insumos"].advantages} />
+      <AgilitySection dict={dict["gestor-insumos"].agility} />
+      <CtaSection dict={dict["gestor-insumos"].cta} />
+      <ContactSection isPlataform />
+    </section>
   );
 }

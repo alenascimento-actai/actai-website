@@ -1,16 +1,16 @@
 {
   "nav": {
     "home": "Home",
-    "foundingTeam": "Founders",
     "about": "About",
+    "concepts": "Concepts Behind The Solution",
     "data-labeling": "Data Labeling",
-    "plataform": "Input Manager",
     "button": "Let's Talk",
     "button-plataform": "Access Manager"
   },
   "hero": {
     "title": "Accurate, Compliant and Traceable AI in all markets",
-    "button": "See How It Works"
+    "button": "See How It Works",
+    "demo": "Book a Demo"
   },
   "solutions": {
     "subtitle": "Products and Services",
@@ -86,17 +86,15 @@
   },
   "footer": {
   "home": "Home",
-  "foundingTeam": "Founders",
+  "plataform":"",
+  "concepts": "Concepts Behind The Solution",
   "data-labeling": "Data Labeling",
   "about": "About Us",
   "followUs": "Follow Us",
-  "description": "shortly",
-  "linkForFounding": "founders",
-  "linkForMission": "mission",
-  "plataform":""
+  "description": "shortly"
   },
   "founders": {
-    "sectionTitle": "Meet the founders driving innovation and impact with applied AI.",
+    "sectionTitle": "Founding Team",
     "marco": {
       "name": "Marco Spinelli",
       "title": "Co-Founder & CEO",
@@ -151,7 +149,7 @@
       ]
     }
   },
-  "input-manager": {
+  "gestor-insumos": {
     "hero":{
       "titlePart01": "The solution that ",
       "titleHighlight": "simplifies the management ",
@@ -161,8 +159,8 @@
       "linkButton02": "access Manager"
     },
         "connection": {
-      "title":"Connected to what you already use",
-      "text": "The Input Manager easily integrates with the main systems on the market, whether via API, cookies, or simple copy and paste."
+      "title":"Possibility of integration with what you already use.",
+      "text": "The Input Manager easily integrates with the main systems on the market, whether via API or simple copy and paste."
     },
      "transformWork": {
       "title": "Turning data into smart decisions",
@@ -175,20 +173,21 @@
         {
           "title":"Trusted Data",
           "text":"Regulatory and technical data always automatically updated, with clean and validated codes.",
-          "image":"/images/plataform/vandagem-dados.png"
+          "image":"https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/vandagem-dados.png"
         },
         {
-          "title":"Global Base",
-          "text":"Centralized information from suppliers, manufacturers and regulatory bodies in Brazil and around the world.",
-          "image":"/images/plataform/vandagem-base.png"
+          "title":"Updated Base",
+          "text":"Up-to-date information on suppliers, manufacturers, and regulatory bodies in Brazil and worldwide.",
+          "image":"https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/vandagem-base.png"
         },
         {
-          "title":"Interoperability",
-          "text":"Integrate the Input Manager into your workflow, ensuring continuity and efficiency in your routine.",
-          "image":"/images/plataform/vandagem-inter.png"
+          "title":"Smart Search",
+          "text":"A search that interprets variations, typos, and incomplete terms to find the desired item.",
+          "image":"https://website-actai.s3.sa-east-1.amazonaws.com/imagens/plataform/vandagem-inter.png"
         }
       ],
-      "button": "Access Manager"
+      "button": "Access Manager",
+      "buttonContact": "Let's Talk"
     },
     "agility": {
       "title": "The technology that simplifies your journey",
@@ -210,7 +209,8 @@
     },
     "cta": {
       "title": "No more wasting time on complex searches",
-      "button": "Start Now"
+      "button": "Start Now",
+      "buttonContact": "Let's Talk"
     }
   }
 }

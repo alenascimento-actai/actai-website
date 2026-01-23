@@ -21,7 +21,7 @@
     transition: width 0.25s ease-out;
   }
   
-.header-styles.header--input-manager nav a::after {
+.header-styles.header--gestor-insumos nav a::after {
   background-color: #000;
 }
 

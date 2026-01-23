@@ -1,44 +1,52 @@
+"use client";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { BetweenHorizonalEnd, Globe, Puzzle } from "lucide-react";
+import Link from "next/link";
 import RevealOnView from "@/components/reveal/RevealOnView";
+import { BetweenHorizontalEnd, Globe, Puzzle } from "lucide-react"; // <- nome certo
+import { CarouselWorks } from "@/components/layout/CarouselWorks";
 
 export interface AdvantagesSectionProps {
   dict: {
     title: string;
     cards: { title: string; text: string; image: string }[];
     button: string;
+    buttonContact: string;
   };
 }
 
-const icons = [BetweenHorizonalEnd, Globe, Puzzle];
+const icons = [BetweenHorizontalEnd, Globe, Puzzle];
 
 export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
   return (
     <section className="w-full py-16 md:py-24">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-200">
           <h2 className="text-center text-3xl md:text-5xl font-bold text-[#3B3B3B]">
             {dict.title}
           </h2>
         </RevealOnView>
 
-        {/* Cards */}
-        <div className="px-20 flex flex-col basis-full gap-8 py-16 lg:flex-row lg:basis-1/3">
+        {/* MOBILE: carrossel */}
+        <div className="px-4 md:px-20 py-16 lg:hidden">
+          <CarouselWorks dict={{ cards: dict.cards }} icons={icons} />
+        </div>
+
+        {/* DESKTOP: mantém exatamente como estava antes */}
+        <div className="hidden lg:flex px-4 md:px-20 flex-col basis-full gap-8 py-16 lg:flex-row lg:basis-1/3 lg:items-stretch">
           {dict.cards.map((card, i) => {
-            const Icon = icons[i] ?? BetweenHorizonalEnd;
+            const Icon = icons[i] ?? BetweenHorizontalEnd;
             return (
               <RevealOnView
                 revealClasses={`animate-fade-up animate-duration-[1500ms] ${
                   i === 0
                     ? "animate-delay-[400ms]"
                     : i === 1
-                    ? "animate-delay-[700ms]"
-                    : "animate-delay-[900ms]"
+                      ? "animate-delay-[700ms]"
+                      : "animate-delay-[900ms]"
                 }`}
                 key={card.title}
               >
-                <div className="rounded-2xl border border-[#F4F5F8] bg-[#F4F5F8] p-8 shadow-[0_10px_30px_rgba(16,24,40,0.04)] space-y-3">
+                <div className="rounded-2xl border border-[#F4F5F8] bg-[#F4F5F8] p-8 shadow-[0_10px_30px_rgba(16,24,40,0.04)] space-y-3 h-full">
                   <div>
                     <span className="border border-[#D7F3FF] rounded-[18px] bg-gradient-to-b from-[#D7F3FF] via-[#B9E9FD] to-[#A9E5FF] size-12 flex items-center justify-center mb-2.5">
                       <Icon size={18} aria-hidden="true" color="#103C68" />
@@ -58,6 +66,7 @@ export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
                       height={280}
                       className="w-full h-auto"
                       sizes="(max-width: 1024px) 100vw, 33vw"
+                      priority
                     />
                   </div>
                 </div>
@@ -66,13 +75,21 @@ export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
           })}
         </div>
 
-        <div className="flex justify-center">
-          <Button
-            variant="outline"
-            className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out "
+        <div className="flex justify-center gap-6">
+          <Link
+            href="https://healthcare.actai.ai"
+            className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#D7F3FF] bg-[#0C2941] font-medium text-base flex items-center"
           >
             {dict.button}
-          </Button>
+          </Link>
+
+          <Link
+            href="#contact"
+            scroll={true}
+            className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#0C2941] font-medium text-base flex items-center"
+          >
+            {dict.buttonContact}
+          </Link>
         </div>
       </div>
     </section>
