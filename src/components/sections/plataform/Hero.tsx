@@ -15,6 +15,7 @@ export interface HeroProps {
 }
 
 export function Hero({ dict }: HeroProps) {
+  console.log("navegando actai.ai 🚀🚀");
   return (
     <section
       className="
