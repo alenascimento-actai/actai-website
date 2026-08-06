@@ -31,7 +31,7 @@ export function Hero({ dict }: HeroProps) {
           "radial-gradient(147.08% 98.61% at 51.88% 103.58%, #D7F3FF 14.03%, #F5E6FF 26.6%, #F4F6FA 50%)",
       }}
     >
-      <div className="relative w-full pt-[224px] text-[#3B3B3B] z-40">
+      <div className="relative w-full pt-56 text-[#3B3B3B] z-40">
         <div className="container mx-auto flex flex-col items-center text-center px-6 z-30">
           <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-200">
             {/* Título */}
@@ -70,7 +70,7 @@ export function Hero({ dict }: HeroProps) {
       <div
         className="
           pointer-events-none
-          absolute left-1/2 -bottom-[226px] md:-bottom-[419px] lg:bottom-[-490px] -translate-x-1/2
+          absolute left-1/2 -bottom-56.5 md:-bottom-104.75 lg:-bottom-122.5 -translate-x-1/2
           w-full lg:max-w-4xl
         "
       >
