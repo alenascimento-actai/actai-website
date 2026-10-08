@@ -99,8 +99,8 @@
     "sectionTitle": "Time de Gestão",
     "marco": {
       "name": "Marco Spinelli",
-      "title": "Co-Fundador e CEO",
-      "bio": "Mais de 25 anos de liderança global, gestão sênior e desenvolvimento de produtos em serviços financeiros, lançando aplicações de IA/LLM premiadas no setor, estratégia de dados e transformação digital. Ocupou cargos de liderança na McKinsey & Co, Morgan Stanley, UBS e Bridgewater. Histórico comprovado na construção e expansão de grandes organizações complexas, supervisionando equipes globais com mais de 800 profissionais. Assessorou CEOs da Fortune 500, banqueiros centrais e líderes de gestão de investimentos em inovação e estratégia de IA. MBA pela Wharton e bacharelado/mestrado em Engenharia Elétrica pela Universidade de São Paulo"
+      "title": "Fundador e CEO",
+      "bio": "Mais de 25 anos de liderança global, gestão executiva e desenvolvimento de produtos em serviços financeiros, lançando aplicações premiadas de IA/LLM, estratégias de dados e transformação digital. Ocupou cargos de liderança na McKinsey & Co, Morgan Stanley, UBS e Bridgewater em NY, Londres e Paris. Assessorou CEOs da Fortune 500, banqueiros centrais e líderes de gestão de investimentos em inovação e estratégia de IA. Foi membro do Board da Touch Health (NY) participando ativamente do desenvolvimento do sistema de Saúde, no Leste da África. MBA pela Wharton e bacharelado/mestrado em Engenharia Elétrica pela Universidade de São Paulo."
     },
     "mauricio": {
       "name": "Maurício Lima",
@@ -112,7 +112,11 @@
     "sectionTitle": "Conselho Consultivo",
     "vera": {
       "name": "Vera Valente",
-      "bio": "Executiva com 25 anos de experiência em saúde pública, saúde suplementar, indústria farmacêutica e regulação. Sua trajetória reúne atuação em inovação, acesso a medicamentos, compliance e combate a fraudes."
+      "bio": "Executiva com mais de 25 anos de experiência em saúde pública, saúde suplementar, indústria farmacêutica e regulação. Sua trajetória reúne atuação em inovação, acesso a medicamentos, compliance e combate a fraudes."
+    },
+    "yen": {
+      "name": "Yen Wang",
+      "bio": "Mais de 30 anos de experiência em liderança e consultoria estratégica. Foi CEO do Grupo Emeis na América Latina e da Carrefour Property no Brasil, com passagem pela McKinsey, A.T. Kearney e Arthur D. Little."
     },
     "gustavo": {
       "name": "Gustavo Jobim",
