@@ -18,7 +18,7 @@ export function CtaSection({ dict }: CtaSectionProps) {
     <section className="w-full py-16 md:py-24">
       <div className="container mx-auto px-10 md:px-6">
         {/* CARD */}
-        <div className="rounded-[21px] bg-[#F4F5F8] h-[468px] lg:h-[508px] flex flex-col md:flex-row items-center justify-end pb-14 md:pb-0">
+        <div className="rounded-[21px] bg-[#F4F5F8] h-[532px] sm:h-[468px] lg:h-[508px] flex flex-col md:flex-row items-center justify-end pb-14 md:pb-0">
           {/* IMAGEM: sai do card pela parte de cima/esquerda */}
           <div className="pointer-events-none select-none">
             <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-[400ms]">
@@ -36,15 +36,15 @@ export function CtaSection({ dict }: CtaSectionProps) {
 
           <div className="lg:pr-0 lg:max-w-1/2 lg:w-full">
             <RevealOnView revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-200">
-              <div className="flex justify-center items-center flex-col md:block">
-                <h2 className="w-[300px] md:w-full text-center md:text-start text-2xl md:text-3xl lg:text-[48px] font-extrabold leading-tight text-[#131922]">
+              <div className="flex justify-center items-center flex-col md:block px-4 md:px-0">
+                <h2 className="w-full max-w-[300px] md:max-w-none text-center md:text-start text-2xl md:text-3xl lg:text-[48px] font-extrabold leading-tight text-[#131922]">
                   {dict.title}
                 </h2>
 
-                <div className="mt-8 flex justify-start gap-6">
+                <div className="mt-8 w-full flex flex-col items-center gap-4 sm:w-auto sm:flex-row sm:gap-6 md:justify-start">
                   <Link
                     href="https://healthcare.actai.ai"
-                    className="flex bg-[#0C2941] text-white rounded-full font-medium text-base lg:text-xl hover:brightness-105 hover:bg-[#E7C2FF] transition justify-center items-center gap-2 h-12 w-[270px] lg:w-[257px] lg:hover:gap-9 duration-600 ease-out hover:text-black max-w-[270px] lg:max-w-[300px]"
+                    className="flex bg-[#0C2941] text-white rounded-full font-medium text-base lg:text-xl hover:brightness-105 hover:bg-[#E7C2FF] transition justify-center items-center gap-2 h-12 w-full sm:w-[270px] lg:w-[257px] lg:hover:gap-9 duration-600 ease-out hover:text-black max-w-[270px] lg:max-w-[300px]"
                   >
                     {dict.button}
 
@@ -54,7 +54,7 @@ export function CtaSection({ dict }: CtaSectionProps) {
                   <Link
                     href="#contact"
                     scroll={true}
-                    className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#0C2941] font-medium text-base flex items-center"
+                    className="rounded-full h-12 w-full max-w-[270px] sm:w-auto sm:max-w-none justify-center px-6 sm:px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#0C2941] font-medium text-base flex items-center"
                   >
                     {dict.buttonContact}
                   </Link>

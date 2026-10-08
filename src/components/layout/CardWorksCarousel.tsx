@@ -43,7 +43,7 @@ export function CardWorksCarousel({
       <p className="text-base font-bold text-[#cccccc] mb-7">{subtitle}</p>
 
       <p
-        className={`text-base duration-600 ease-out h-[70px] ${
+        className={`text-base duration-600 ease-out min-h-[70px] ${
           isActive
             ? "lg:text-{#cccccc} text-[#cccccc]"
             : "lg:text-transparent text-[#cccccc]"

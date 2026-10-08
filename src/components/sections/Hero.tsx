@@ -21,7 +21,7 @@ export function Hero({ title, buttonLabel, demoLabel }: HeroProps) {
             <Link
               href="#contact"
               scroll={true}
-              className="bg-white text-black px-10 py-3 rounded-full font-medium text-base hover:brightness-105 hover:bg-[#E7C2FF] transition h-12 w-full lg:w-auto lg:min-w-[260px] text-center"
+              className="bg-white text-black px-6 sm:px-10 py-3 rounded-full font-medium text-base hover:brightness-105 hover:bg-[#E7C2FF] transition min-h-12 w-full lg:w-auto lg:min-w-[260px] text-center"
             >
               {demoLabel}
             </Link>

@@ -1,7 +1,7 @@
-// app/[lang]/founders/page.tsx
-
-import { FoundersSection } from "@/components/sections/FoundersSection";
+import { MissionSection } from "@/components/sections/MissionSection";
 import { getDictionary } from "../dictionaries";
+import { FoundersSection } from "@/components/sections/FoundersSection";
+import { AdvisoryBoardSection } from "@/components/sections/AdvisoryBoardSection";
 
 export default async function FoundersPage({
   params,
@@ -11,5 +11,12 @@ export default async function FoundersPage({
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
-  return <FoundersSection dict={dict.founders} />;
+  return (
+    <div>
+      <MissionSection dict={dict.mission} />
+      <FoundersSection dict={dict.founders}>
+        <AdvisoryBoardSection dict={dict.advisoryBoard} />
+      </FoundersSection>
+    </div>
+  );
 }

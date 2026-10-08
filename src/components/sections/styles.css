@@ -30,6 +30,16 @@
   pointer-events: none;
 }
 
+.advisory-board-bg {
+  background:
+    radial-gradient(
+      ellipse min(420px, 70vw) 300px at 100% 50%,
+      rgba(151, 0, 255, 0.4) 0%,
+      rgba(151, 0, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 96px);
+}
+
 .parent:hover .section-card:not(:hover) {
   opacity: 0.5;
 }

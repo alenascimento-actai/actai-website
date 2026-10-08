@@ -75,10 +75,10 @@ export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
           })}
         </div>
 
-        <div className="flex justify-center gap-6">
+        <div className="flex flex-col items-center sm:flex-row justify-center gap-4 sm:gap-6">
           <Link
             href="https://healthcare.actai.ai"
-            className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#D7F3FF] bg-[#0C2941] font-medium text-base flex items-center"
+            className="rounded-full h-12 w-full max-w-[270px] sm:w-auto sm:max-w-none justify-center px-6 sm:px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#D7F3FF] bg-[#0C2941] font-medium text-base flex items-center"
           >
             {dict.button}
           </Link>
@@ -86,7 +86,7 @@ export function AdvantagesSection({ dict }: AdvantagesSectionProps) {
           <Link
             href="#contact"
             scroll={true}
-            className="rounded-full h-12 px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#0C2941] font-medium text-base flex items-center"
+            className="rounded-full h-12 w-full max-w-[270px] sm:w-auto sm:max-w-none justify-center px-6 sm:px-20 hover:bg-[#E7C2FF] hover:border-[#E7C2FF] hover:brightness-105 duration-600 ease-out border border-[#0C2941] text-[#0C2941] font-medium text-base flex items-center"
           >
             {dict.buttonContact}
           </Link>
