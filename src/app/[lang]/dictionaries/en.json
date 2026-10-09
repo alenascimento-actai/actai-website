@@ -7,6 +7,11 @@
     "button": "Let's Talk",
     "button-plataform": "Access Manager"
   },
+  "unsupportedBrowser": {
+    "title": "Your browser is not compatible with this website",
+    "description": "Internet Explorer is no longer supported. To view the website correctly, open it in an up-to-date browser such as Microsoft Edge, Google Chrome or Firefox.",
+    "button": "Open in Microsoft Edge"
+  },
   "hero": {
     "title": "Accurate, Compliant and Traceable AI in all markets",
     "button": "See How It Works",

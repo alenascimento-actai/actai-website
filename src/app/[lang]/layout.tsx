@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { getDictionary } from "./dictionaries";
 import { Footer } from "@/components/layout/footer";
+import { UnsupportedBrowser } from "@/components/layout/unsupportedBrowser";
 import { Inter, Ubuntu } from "next/font/google";
 import ".././globals.css";
 
@@ -35,6 +36,7 @@ export default async function LangLayout({
   return (
     <html lang={safeLang}>
       <body className="antialiased">
+        <UnsupportedBrowser dict={dict} />
         <Header dict={dict} lang={safeLang} />
         <main className={`${inter.variable} ${ubuntu.variable}`}>
           {children}

@@ -7,6 +7,11 @@
     "button": "Fale Conosco",
     "button-plataform": "Acessar Gestor"
   },
+  "unsupportedBrowser": {
+    "title": "Seu navegador não é compatível com este site",
+    "description": "O Internet Explorer não é mais suportado. Para visualizar o site corretamente, abra-o em um navegador atualizado, como Microsoft Edge, Google Chrome ou Firefox.",
+    "button": "Abrir no Microsoft Edge"
+  },
   "hero": {
     "title": "IA precisa, em conformidade e rastreável em todos os mercados",
     "button": "Veja como funciona",
