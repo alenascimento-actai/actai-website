@@ -8,10 +8,18 @@ const locales = ["en", "pt-br"];
 const defaultLocale = "pt-br";
 
 function getLocale(request: NextRequest): string {
-  const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-  const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-  return match(languages, locales, defaultLocale);
+  try {
+    const negotiatorHeaders: Record<string, string> = {};
+    request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+    const languages = new Negotiator({ headers: negotiatorHeaders })
+      .languages()
+      .filter((language) => language !== "*");
+    return languages.length
+      ? match(languages, locales, defaultLocale)
+      : defaultLocale;
+  } catch {
+    return defaultLocale;
+  }
 }
 
 export function middleware(req: NextRequest) {

@@ -7,6 +7,11 @@
     "button": "Fale Conosco",
     "button-plataform": "Acessar Gestor"
   },
+  "unsupportedBrowser": {
+    "title": "Seu navegador não é compatível com este site",
+    "description": "O Internet Explorer não é mais suportado. Para visualizar o site corretamente, abra-o em um navegador atualizado, como Microsoft Edge, Google Chrome ou Firefox.",
+    "button": "Abrir no Microsoft Edge"
+  },
   "hero": {
     "title": "IA precisa, em conformidade e rastreável em todos os mercados",
     "button": "Veja como funciona",
@@ -116,7 +121,7 @@
     },
     "yen": {
       "name": "Yen Wang",
-      "bio": "Mais de 30 anos de experiência em liderança e consultoria estratégica. Foi CEO do Grupo Emeis na América Latina e da Carrefour Property no Brasil, com passagem pela McKinsey, A.T. Kearney e Arthur D. Little."
+      "bio": "CEO da BSL Saúde e do Grupo Emeis na América Latina, com mais de 30 anos de experiência em liderança e consultoria estratégica. Foi CEO da Carrefour Property no Brasil, com passagem pela McKinsey, A.T. Kearney e Arthur D. Little."
     },
     "gustavo": {
       "name": "Gustavo Jobim",

@@ -7,6 +7,11 @@
     "button": "Let's Talk",
     "button-plataform": "Access Manager"
   },
+  "unsupportedBrowser": {
+    "title": "Your browser is not compatible with this website",
+    "description": "Internet Explorer is no longer supported. To view the website correctly, open it in an up-to-date browser such as Microsoft Edge, Google Chrome or Firefox.",
+    "button": "Open in Microsoft Edge"
+  },
   "hero": {
     "title": "Accurate, Compliant and Traceable AI in all markets",
     "button": "See How It Works",
@@ -114,7 +119,7 @@
     },
     "yen": {
       "name": "Yen Wang",
-      "bio": "30+ years of experience in leadership and strategy consulting. Former CEO of Emeis Group in Latin America and of Carrefour Property in Brazil, with earlier roles at McKinsey, A.T. Kearney and Arthur D. Little."
+      "bio": "CEO of BSL Saúde and of Emeis Group in Latin America, with 30+ years of experience in leadership and strategy consulting. Former CEO of Carrefour Property in Brazil, with earlier roles at McKinsey, A.T. Kearney and Arthur D. Little."
     },
     "gustavo": {
       "name": "Gustavo Jobim",
