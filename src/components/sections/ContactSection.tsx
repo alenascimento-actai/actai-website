@@ -79,7 +79,7 @@ export function ContactSection({ isPlataform = false }: ContactSectionProps) {
           <Button
             variant={"link"}
             onClick={handleCopyEmail}
-            className="bg-[#F4F5F8] lg:bg-transparent hover:bg-[#f4f5f8e1] cursor-pointer"
+            className="lg:hover:bg-[#f4f5f8e1] cursor-pointer"
           >
             <Copy size={16} color={` ${isPlataform ? "#0C2941" : "#fff"}`} />
           </Button>
