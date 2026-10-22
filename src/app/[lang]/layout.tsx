@@ -47,7 +47,7 @@ export default async function LangLayout({
         <UnsupportedBrowser dict={dict} />
         <Header dict={dict} lang={safeLang} />
         <main>{children}</main>
-        <Footer dict={dict} />
+        <Footer dict={dict} lang={safeLang} />
         {process.env.NODE_ENV === "production" && (
           <Script
             id="microsoft-clarity"

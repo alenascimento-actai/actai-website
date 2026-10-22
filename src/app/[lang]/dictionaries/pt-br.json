@@ -1,11 +1,131 @@
 {
   "nav": {
-    "home": "Início",
-    "about": "Sobre",
-    "concepts": "Conceitos Por Trás da Solução",
-    "data-labeling": "Data Labeling",
-    "button": "Fale Conosco",
-    "button-plataform": "Acessar Gestor"
+    "solutions": "Soluções",
+    "about": "Quem somos",
+    "contact": "Contato",
+    "button-plataform": "Acessar Gestor",
+    "language": "Idioma",
+    "languages": {
+      "pt-br": "Português",
+      "en": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Reduza desperdícios e ganhe eficiência",
+      "subtitle": "O Gestor de Insumos organiza e atualiza informações técnicas e regulatórias para ajudar hospitais a reduzir desperdícios, evitar retrabalho e ganhar eficiência.",
+      "primaryButton": "Conhecer o Gestor",
+      "secondaryButton": "Agendar Demo",
+      "imageAlt": "Computador exibindo a tela do Gestor de Insumos",
+      "badges": ["+Praticidade", "+Agilidade", "+Eficiência"]
+    },
+    "solution": {
+      "label": "Gestor de Insumos",
+      "title": "O desperdício começa antes do estoque.",
+      "text": "Informações desatualizadas e cadastros inconsistentes geram retrabalho e dificultam decisões em toda a operação hospitalar.",
+      "imageAlt": "Tela de busca do Gestor de Insumos",
+      "cards": [
+        {
+          "title": "Busca centralizada",
+          "text": "Encontre insumos por código TUSS, descrição ou fabricante em um único lugar, de forma clara e organizada."
+        },
+        {
+          "title": "Compare os itens",
+          "text": "Consulte características, fabricantes e informações de uso para apoiar a análise dos insumos e a tomada de decisão."
+        },
+        {
+          "title": "Dados de fontes oficiais",
+          "text": "Acesse informações da Anvisa e da Tabela TUSS para conferir registros, códigos e o status dos itens."
+        }
+      ]
+    },
+    "howItWorks": {
+      "label": "Como o Gestor apoia sua operação",
+      "title": "Três formas de usar na sua operação.",
+      "contactLink": "Entrar em contato",
+      "comingSoon": "Em breve",
+      "steps": [
+        {
+          "title": "Consultar insumos",
+          "text": "Busque e compare informações técnicas e regulatórias por código TUSS, descrição ou fornecedor. Tudo em um único lugar, sempre atualizado.",
+          "items": [
+            "Busca por código, descrição ou fornecedor",
+            "Informações técnicas e regulatórias",
+            "Via portal web"
+          ],
+          "button": "Testar o Gestor"
+        },
+        {
+          "title": "Tratar minha base",
+          "text": "Faça upload do seu arquivo pelo Gestor de Insumos, identifique inconsistências e escolha quais informações deseja enriquecer. Ao final, você recebe uma base tratada, mais completa e pronta para seguir com a sua operação.",
+          "items": [
+            "Upload do arquivo dentro do Gestor",
+            "Diagnóstico automático da sua base",
+            "Download da base tratada e enriquecida"
+          ],
+          "button": "Importar uma base"
+        },
+        {
+          "title": "Integrar via API",
+          "text": "Leve os dados do Gestor para os sistemas que sua equipe já usa. Nossa equipe avalia com você as melhores possibilidades de integração.",
+          "items": [
+            "Acesso aos dados por API",
+            "Uso nos seus sistemas e fluxos",
+            "Avaliação com a equipe ACT.AI"
+          ],
+          "button": "Saiba mais"
+        }
+      ]
+    },
+    "about": {
+      "title": "IA conectada à realidade de quem usa.",
+      "paragraphs": [
+        "A ACT AI desenvolve soluções para o setor de saúde com modelos proprietários de inteligência artificial, considerando as exigências regulatórias e os desafios da operação.",
+        "Esse propósito ganha forma com o Gestor de Insumos: uma solução para melhorar a qualidade da informação e ajudar hospitais a reduzir desperdícios."
+      ],
+      "values": [
+        {
+          "title": "Missão",
+          "text": "Transformar informações complexas em decisões mais seguras, ajudando a saúde a reduzir desperdícios."
+        },
+        {
+          "title": "Visão",
+          "text": "Uma saúde em que dados confiáveis fortaleçam decisões e liberem mais tempo e recursos para cuidar das pessoas."
+        },
+        {
+          "title": "Valores",
+          "text": "Precisão, conformidade e rastreabilidade dos dados, com tecnologia conectada à realidade de quem trabalha na saúde."
+        }
+      ],
+      "founderLabel": "Fundador",
+      "advisorsLabel": "Conselho Consultivo",
+      "advisorRoles": {
+        "vera": "Conselheira",
+        "yen": "Conselheiro",
+        "gustavo": "Conselheiro"
+      }
+    },
+    "contact": {
+      "label": "Fale conosco",
+      "title": "Vamos olhar para os desafios da sua operação?",
+      "text": "Preencha o formulário e nossa equipe entrará em contato para apresentar a plataforma e entender as necessidades da sua operação.",
+      "form": {
+        "title": "Envie uma mensagem",
+        "name": "Nome completo",
+        "namePlaceholder": "Seu nome",
+        "email": "E-mail profissional",
+        "emailPlaceholder": "voce@empresa.com.br",
+        "phone": "Telefone",
+        "optional": "(opcional)",
+        "phonePlaceholder": "(00) 00000-0000",
+        "source": "Como ficou sabendo de nós?",
+        "sourceOptions": ["LinkedIn", "Google", "Indicação", "Eventos", "Outros"],
+        "button": "Enviar mensagem",
+        "sending": "Enviando...",
+        "success": "Mensagem enviada! Em breve nossa equipe entrará em contato.",
+        "error": "Não foi possível enviar sua mensagem agora. Tente novamente ou escreva para contato@actai.ai."
+      }
+    }
   },
   "unsupportedBrowser": {
     "title": "Seu navegador não é compatível com este site",
@@ -92,13 +212,10 @@
   }
   },
   "footer": {
-  "home": "Início",
-  "plataform": "",
-  "concepts": "Conceitos Por Trás da Solução",
-  "data-labeling": "Data Labeling",
-  "about": "Sobre Nós",
-  "followUs": "Siga-nos",
-  "description": "Em breve"
+    "solutions": "Soluções",
+    "about": "Quem somos",
+    "contact": "Contato",
+    "followUs": "Acompanhe a ACT.AI"
   },
   "founders": {
     "sectionTitle": "Fundador",

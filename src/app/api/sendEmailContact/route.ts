@@ -1,10 +1,37 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request: Request) {
-  try {
-    const { email, mensage } = await request.json();
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const readField = (value: unknown, maxLength: number) =>
+  typeof value === "string" ? value.trim().slice(0, maxLength) : "";
+
+export async function POST(request: Request) {
+  let body: Record<string, unknown>;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid body" }, { status: 400 });
+  }
+
+  const name = readField(body.name, 120);
+  const email = readField(body.email, 160);
+  const phone = readField(body.phone, 30);
+  const source = readField(body.source, 60);
+
+  if (!name || !source || !EMAIL_PATTERN.test(email)) {
+    return NextResponse.json({ error: "Invalid fields" }, { status: 400 });
+  }
+
+  try {
     const transporter = nodemailer.createTransport({
       host: "smtp.office365.com",
       port: 587,
@@ -18,19 +45,22 @@ export async function POST(request: Request) {
     const mailOptions = {
       from: "anascimento@actai.ai",
       to: "alexandre.sfi@hotmail.com",
-      subject: `Contact E-commerce exclusive`,
+      replyTo: email,
+      subject: `Contato pelo site - ${name}`,
       html: `
-      <ul> 
-        <li> Email: ${email} </li> 
-        <li> Conteudo: ${mensage} </li> 
+      <ul>
+        <li> Nome: ${escapeHtml(name)} </li>
+        <li> Email: ${escapeHtml(email)} </li>
+        <li> Telefone: ${escapeHtml(phone || "-")} </li>
+        <li> Como ficou sabendo: ${escapeHtml(source)} </li>
       </ul>
       `,
     };
 
-    const responseSendEmail = await transporter.sendMail(mailOptions);
-    return NextResponse.json({ status: 200, data: responseSendEmail });
+    await transporter.sendMail(mailOptions);
+    return NextResponse.json({ ok: true });
   } catch (error) {
     console.log("Erro:", error);
-    return NextResponse.json(error);
+    return NextResponse.json({ error: "Send failed" }, { status: 500 });
   }
 }
