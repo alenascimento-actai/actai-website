@@ -6,7 +6,7 @@ import { AdvisoryBoardSection } from "@/components/sections/AdvisoryBoardSection
 export default async function FoundersPage({
   params,
 }: {
-  params: Promise<{ lang: "pt-br" | "en" }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);

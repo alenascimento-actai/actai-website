@@ -1,11 +1,131 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "concepts": "Concepts Behind The Solution",
-    "data-labeling": "Data Labeling",
-    "button": "Let's Talk",
-    "button-plataform": "Access Manager"
+    "solutions": "Solutions",
+    "about": "About us",
+    "contact": "Contact",
+    "button-plataform": "Access Manager",
+    "language": "Language",
+    "languages": {
+      "pt-br": "Português",
+      "en": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Reduce waste and gain efficiency",
+      "subtitle": "The Input Manager organizes and updates technical and regulatory information to help hospitals reduce waste, avoid rework and gain efficiency.",
+      "primaryButton": "Discover the Manager",
+      "secondaryButton": "Book a Demo",
+      "imageAlt": "Computer showing the Input Manager screen",
+      "badges": ["+Practicality", "+Agility", "+Efficiency"]
+    },
+    "solution": {
+      "label": "Input Manager",
+      "title": "Waste starts before the stockroom.",
+      "text": "Outdated information and inconsistent records create rework and make decisions harder across the entire hospital operation.",
+      "imageAlt": "Input Manager search screen",
+      "cards": [
+        {
+          "title": "Centralized search",
+          "text": "Find supplies by TUSS code, description or manufacturer in a single place, clearly organized."
+        },
+        {
+          "title": "Compare items",
+          "text": "Review specifications, manufacturers and usage information to support supply analysis and decision-making."
+        },
+        {
+          "title": "Data from official sources",
+          "text": "Access information from Anvisa and the TUSS Table to check registrations, codes and item status."
+        }
+      ]
+    },
+    "howItWorks": {
+      "label": "How the Manager supports your operation",
+      "title": "Three ways to use it in your operation.",
+      "contactLink": "Get in touch",
+      "comingSoon": "Coming soon",
+      "steps": [
+        {
+          "title": "Search supplies",
+          "text": "Search and compare technical and regulatory information by TUSS code, description or supplier. All in one place, always up to date.",
+          "items": [
+            "Search by code, description or supplier",
+            "Technical and regulatory information",
+            "Via web portal"
+          ],
+          "button": "Try the Manager"
+        },
+        {
+          "title": "Clean up my database",
+          "text": "Upload your file through the Input Manager, identify inconsistencies and choose which information you want to enrich. In the end, you get a cleaned, more complete database, ready for your operation.",
+          "items": [
+            "File upload inside the Manager",
+            "Automatic diagnosis of your database",
+            "Download of the cleaned and enriched database"
+          ],
+          "button": "Import a database"
+        },
+        {
+          "title": "Integrate via API",
+          "text": "Bring the Manager's data into the systems your team already uses. Our team will assess the best integration options with you.",
+          "items": [
+            "Data access via API",
+            "Use in your own systems and workflows",
+            "Assessment with the ACT.AI team"
+          ],
+          "button": "Learn more"
+        }
+      ]
+    },
+    "about": {
+      "title": "AI connected to the reality of those who use it.",
+      "paragraphs": [
+        "ACT AI develops solutions for the healthcare sector with proprietary artificial intelligence models, taking into account regulatory requirements and operational challenges.",
+        "This purpose takes shape in the Input Manager: a solution to improve information quality and help hospitals reduce waste."
+      ],
+      "values": [
+        {
+          "title": "Mission",
+          "text": "Turn complex information into safer decisions, helping healthcare reduce waste."
+        },
+        {
+          "title": "Vision",
+          "text": "Healthcare in which reliable data strengthens decisions and frees up time and resources to care for people."
+        },
+        {
+          "title": "Values",
+          "text": "Data accuracy, compliance and traceability, with technology connected to the reality of those who work in healthcare."
+        }
+      ],
+      "founderLabel": "Founder",
+      "advisorsLabel": "Advisory Board",
+      "advisorRoles": {
+        "vera": "Board Advisor",
+        "yen": "Board Advisor",
+        "gustavo": "Board Advisor"
+      }
+    },
+    "contact": {
+      "label": "Contact us",
+      "title": "Shall we look at your operation's challenges?",
+      "text": "Fill out the form and our team will get in touch to present the platform and understand your operation's needs.",
+      "form": {
+        "title": "Send a message",
+        "name": "Full name",
+        "namePlaceholder": "Your name",
+        "email": "Work email",
+        "emailPlaceholder": "you@company.com",
+        "phone": "Phone",
+        "optional": "(optional)",
+        "phonePlaceholder": "+55 (00) 00000-0000",
+        "source": "How did you hear about us?",
+        "sourceOptions": ["LinkedIn", "Google", "Referral", "Events", "Other"],
+        "button": "Send message",
+        "sending": "Sending...",
+        "success": "Message sent! Our team will get in touch soon.",
+        "error": "We couldn't send your message right now. Please try again or write to contato@actai.ai."
+      }
+    }
   },
   "unsupportedBrowser": {
     "title": "Your browser is not compatible with this website",
@@ -90,13 +210,10 @@
   }
   },
   "footer": {
-  "home": "Home",
-  "plataform":"",
-  "concepts": "Concepts Behind The Solution",
-  "data-labeling": "Data Labeling",
-  "about": "About Us",
-  "followUs": "Follow Us",
-  "description": "shortly"
+    "solutions": "Solutions",
+    "about": "About us",
+    "contact": "Contact",
+    "followUs": "Follow ACT.AI"
   },
   "founders": {
     "sectionTitle": "Founder",
@@ -119,7 +236,7 @@
     },
     "yen": {
       "name": "Yen Wang",
-      "bio": "30+ years of experience in executive management and strategy consulting, including 18 years in senior leadership roles at multinationals in Latin America. CEO of Emeis Group in Latin America, in the post-acute care segment, with operations in Brazil, Mexico, Chile, Colombia and Uruguay. Previously CEO of Carrefour Property in Brazil and Director of Corporate Strategy and New Business at Oi. Career includes 15 years in strategy consulting, 10 of them at McKinsey, across markets in Latin America, Europe, Asia and the Middle East. Experience spans strategy, business development, operations transformation and team management. Computer Science degree from Universidade de São Paulo, graduate degree in Business Administration from Fundação Getúlio Vargas and an MBA from the Wharton School of the University of Pennsylvania."
+      "bio": "30+ years of experience in leadership and strategy consulting, including 18 years in senior management roles at large multinationals in Latin America. CEO of Emeis Group in Latin America, in the healthcare sector, and CEO of BSL Saúde. Previously CEO of Carrefour Property in Brazil and Director of Corporate Strategy and New Business at Oi. Career includes 15 years of consulting at McKinsey, A.T. Kearney and Arthur D. Little, serving companies across different markets. Brings international experience in strategy, business development, operations transformation and team management, including five years working in China. Computer Science degree from Universidade de São Paulo."
     },
     "gustavo": {
       "name": "Gustavo Jobim",

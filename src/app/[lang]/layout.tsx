@@ -29,6 +29,7 @@ export async function generateStaticParams() {
   return [{ lang: "pt-br" }, { lang: "en" }];
 }
 
+// Layout raiz: é o único que renderiza <html> e <body>, com o idioma da rota
 export default async function LangLayout({
   children,
   params,
@@ -37,29 +38,24 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const safeLang = lang === "pt-br" ? "pt-br" : "en";
-
-  const dict = await getDictionary(safeLang);
+  if (lang !== "pt-br" && lang !== "en") {
+    throw new Error(`Unsupported locale: ${lang}`);
+  }
+  const dict = await getDictionary(lang);
 
   return (
-    <html lang={safeLang} className={`${inter.variable} ${ubuntu.variable}`}>
+    <html lang={lang} className={`${inter.variable} ${ubuntu.variable}`}>
       <body className="antialiased duration-2000 ease-out">
         <UnsupportedBrowser dict={dict} />
-        <Header dict={dict} lang={safeLang} />
+        <Header dict={dict} lang={lang} />
         <main>{children}</main>
-        <Footer dict={dict} />
-        {process.env.NODE_ENV === "production" && (
+        <Footer dict={dict} lang={lang} />
+        {process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID && (
           <Script
-            id="microsoft-clarity"
+            id="clarity-script"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
-              __html: `
-                (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID}");
-              `,
+              __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID}");`,
             }}
           />
         )}

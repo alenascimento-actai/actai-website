@@ -1,29 +1,29 @@
-import { Hero } from "@/components/sections/plataform/Hero";
 import { getDictionary } from "./dictionaries";
-import { TransformWorkSection } from "@/components/sections/plataform/TransformWork";
-import { AdvantagesSection } from "@/components/sections/plataform/Advantages";
-import { AgilitySection } from "@/components/sections/plataform/Agility";
-import { CtaSection } from "../../components/sections/plataform/CtaSection";
-import { ConnectionSection } from "@/components/sections/plataform/Connection";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { HeroSection } from "@/components/sections/home/HeroSection";
+import { SolutionSection } from "@/components/sections/home/SolutionSection";
+import { HowItWorksSection } from "@/components/sections/home/HowItWorksSection";
+import { AboutSection } from "@/components/sections/home/AboutSection";
+import { ContactFormSection } from "@/components/sections/home/ContactFormSection";
 
 export default async function Page({
   params,
 }: {
-  params: Promise<{ lang: "pt-br" | "en" }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return (
-    <section>
-      <Hero dict={dict["gestor-insumos"].hero} />
-      <TransformWorkSection dict={dict["gestor-insumos"].transformWork} />
-      <ConnectionSection dict={dict["gestor-insumos"].connection} />
-      <AdvantagesSection dict={dict["gestor-insumos"].advantages} />
-      <AgilitySection dict={dict["gestor-insumos"].agility} />
-      <CtaSection dict={dict["gestor-insumos"].cta} />
-      <ContactSection isPlataform />
-    </section>
+    <>
+      <HeroSection dict={dict.home.hero} />
+      <SolutionSection dict={dict.home.solution} />
+      <HowItWorksSection dict={dict.home.howItWorks} />
+      <AboutSection
+        dict={dict.home.about}
+        founder={dict.founders.marco}
+        advisors={dict.advisoryBoard}
+      />
+      <ContactFormSection dict={dict.home.contact} />
+    </>
   );
 }

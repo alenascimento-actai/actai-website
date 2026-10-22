@@ -9,7 +9,7 @@ import { getDictionary } from "../dictionaries";
 export default async function concepts({
   params,
 }: {
-  params: Promise<{ lang: "pt-br" | "en" }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
