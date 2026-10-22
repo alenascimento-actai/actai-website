@@ -8,7 +8,7 @@ import { ContactFormSection } from "@/components/sections/home/ContactFormSectio
 export default async function Page({
   params,
 }: {
-  params: Promise<{ lang: "pt-br" | "en" }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
