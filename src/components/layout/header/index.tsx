@@ -9,11 +9,10 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { ArrowRight, Menu } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import "./styles.css";
 
@@ -131,23 +130,57 @@ export function Header({ dict, lang }: NavProps) {
               <Menu />
             </SheetTrigger>
 
-            <SheetContent className={`w-full bg-[#FFFFFF0D] bg-blur-ios`}>
+            {/* Na home o painel usa o mesmo fundo do hero, para o texto ficar legível */}
+            <SheetContent
+              aria-describedby={undefined}
+              className={`w-full border-none px-6 py-5 ${
+                isHome
+                  ? "bg-white bg-[url(https://website-actai.s3.sa-east-1.amazonaws.com/imagens/new-version/img-bg-section-01.webp)] bg-cover bg-top text-[#0C2941]"
+                  : "bg-[#FFFFFF0D] bg-blur-ios text-white"
+              }`}
+            >
               <SheetTitle className="sr-only">Menu</SheetTitle>
-              <SheetDescription asChild>
-                <div className="mt-20 px-4 text-center">
-                  <nav
-                    className={`flex flex-col gap-10 text-lg ${
-                      isHome ? "text-black" : "text-white"
+              <div className="flex h-full flex-col">
+                <SheetClose asChild>
+                  <Link href={`/${lang}`} className="self-start pt-0.5">
+                    <Image
+                      src={Logo}
+                      alt="ACT.AI Logo"
+                      width={88}
+                      height={20}
+                      className={`h-5 w-auto ${isHome ? "brightness-0" : ""}`}
+                    />
+                  </Link>
+                </SheetClose>
+
+                <nav className="mt-12 flex flex-col">
+                  {navLinks.map((link) => (
+                    <SheetClose asChild key={link.href}>
+                      <Link
+                        href={link.href}
+                        className={`flex items-center justify-between border-b py-5 font-title text-2xl font-medium ${
+                          isHome ? "border-[#0C2941]/10" : "border-white/15"
+                        }`}
+                      >
+                        {link.label}
+                        <ArrowRight size={20} aria-hidden="true" />
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </nav>
+
+                <SheetClose asChild>
+                  <Link
+                    href={PLATFORM_URL}
+                    className={`mt-auto mb-2 flex h-12 w-full items-center justify-center gap-2 rounded-full text-base font-medium ${
+                      isHome ? "bg-[#0C2941] text-white" : "bg-white text-black"
                     }`}
                   >
-                    {navLinks.map((link) => (
-                      <SheetClose asChild key={link.href}>
-                        <Link href={link.href}>{link.label}</Link>
-                      </SheetClose>
-                    ))}
-                  </nav>
-                </div>
-              </SheetDescription>
+                    {dict.nav["button-plataform"]}
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </Link>
+                </SheetClose>
+              </div>
             </SheetContent>
           </Sheet>
 
