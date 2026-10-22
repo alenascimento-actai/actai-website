@@ -1,9 +1,33 @@
 import Image from "next/image";
 import { Eye, Gem, Target } from "lucide-react";
 import RevealOnView from "@/components/reveal/RevealOnView";
+import { AdvisorsCarousel } from "./AdvisorsCarousel";
 import { sectionTitleClass } from "./SectionHeading";
 
 type Person = { name: string; bio: string };
+type Advisor = Person & { role: string; image: string };
+
+const renderAdvisorCard = (advisor: Advisor) => (
+  <div
+    key={advisor.name}
+    className="h-full rounded-2xl border border-[#BCE9FC] bg-[#E5F6FF]/60 p-4 lg:p-5"
+  >
+    <div className="relative aspect-[1153/857] overflow-hidden rounded-xl bg-[#0C2941]">
+      <Image
+        src={advisor.image}
+        alt={advisor.name}
+        fill
+        sizes="(min-width: 1024px) 270px, (min-width: 768px) 45vw, 80vw"
+        className="object-cover object-top"
+      />
+    </div>
+    <h4 className="font-sans! mt-5 text-2xl lg:text-[28px] font-medium text-[#101828]">
+      {advisor.name}
+    </h4>
+    <p className="mt-1 text-sm text-[#2185D0]">{advisor.role}</p>
+    <p className="mt-4 text-sm leading-relaxed text-[#667085]">{advisor.bio}</p>
+  </div>
+);
 
 export interface AboutSectionProps {
   dict: {
@@ -120,31 +144,26 @@ export function AboutSection({ dict, founder, advisors }: AboutSectionProps) {
         {/* Conselho consultivo */}
         <div className="mt-14 lg:mt-16">
           <h3 className={groupLabelClass}>{dict.advisorsLabel}</h3>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+          {/* Mobile: slider, para os cards não ficarem empilhados numa rolagem longa */}
+          <RevealOnView
+            revealClasses="animate-fade-right animate-duration-[2000ms] animate-delay-200"
+            className="md:hidden"
+          >
+            <AdvisorsCarousel labels={advisorList.map((advisor) => advisor.name)}>
+              {advisorList.map(renderAdvisorCard)}
+            </AdvisorsCarousel>
+          </RevealOnView>
+
+          {/* Tablet e desktop: grid */}
+          <div className="hidden md:grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {advisorList.map((advisor, i) => (
               <RevealOnView
                 key={advisor.name}
                 revealClasses={`animate-fade-right animate-duration-200 ${cardDelays[i] ?? cardDelays[0]}`}
                 className="h-full"
               >
-                <div className="h-full rounded-2xl border border-[#BCE9FC] bg-[#E5F6FF]/60 p-4 lg:p-5">
-                  <div className="relative aspect-[1153/857] overflow-hidden rounded-xl bg-[#0C2941]">
-                    <Image
-                      src={advisor.image}
-                      alt={advisor.name}
-                      fill
-                      sizes="(min-width: 1024px) 270px, (min-width: 768px) 45vw, 90vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <h4 className="font-sans! mt-5 text-2xl lg:text-[28px] font-medium text-[#101828]">
-                    {advisor.name}
-                  </h4>
-                  <p className="mt-1 text-sm text-[#2185D0]">{advisor.role}</p>
-                  <p className="mt-4 text-sm leading-relaxed text-[#667085]">
-                    {advisor.bio}
-                  </p>
-                </div>
+                {renderAdvisorCard(advisor)}
               </RevealOnView>
             ))}
           </div>
