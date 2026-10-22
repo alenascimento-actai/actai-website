@@ -6,7 +6,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 export default async function DataLebeling({
   params,
 }: {
-  params: Promise<{ lang: "pt-br" | "en" }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const {

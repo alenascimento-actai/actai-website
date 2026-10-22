@@ -9,7 +9,7 @@ import { ConnectionSection } from "@/components/sections/plataform/Connection";
 export default async function PageInputManager({
   params,
 }: {
-  params: Promise<{ lang: "pt-br" | "en" }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
